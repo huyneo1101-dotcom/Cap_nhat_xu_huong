@@ -9,6 +9,9 @@ Lex Fridman...).
 - Mỗi mục là **tóm tắt/diễn giải**, không sao chép nguyên văn nội dung có bản quyền.
 - Luôn kèm nguồn để tra lại bản gốc.
 - Trang dùng cá nhân, không phải sản phẩm public.
+- **Mỗi bài tóm tắt khách mời/tập giữ độ dài khoảng 1000 từ**, theo cấu trúc 4 phần: bối cảnh khách mời, nội dung
+  chính của tập, giải thích thêm thuật ngữ cho người mới, và vì sao đáng nghe/liên hệ. Xem các bài trong "Tuần 1"
+  làm mẫu.
 
 ## Cách thêm nội dung tuần mới
 
