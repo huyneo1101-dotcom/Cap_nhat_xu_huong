@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cập nhật xu hướng</title>
+<meta name="description" content="Nhật ký cá nhân hàng tuần: tóm tắt các cuộc phỏng vấn chuyên gia đáng chú ý về kinh doanh, công nghệ và tương lai công việc.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2563eb">
+<style>
+  :root{
+    --ink:#182338;
+    --bg:#eef2f8;
+    --card:#ffffff;
+    --border:#dbe3ef;
+    --muted:#5b6a82;
+    --accent:#2563eb;
+    --accent-soft:#e8effd;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  a{color:var(--accent)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px 90px}
+  header.hero{
+    text-align:center;
+    padding:44px 20px 32px;
+    background:linear-gradient(135deg,#1e3a8a,#2563eb);
+    color:#fff;
+  }
+  header.hero .icon{width:52px;height:52px;margin-bottom:12px;border-radius:14px}
+  header.hero h1{margin:0 0 8px;font-size:1.75rem}
+  header.hero p{margin:0;opacity:.92;font-size:.98rem;max-width:44ch;margin:0 auto}
+
+  .meta-strip{
+    display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
+    margin:-18px auto 28px;position:relative;z-index:1;
+  }
+  .pill{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:999px;padding:7px 14px;font-size:.8rem;color:var(--muted);
+    box-shadow:0 4px 12px rgba(30,58,138,.08);
+  }
+
+  .note{
+    background:var(--accent-soft);border:1px solid var(--border);
+    border-radius:12px;padding:14px 16px;font-size:.9rem;color:var(--ink);
+    margin:24px 0;
+  }
+
+  .week{margin:40px 0}
+  .week-head{
+    display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:6px;
+    border-bottom:2px solid var(--border);padding-bottom:10px;margin-bottom:16px;
+  }
+  .week-head h2{margin:0;font-size:1.25rem}
+  .week-head .range{font-size:.82rem;color:var(--muted)}
+
+  .entry{
+    background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:18px 20px;margin:14px 0;
+  }
+  .entry .src-tag{
+    display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+    background:var(--accent-soft);color:var(--accent);border-radius:6px;padding:2px 8px;margin-bottom:8px;
+  }
+  .entry h3{margin:0 0 4px;font-size:1.02rem}
+  .entry .guest-meta{margin:0 0 10px;color:var(--muted);font-size:.82rem}
+  .entry p{margin:0 0 8px}
+  .entry p:last-of-type{margin-bottom:0}
+  .source-note{font-size:.8rem;color:var(--muted);margin-top:10px}
+
+  .placeholder{
+    border:1.5px dashed var(--border);border-radius:14px;
+    padding:22px 20px;text-align:center;color:var(--muted);font-size:.92rem;
+  }
+
+  footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:50px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="icon" viewBox="0 0 100 100" aria-hidden="true">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient></defs>
+    <rect x="4" y="4" width="92" height="92" rx="22" fill="url(#g)"/>
+    <path d="M24 66 L24 44 L34 44 L34 66 Z" fill="#fff"/>
+    <path d="M42 66 L42 30 L52 30 L52 66 Z" fill="#fff"/>
+    <path d="M60 66 L60 50 L70 50 L70 66 Z" fill="#fff"/>
+    <path d="M22 40 L40 24 L52 34 L76 14" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M64 14 L76 14 L76 26" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <h1>Cập nhật xu hướng</h1>
+  <p>Nhật ký cá nhân hàng tuần — tóm tắt các cuộc phỏng vấn chuyên gia đáng chú ý về kinh doanh, công nghệ và
+    tương lai công việc.</p>
+</header>
+
+<div class="wrap">
+
+  <div class="meta-strip">
+    <span class="pill">📅 Cập nhật hàng tuần</span>
+    <span class="pill">🎙️ Đa nguồn (Diary of a CEO, Lex Fridman...)</span>
+    <span class="pill">🔒 Dùng cá nhân</span>
+  </div>
+
+  <div class="note">
+    📝 Đây là trang cá nhân, không phải sản phẩm public — nội dung là <strong>tóm tắt/diễn giải</strong> lại các
+    cuộc phỏng vấn công khai, kèm nguồn trích dẫn để tra lại bản gốc khi cần, không sao chép nguyên văn nội dung
+    có bản quyền.
+  </div>
+
+  <div class="week">
+    <div class="week-head">
+      <h2>Tuần mẫu — định dạng ví dụ</h2>
+      <span class="range">chưa có dữ liệu thật</span>
+    </div>
+
+    <div class="entry">
+      <span class="src-tag">Tên podcast</span>
+      <h3>Tên khách mời — chức danh/lĩnh vực</h3>
+      <p class="guest-meta">Tên tập · ngày phát</p>
+      <p><strong>Ý chính:</strong> 3-5 câu tóm tắt luận điểm quan trọng nhất của tập, viết theo văn phong dễ đọc
+        lướt.</p>
+      <p><strong>Vì sao đáng chú ý:</strong> 1-2 câu giải thích tại sao tập này đáng lưu vào nhật ký tuần này.</p>
+      <p class="source-note">Nguồn: <a href="#">link tới trang tóm tắt/tập gốc</a></p>
+    </div>
+
+    <div class="placeholder">
+      Đây là mẫu định dạng cho mỗi tuần. Nói cho mình biết muốn đưa tập/podcast nào vào <strong>Tuần 1</strong>,
+      mình sẽ thay thế mục này bằng nội dung thật.
+    </div>
+  </div>
+
+  <footer>
+    Trang cá nhân · Tóm tắt phi chính thức từ các nguồn công khai, không thay thế nội dung gốc.
+  </footer>
+</div>
+
+</body>
+</html>
