@@ -230,6 +230,10 @@
       <li><a href="#t3-piers">Bulwark × Piers Morgan</a> <span class="toc-sub">— Tim Miller đối chất về Trump</span></li>
       <li><a href="#t3-jang">Dwarkesh × Eric Jang</a> <span class="toc-sub">— dựng lại AlphaGo, gán công lao RL</span></li>
       <li><a href="#t3-telhami">Ezra Klein × Shibley Telhami</a> <span class="toc-sub">— "thực tại một nhà nước" Israel</span></li>
+      <li><a href="#t3-ffmpeg">Lex Fridman #496 — FFmpeg</a> <span class="toc-sub">— công nghệ vô hình sau mọi video</span></li>
+      <li><a href="#t3-stevenson">Ezra Klein × Bryan Stevenson</a> <span class="toc-sub">— vĩ đại là lòng thương &amp; công lý</span></li>
+      <li><a href="#t3-enders">Knowledge Project × Giulia Enders</a> <span class="toc-sub">— sức khoẻ đường ruột &amp; vệ sinh căng thẳng</span></li>
+      <li><a href="#t3-pope2">Dwarkesh × Reiner Pope (phần 2)</a> <span class="toc-sub">— thiết kế chip từ dưới lên</span></li>
     </ul>
   </nav>
 
@@ -3925,10 +3929,206 @@
         <a href="https://www.brookings.edu/books/the-one-state-reality" target="_blank" rel="noopener">Brookings (bối cảnh sách)</a></p>
     </div>
 
-    <p style="color:var(--muted);font-size:.85rem">📌 <strong>Vòng 2 — tiến độ:</strong> Đợt 6–15 thêm 41 bài. Tổng
-      toàn trang: <strong>59 bài tóm tắt</strong> (mục tiêu 100). <strong>Bỏ qua có ghi chú:</strong> Acquired × IPL,
-      No Priors × Sunday Robotics &amp; Harvey — các tập tra ra đều phát cuối 2025. Vẫn chỉ tóm tắt tập có nguồn
-      kiểm chứng.</p>
+    <div class="entry" id="t3-ffmpeg">
+      <span class="src-tag">Lex Fridman Podcast · #496</span>
+      <h3>FFmpeg — công nghệ vô hình đứng sau mọi video trên internet</h3>
+      <p class="guest-meta">Phát 6/5/2026 · Jean-Baptiste Kempf (VLC/VideoLAN) &amp; Kieran Kunhya (FFmpeg)</p>
+
+      <p><strong>Bối cảnh khách mời:</strong> Jean-Baptiste Kempf là lập trình viên chính của VLC (trình phát video
+        mã nguồn mở hàng tỷ lượt tải) và chủ tịch VideoLAN; Kieran Kunhya là kỹ sư codec, người đóng góp lâu năm cho
+        FFmpeg và người đứng sau tài khoản FFmpeg "nổi loạn" trên X. Đây là tập tôn vinh <strong>hạ tầng vô hình</strong>
+        của internet — FFmpeg là phần mềm mã nguồn mở đứng sau YouTube, Netflix, Chrome, Discord và gần như mọi nền
+        tảng chạm tới video/âm thanh, nhưng do một nhóm nhỏ tình nguyện viên duy trì. Một góc "xu hướng" khác của
+        trang: không phải AI hay chính trị, mà là câu chuyện về nền móng kỹ thuật số mà tất cả chúng ta đứng lên.</p>
+
+      <p><strong>Nội dung chính của tập:</strong> Ba tầng nội dung. <strong>Kỹ thuật:</strong> hai khách giải thích
+        nền tảng của codec video và nén — phân biệt "container" (định dạng đóng gói như MP4) với "codec" (thuật
+        toán nén như H.264), và cách các thuật toán nén <strong>khai thác giới hạn giác quan con người</strong> để
+        giảm kích thước file khủng khiếp mà mắt gần như không nhận ra khác biệt (mắt người nhạy với độ sáng hơn màu,
+        nên nén màu mạnh hơn...). <strong>Hiệu năng:</strong> một chi tiết gây kinh ngạc — assembly viết tay, đặc
+        biệt cho các tác vụ SIMD (một lệnh xử lý nhiều dữ liệu cùng lúc), <strong>nhanh hơn tới 62 lần</strong> so
+        với code C và tối ưu tự động của trình biên dịch; lý do các dự án video vẫn cần những kỹ sư hiếm hoi biết
+        "vặn" từng chỉ thị máy — kỹ năng đang mai một. <strong>Triết lý mã nguồn mở:</strong> phần thấm nhất — điều
+        gì thúc đẩy các tình nguyện viên duy trì hạ tầng trọng yếu mà cả thế giới dùng miễn phí, và
+        <strong>khủng hoảng bền vững</strong> của mô hình đó: các tập đoàn nghìn tỷ đô xây dựng đế chế trên FFmpeg
+        nhưng dự án vẫn thiếu kinh phí và người; tài khoản FFmpeg trên X nổi tiếng vì công khai "cà khịa" chính các
+        Big Tech này về việc hưởng lợi mà không đóng góp. Câu chuyện chạm một nghịch lý lớn của kinh tế số: phần
+        mềm nền tảng quan trọng nhất thế giới thường được duy trì bởi vài người làm không công — một rủi ro hệ
+        thống ít ai để ý cho tới khi nó gãy.</p>
+
+      <p><strong>📖 Giải thích thêm</strong> <em>(nội dung bổ sung):</em></p>
+      <ul class="checklist">
+        <li><strong>Codec vs container</strong>: codec là cách nén/giải nén dữ liệu (H.264, AV1); container là "hộp"
+          chứa video+âm thanh+phụ đề (MP4, MKV) — nhầm lẫn phổ biến mà tập này làm rõ.</li>
+        <li><strong>SIMD &amp; assembly viết tay</strong>: kỹ thuật lập trình sát phần cứng để xử lý nhiều dữ liệu
+          song song — cho tốc độ vượt xa code thông thường, nhưng cực khó và ít người làm được.</li>
+        <li><strong>Nén "có mất" (lossy)</strong>: bỏ bớt thông tin mắt/tai người khó nhận ra để giảm kích thước —
+          nền tảng của mọi video streaming; nghệ thuật là mất ít chất lượng cảm nhận nhất.</li>
+        <li><strong>Bền vững mã nguồn mở</strong>: vấn đề hạ tầng số then chốt do tình nguyện viên duy trì thiếu
+          nguồn lực — rủi ro hệ thống (xem cả sự cố Log4j, xz) mà tập này nêu qua ca FFmpeg.</li>
+      </ul>
+
+      <p><strong>Vì sao đáng nghe:</strong> Một tập giúp trân trọng thứ ta dùng mỗi ngày mà không hề thấy — và hiểu
+        một rủi ro thật của thời đại số: nền móng chung mong manh đến mức nào. Với lập trình viên Việt Nam, đây vừa
+        là bài học kỹ thuật (nén, SIMD) vừa là câu hỏi nghề nghiệp và đạo đức về đóng góp cho tài sản chung. Là
+        quãng nghỉ "kỹ thuật thuần" đáng giá giữa các tập AI và chính trị.</p>
+
+      <p class="source-note">Nguồn:
+        <a href="https://lexfridman.com/ffmpeg/" target="_blank" rel="noopener">lexfridman.com (kèm transcript)</a>,
+        <a href="https://www.shortform.com/podcast/episode/lex-fridman-podcast-2026-05-06-episode-summary-496-ffmpeg-the-incredible-technology-behind-video-on-the-internet" target="_blank" rel="noopener">Shortform</a></p>
+    </div>
+
+    <div class="entry" id="t3-stevenson">
+      <span class="src-tag">The Ezra Klein Show</span>
+      <h3>Bryan Stevenson — "Nước Mỹ vẫn còn có thể trở thành": vĩ đại là lòng thương, không phải quyền lực</h3>
+      <p class="guest-meta">Tập: "The America That's Still Possible" · phát 29/5/2026 · ghi tại Montgomery, Alabama</p>
+
+      <p><strong>Bối cảnh khách mời:</strong> Bryan Stevenson là luật sư nhân quyền sáng lập Equal Justice
+        Initiative (EJI), tác giả <em>Just Mercy</em> (đã thành phim), người dành sự nghiệp bào chữa cho tử tù và
+        người bị kết án oan ở miền Nam nước Mỹ. Ông xây các "Legacy Sites" ở Montgomery, Alabama — bảo tàng và đài
+        tưởng niệm về chế độ nô lệ và nạn hành hình lynch (lynching) — nơi Ezra Klein tới thăm để ghi tập này. Ghi
+        hình trước dịp kỷ niệm 250 năm lập quốc Mỹ, cuộc trò chuyện là một suy tư về <strong>ý nghĩa của sự vĩ
+        đại quốc gia</strong> — đối trọng sâu sắc với các tập chính trị thời sự trên trang.</p>
+
+      <p><strong>Nội dung chính của tập:</strong> Câu hỏi khung của Klein: điều gì khiến một quốc gia trở nên vĩ đại
+        — hay "vĩ đại trở lại"? Chính quyền Trump (và các phong trào cánh hữu ở nhiều nước) đưa ra một hình dung về
+        sự vĩ đại dựa trên <strong>quyền lực và sự thống trị bên ngoài</strong>, cùng một tập hợp các câu chuyện dân
+        tộc và tôn giáo chung bên trong. Stevenson đưa ra tầm nhìn thay thế, gần như ngược lại:
+        <strong>sự vĩ đại thật không đo bằng sức mạnh quân sự hay kinh tế, mà bằng năng lực yêu thương, khoan dung
+        và công lý</strong>. Luận điểm trung tâm của ông — và là công việc cả đời: lòng yêu nước chân chính đòi hỏi
+        <strong>đối diện với toàn bộ lịch sử</strong> của đất nước, gồm cả nô lệ, lynching và phân biệt chủng tộc,
+        <em>bên cạnh</em> các thành tựu — chứ không phải chỉ ca ngợi vinh quang một cách phi phê phán. Ông lập luận
+        rằng một quốc gia, như một con người, chỉ trưởng thành khi dám thừa nhận sai lầm; né tránh quá khứ không
+        phải lòng ái quốc mà là sự yếu đuối. Klein và Stevenson đi qua các chủ đề nặng: vì sao ký ức về bất công dễ
+        bị chôn vùi, vai trò của các đài tưởng niệm trong việc "sửa chữa tự sự" của một dân tộc, và làm sao giữ hy
+        vọng (chính chữ "vẫn còn có thể" trong tên tập) khi thực tại chính trị u ám. Đây là một trong những tập
+        "chậm" và giàu chiều sâu đạo đức nhất của Ezra Klein — ít thời sự, nhiều triết lý về ký ức, công lý và bản
+        sắc quốc gia.</p>
+
+      <p><strong>📖 Giải thích thêm</strong> <em>(nội dung bổ sung):</em></p>
+      <ul class="checklist">
+        <li><strong>Lynching</strong>: các vụ hành hình phi pháp (chủ yếu nhắm người da đen) ở Mỹ, đặc biệt miền
+          Nam cuối thế kỷ 19 – đầu 20 — chương lịch sử EJI của Stevenson nỗ lực đưa ra ánh sáng qua đài tưởng
+          niệm.</li>
+        <li><strong>"Vĩ đại" như năng lực đạo đức</strong>: định nghĩa của Stevenson — đo bằng lòng thương và công
+          lý, đối lập với "vĩ đại" đo bằng thống trị; một tranh luận triết học về mục đích quốc gia.</li>
+        <li><strong>Lòng yêu nước phê phán</strong>: yêu nước bằng cách đòi hỏi đất nước sống đúng lý tưởng của
+          mình, gồm cả đối diện sai lầm — khác "yêu nước mù quáng" chỉ ca ngợi.</li>
+        <li><strong>Vì sao đáng nghe với người ngoài Mỹ</strong>: câu hỏi "một dân tộc đối diện quá khứ đau thương
+          thế nào" mang tính phổ quát — Việt Nam, như mọi quốc gia, cũng có những chương lịch sử cần cả tự hào lẫn
+          suy ngẫm.</li>
+      </ul>
+
+      <p><strong>Vì sao đáng nghe:</strong> Giữa dòng podcast về quyền lực, thị trường và công nghệ, đây là tập về
+        <em>ý nghĩa</em> — một cuộc trò chuyện hiếm hoi nâng câu hỏi chính trị lên tầm đạo đức và tồn tại. Giọng
+        điềm tĩnh, đầy nhân văn của Stevenson là liều thuốc giải cho sự ồn ào của tin tức; và câu hỏi trung tâm —
+        vĩ đại thật sự là gì — đáng để bất kỳ ai, ở bất kỳ quốc gia nào, tự hỏi.</p>
+
+      <p class="source-note">Nguồn:
+        <a href="https://podcastrex.com/shows/the-ezra-klein-show/the-america-thats-still-possible" target="_blank" rel="noopener">Podcast Rex (NYT)</a>,
+        <a href="https://the-ezra-klein-show.simplecast.com/episodes" target="_blank" rel="noopener">NYT/Simplecast</a></p>
+    </div>
+
+    <div class="entry" id="t3-enders">
+      <span class="src-tag">The Knowledge Project</span>
+      <h3>Dr. Giulia Enders — "Sửa chữa và nuôi dưỡng đường ruột": vệ sinh lớn nhất là vệ sinh căng thẳng</h3>
+      <p class="guest-meta">Tập: "How to Repair and Nourish Your Gut" · phát 23/6/2026</p>
+
+      <p><strong>Bối cảnh khách mời:</strong> Giulia Enders là bác sĩ và nhà khoa học người Đức, tác giả cuốn
+        <em>Gut (Charming Bowels)</em> — sách khoa học thường thức bán hàng triệu bản, biến một chủ đề "khó nói"
+        (tiêu hoá) thành hiện tượng xuất bản toàn cầu. Trên Knowledge Project, bà mở rộng mảng sức khoẻ của trang
+        (bên cạnh Huberman) sang một hệ cơ quan ít được hiểu đúng: đường ruột — nơi khoa học gần đây phát hiện ảnh
+        hưởng sâu rộng tới miễn dịch, tâm trạng và trao đổi chất.</p>
+
+      <p><strong>Nội dung chính của tập:</strong> Thông điệp đảo ngược trực giác đầu tiên: <strong>đường ruột là cơ
+        quan bền bỉ, không mong manh</strong> — trái với marketing của ngành thực phẩm chức năng vẽ ra một hệ tiêu
+        hoá "dễ vỡ" cần liên tục "sửa chữa" bằng sản phẩm đắt tiền. Cải thiện sức khoẻ ruột, theo Enders, đến từ
+        các thay đổi <em>từ từ và dễ chịu</em>: ăn nhiều chất xơ từ thực phẩm mình <strong>thích</strong> (bền hơn
+        ép ăn theo chế độ khắc nghiệt), <strong>đa dạng thực phẩm</strong> (nuôi hệ vi sinh phong phú), và tối ưu
+        cách chế biến (ví dụ làm nguội tinh bột tạo "tinh bột kháng" tốt cho vi khuẩn ruột). Nhưng luận điểm gây
+        chú ý nhất, và là đóng góp lớn của tập, là bà kéo trọng tâm ra khỏi ám ảnh thức ăn/bổ sung suốt nhiều thập
+        kỷ: <strong>"một trong những vệ sinh quan trọng nhất bạn có thể có là vệ sinh căng thẳng (stress
+        hygiene)"</strong> — căng thẳng mãn tính âm thầm phá hoại đường ruột (qua trục ruột–não) mạnh không kém chế
+        độ ăn tồi. Bà cũng trả lời loạt câu hỏi thực dụng người nghe hay thắc mắc: tác động của ăn vặt liên tục lên
+        ruột và trao đổi chất; "thải độc ruột" (gut cleanse) có tác dụng không (phần lớn không); bổ sung có đáng
+        tiền không (thường không bằng thực phẩm thật); lợi ích của đi bộ sau bữa ăn; và vì sao lạm dụng nước rửa tay
+        sát khuẩn <em>không</em> phải cách vệ sinh tốt (giết cả vi khuẩn có lợi, cản trở hệ miễn dịch "tập luyện").
+        Điểm hấp dẫn: toàn bộ lời khuyên đều đơn giản, rẻ, không cần chế độ phức tạp — đúng tinh thần "khung tư duy
+        thực dụng" của Knowledge Project.</p>
+
+      <p><strong>📖 Giải thích thêm</strong> <em>(nội dung bổ sung):</em></p>
+      <ul class="checklist">
+        <li><strong>Hệ vi sinh đường ruột (gut microbiome)</strong>: hàng nghìn tỷ vi khuẩn trong ruột — ảnh hưởng
+          miễn dịch, tâm trạng, trao đổi chất; đa dạng thực phẩm nuôi đa dạng vi sinh, chìa khoá sức khoẻ ruột.</li>
+        <li><strong>Trục ruột–não (gut-brain axis)</strong>: đường liên lạc hai chiều giữa ruột và não — lý do căng
+          thẳng ảnh hưởng tiêu hoá và ngược lại; nền khoa học cho "vệ sinh căng thẳng".</li>
+        <li><strong>Tinh bột kháng (resistant starch)</strong>: tinh bột (cơm, khoai) khi làm nguội trở nên khó
+          tiêu hơn với người nhưng là "thức ăn" tốt cho vi khuẩn ruột — mẹo chế biến đơn giản Enders nêu.</li>
+        <li><strong>Thực phẩm siêu chế biến (ultra-processed food)</strong>: đồ ăn công nghiệp nhiều phụ gia, ít
+          chất xơ — góp phần viêm ruột và mất cân bằng vi sinh (dysbiosis); một trong các "thủ phạm" chính.</li>
+      </ul>
+
+      <p><strong>Vì sao đáng nghe:</strong> Sức khoẻ đường ruột ngập trong thông tin sai và sản phẩm thổi phồng;
+        tập này là liều "vệ sinh nhận thức" — một nhà khoa học nói rõ cái gì có bằng chứng (chất xơ, đa dạng, giảm
+        căng thẳng) và cái gì là marketing (cleanse, phần lớn bổ sung). Thông điệp "vệ sinh căng thẳng" đặc biệt
+        đáng nhớ với người sống trong nhịp đô thị áp lực cao — và nối đẹp với các tập về tâm lý (Valiante) và cơ
+        thể (Huberman) trên trang thành bộ ba sức khoẻ thực dụng.</p>
+
+      <p class="source-note">Nguồn:
+        <a href="https://fs.blog/knowledge-project-podcast/dr-giulia-enders/" target="_blank" rel="noopener">fs.blog</a>,
+        <a href="https://open.spotify.com/episode/67TgrZuqVlF4GUbfYFuxmD" target="_blank" rel="noopener">Spotify</a></p>
+    </div>
+
+    <div class="entry" id="t3-pope2">
+      <span class="src-tag">Dwarkesh Podcast</span>
+      <h3>Reiner Pope (phần 2) — "Thiết kế chip từ dưới lên": bên trong một con chip AI</h3>
+      <p class="guest-meta">Phát 22/5/2026 · CEO MatX, cựu kiến trúc sư TPU · bài giảng bảng đen phần 2</p>
+
+      <p><strong>Bối cảnh khách mời:</strong> Đây là tập thứ hai của Reiner Pope trên Dwarkesh (tập một, Đợt 11, về
+        <em>cách LLM được huấn luyện và phục vụ</em>). Nếu tập một nhìn từ trên xuống (mô hình → phần cứng), tập này
+        đi <strong>từ dưới lên</strong>: bên trong một con chip AI thật sự có gì, và nó "tính toán" ra sao — từ cổng
+        logic nhỏ nhất tới con chip sản xuất hoàn chỉnh. Pope là CEO MatX, startup chip AI thách thức Nvidia, nên
+        đây là "sách giáo khoa nói" về chính thứ ông đang xây.</p>
+
+      <p><strong>Nội dung chính của tập:</strong> Pope dựng kiến thức từ đơn vị nhỏ nhất: <strong>cổng logic</strong>
+        (AND, OR, NOT) — các "công tắc" cơ bản — được nối với nhau bằng dây (các đường kim loại đặt vật lý trên
+        chip). Từ đó ông xây dần lên: các cổng logic kết hợp thành mạch tính toán, và mạch tính toán tổ chức thành
+        một con chip sản xuất với các thành phần của nó. Điểm mấu chốt cho AI: phép tính mà chip AI muốn làm nhanh
+        nhất là <strong>nhân ma trận (matrix multiplication)</strong>, với đơn vị cơ bản là "nhân-cộng dồn"
+        (multiply-accumulate) các cặp số — toàn bộ kiến trúc chip AI (Nvidia GPU, Google TPU, MatX) về bản chất là
+        các cách khác nhau để làm phép nhân-cộng này thật nhiều, thật nhanh, thật tiết kiệm điện. Hiểu điều này giải
+        thích rất nhiều: vì sao chip AI khác chip thường (CPU đa năng), vì sao băng thông bộ nhớ và cách bố trí vật
+        lý quan trọng đến vậy (tập một), và vì sao vẫn còn "khe" cho startup như MatX — thiết kế chip
+        <em>chuyên biệt</em> cho kiến trúc transformer có thể hiệu quả hơn chip đa dụng của Nvidia ở một số việc.
+        Tập là "cửa sau" hiếm hoi để người không học điện tử vẫn hiểu được nền tảng vật lý của cuộc cách mạng AI —
+        và vì sao "con hào chuỗi cung ứng" của Jensen Huang (tập Tuần 2) lại nằm ở chính khả năng sản xuất những cấu
+        trúc vật lý cực kỳ tinh vi này ở quy mô lớn.</p>
+
+      <p><strong>📖 Giải thích thêm</strong> <em>(nội dung bổ sung):</em></p>
+      <ul class="checklist">
+        <li><strong>Cổng logic (logic gate)</strong>: mạch điện thực hiện phép logic cơ bản (AND/OR/NOT) — "viên
+          gạch" nhỏ nhất của mọi chip; hàng tỷ cổng ghép lại thành bộ xử lý.</li>
+        <li><strong>Nhân ma trận (matrix multiplication)</strong>: phép toán cốt lõi của mạng nơ-ron — chip AI được
+          tối ưu để làm phép này ở quy mô khổng lồ; "nhân-cộng dồn" là đơn vị cơ bản.</li>
+        <li><strong>Chip chuyên dụng vs đa dụng</strong>: GPU/TPU/MatX tối ưu cho một loại tính toán (AI), khác CPU
+          làm mọi việc nhưng chậm hơn cho AI — chuyên biệt hoá là hướng startup chip đánh vào.</li>
+        <li><strong>Vì sao ghép hai tập Pope</strong>: tập một (Đợt 11) cho "toán học của huấn luyện/phục vụ"; tập
+          này cho "vật lý của con chip" — cùng nhau là bức tranh đầy đủ từ mô hình tới silicon.</li>
+      </ul>
+
+      <p><strong>Vì sao đáng nghe:</strong> Cuộc đua AI rốt cuộc là cuộc đua phần cứng, và tập này giúp bất kỳ ai
+        hiểu <em>vì sao</em> chip lại thành nút thắt địa chính trị (kiểm soát xuất khẩu, TSMC, cuộc đua Mỹ–Trung).
+        Với người học kỹ thuật ở Việt Nam, đây là điểm khởi đầu thân thiện để hiểu bán dẫn — ngành mà chính Việt
+        Nam đang đặt cược lớn vào tương lai. Nghe cặp với tập Jensen Huang và Lex #490 để có cả ba tầng: chính sách,
+        kinh doanh, và kỹ thuật của silicon.</p>
+
+      <p class="source-note">Nguồn:
+        <a href="https://www.dwarkesh.com/p/reiner-pope-2" target="_blank" rel="noopener">dwarkesh.com (kèm transcript)</a>,
+        <a href="https://www.franksworld.com/2026/05/28/understanding-chip-design-from-logic-gates-to-ai-hardware/" target="_blank" rel="noopener">Frank's World (tóm tắt)</a></p>
+    </div>
+
+    <p style="color:var(--muted);font-size:.85rem">📌 <strong>Vòng 2 — tiến độ:</strong> Đợt 6–16 thêm 45 bài. Tổng
+      toàn trang: <strong>63 bài tóm tắt</strong> (mục tiêu 100). Vẫn chỉ tóm tắt tập có nguồn kiểm chứng.</p>
   </div>
 
   <div class="placeholder">
