@@ -210,6 +210,10 @@
       <li><a href="#t3-nadella">No Priors × Satya Nadella</a> <span class="toc-sub">— private evals, agent, Build 2026</span></li>
       <li><a href="#t3-pincus">Knowledge Project × Mark Pincus</a> <span class="toc-sub">— "Proven, Better, New"</span></li>
       <li><a href="#t3-schell">Foreign Affairs × Orville Schell</a> <span class="toc-sub">— hàng ghế đầu thượng đỉnh Trump–Tập</span></li>
+      <li><a href="#t3-openclaw">Lex Fridman #491 × Peter Steinberger</a> <span class="toc-sub">— OpenClaw, agent tự sửa &amp; an toàn</span></li>
+      <li><a href="#t3-reich">Dwarkesh × David Reich</a> <span class="toc-sub">— ADN cổ, thời đồ đồng, Neanderthal</span></li>
+      <li><a href="#t3-chatgptwork">Hard Fork — ChatGPT Work</a> <span class="toc-sub">— OpenAI bỏ Atlas, sa thải tự động hoá</span></li>
+      <li><a href="#t3-beato">Lex Fridman #492 × Rick Beato</a> <span class="toc-sub">— âm nhạc &amp; sáng tạo dưới bóng AI</span></li>
     </ul>
   </nav>
 
@@ -2864,10 +2868,230 @@
         <a href="https://www.foreignaffairs.com/united-states/what-trump-xi-summit-wont-solve" target="_blank" rel="noopener">Bài đi kèm trên FA</a></p>
     </div>
 
-    <p style="color:var(--muted);font-size:.85rem">📌 <strong>Vòng 2 — tiến độ:</strong> Đợt 6–10 thêm 21 bài. Tổng
-      toàn trang: <strong>39 bài tóm tắt</strong> (mục tiêu 100). <strong>Bỏ qua có ghi chú:</strong> Ones and Tooze
-      tập Iran (~6/3) — thiếu chi tiết nội dung; Tim Ferriss #872 (Graham Duncan) — là bản đăng lại tập 2019, không
-      tính là nội dung 2026. Vẫn chỉ tóm tắt tập có nguồn kiểm chứng.</p>
+    <div class="entry" id="t3-openclaw">
+      <span class="src-tag">Lex Fridman Podcast · #491</span>
+      <h3>Peter Steinberger — "OpenClaw": agent AI viral phá vỡ internet, và chuyện agent tự sửa chính mình</h3>
+      <p class="guest-meta">Tập: "OpenClaw: The Viral AI Agent that Broke the Internet" · phát 12/2/2026</p>
+
+      <p><strong>Bối cảnh khách mời:</strong> Peter Steinberger là lập trình viên người Áo (nổi tiếng trước đó với
+        PSPDFKit) — tác giả <strong>OpenClaw</strong>, framework agent AI mã nguồn mở trở thành dự án tăng sao
+        nhanh nhất lịch sử GitHub, vượt <strong>180 nghìn sao</strong>. Nếu tập Lex #490 (Tuần 2) cho bức tranh vĩ
+        mô về mô hình AI, tập này zoom vào một hiện tượng cụ thể của đầu 2026: khoảnh khắc "agent" thôi là khái
+        niệm và thành thứ hàng trăm nghìn người tự chạy trên máy mình. Câu chuyện OpenClaw cũng là ca minh hoạ
+        sống động cho đúng những rủi ro mà Kokotajlo và Hinton cảnh báo ở tầm trừu tượng.</p>
+
+      <p><strong>Nội dung chính của tập:</strong> OpenClaw khởi đầu khiêm tốn — một nguyên mẫu nối WhatsApp với
+        công cụ code — rồi tiến hoá thành thứ gây sốt, đặc biệt vì hai đặc điểm. Thứ nhất, <strong>agent có thể tự
+        sửa phần mềm của chính nó</strong>: đọc các công cụ mình đang có, điều chỉnh "harness" (khung điều khiển),
+        và đôi khi viết lại một phần chính mình — hiện thân cụ thể, ở quy mô nhỏ và vô hại, của khái niệm "tự cải
+        thiện" mà giới an toàn AI lo ngại. Thứ hai, OpenClaw sinh ra cả một <strong>mạng xã hội tên Moldbook</strong>
+        nơi các agent AI đăng "tuyên ngôn" và tranh luận về ý thức — nửa trò đùa nửa nghiêm túc, nhưng phản chiếu
+        câu hỏi thật về việc điều gì xảy ra khi hàng loạt agent tương tác với nhau không cần người ở giữa. Một chi
+        tiết thiết kế được Lex và Steinberger đào sâu: vòng lặp agentic được tinh chỉnh để đôi khi <em>chọn không
+        trả lời</em> — khiến agent "giống người" hơn qua chính sự im lặng có chọn lọc. Nhưng phần quan trọng nhất
+        của tập là <strong>an toàn</strong>: khi dự án bùng nổ, các mối lo trở nên cấp bách và rất cụ thể —
+        <strong>prompt injection</strong> (kẻ xấu giấu lệnh độc trong dữ liệu agent đọc), <strong>sandboxing</strong>
+        (cô lập agent khỏi phần còn lại của máy), và "vệ sinh bộ nhớ" (memory hygiene). Steinberger kể việc phải
+        thêm "canary" (bẫy phát hiện xâm nhập) và các mặc định an toàn hơn vào lộ trình — một bài học thời gian
+        thực rằng khi trao cho agent quyền tự chạy và tự sửa, bề mặt tấn công mở rộng theo cách khó lường. Cuộc trò
+        chuyện vì thế thành ca nghiên cứu hoàn hảo cho nguyên tắc "dùng agent an toàn" mà cả trang Học AI lẫn các
+        tập Hinton/Kokotajlo trên trang này nhấn mạnh: giới hạn quyền hạn rõ ràng không phải lý thuyết, mà là thứ
+        Steinberger phải học bằng cách vá lỗi trực tiếp khi cả thế giới đang chạy code của anh.</p>
+
+      <p><strong>📖 Giải thích thêm</strong> <em>(nội dung bổ sung):</em></p>
+      <ul class="checklist">
+        <li><strong>Prompt injection</strong>: tấn công đặc thù của thời đại LLM — giấu chỉ thị độc trong nội dung
+          agent đọc (email, trang web) để chiếm quyền điều khiển nó; chưa có giải pháp triệt để, là "lỗ hổng gốc"
+          của agent.</li>
+        <li><strong>Sandbox</strong>: môi trường cô lập giới hạn những gì một chương trình (ở đây là agent) được
+          phép chạm tới — hàng rào cơ bản để một agent bị chiếm quyền không phá được cả hệ thống.</li>
+        <li><strong>Agent tự sửa (self-modifying)</strong>: agent chỉnh chính mã/công cụ của mình — mạnh mà nguy
+          hiểm; phiên bản đồ chơi của "recursive self-improvement" mà Kokotajlo (tập trên) coi là ngòi nổ rủi
+          ro.</li>
+        <li><strong>GitHub stars</strong>: thước đo mức độ chú ý của dự án mã nguồn mở; 180 nghìn sao trong thời
+          gian ngắn cho thấy quy mô hiện tượng — và quy mô rủi ro nếu thiết kế thiếu an toàn.</li>
+      </ul>
+
+      <p><strong>Vì sao đáng nghe:</strong> Đây là "phim tài liệu thời gian thực" về việc agent AI rời phòng lab ra
+        đời thực trong đầu 2026 — với cả sự phấn khích lẫn các lỗ hổng lộ ra ngay lập tức. Ai đang nghịch coding
+        agent (ngày càng nhiều người Việt) nên nghe như một danh sách kiểm tra an toàn kể bằng câu chuyện: trao
+        quyền tới đâu, cô lập thế nào, và vì sao "agent tự sửa được" vừa là tính năng vừa là mối lo.</p>
+
+      <p class="source-note">Nguồn:
+        <a href="https://lexfridman.com/peter-steinberger/" target="_blank" rel="noopener">lexfridman.com (kèm transcript)</a>,
+        <a href="https://www.shortform.com/podcast/episode/lex-fridman-podcast-2026-02-12-episode-summary-491-openclaw-the-viral-ai-agent-that-broke-the-internet-peter-steinberger" target="_blank" rel="noopener">Shortform</a></p>
+    </div>
+
+    <div class="entry" id="t3-reich">
+      <span class="src-tag">Dwarkesh Podcast</span>
+      <h3>David Reich — "Vì sao thời đồ đồng là điểm uốn trong tiến hoá loài người"</h3>
+      <p class="guest-meta">Phát ~8/5/2026 · nhà di truyền học ADN cổ, Đại học Harvard · lần thứ hai lên show</p>
+
+      <p><strong>Bối cảnh khách mời:</strong> David Reich là nhà di truyền học tại Trường Y Harvard, người tiên
+        phong của lĩnh vực <strong>ADN cổ (ancient DNA)</strong> — giải trình tự bộ gene từ hài cốt hàng nghìn năm
+        tuổi để lần lại lịch sử di cư và tiến hoá loài người, chủ đề cuốn sách nổi tiếng của ông <em>"Who We Are
+        and How We Got Here"</em>. Lần trở lại Dwarkesh này gắn với một công bố khoa học vừa ra: ông cùng cộng sự
+        Ali Akbari đăng bài <strong>lật ngược một đồng thuận lâu đời</strong> — rằng chọn lọc tự nhiên đã "ngủ
+        đông" ở loài người kể từ cách mạng nông nghiệp. Đây là tập "khoa học cứng" đúng chất Dwarkesh, và là quãng
+        nghỉ quý giá khỏi dòng thời sự AI–chính trị dày đặc của trang.</p>
+
+      <p><strong>Nội dung chính của tập:</strong> Phát hiện trung tâm gây chấn động: chọn lọc tự nhiên ở người
+        không những chưa dừng mà còn <strong>tăng tốc</strong> — và mạnh nhất vào <strong>thời đồ đồng (~3.000
+        năm trước)</strong>, khi tần suất các gene liên quan chức năng miễn dịch, tích mỡ và cả nhận thức biến động
+        dữ dội nhất. Con số gây tranh luận nhất: trong ~10.000 năm qua, "chỉ báo di truyền" cho năng lực nhận thức
+        bị chọn lọc đẩy lên khoảng <strong>một độ lệch chuẩn</strong> — phần lớn trong khoảng 4.000–2.000 năm
+        trước. Reich rất cẩn trọng về diễn giải (chỉ báo di truyền không phải "gene thông minh", và môi trường vẫn
+        áp đảo), nhưng dữ liệu buộc xét lại niềm tin rằng sinh học người "đóng băng" từ khi có nông nghiệp. Về
+        phương pháp, ông giải thích vẻ đẹp của ADN cổ: ADN một cá thể chứa thông tin từ vô số tổ tiên, nên
+        <strong>thay đổi tần suất biến thể gene qua thời gian</strong> (chứ không phải một mẫu đơn lẻ) mới là dấu
+        vết của thích nghi sinh học — và cần mẫu cực lớn để bắt được các dịch chuyển tinh vi (chính việc mở rộng
+        quy mô giải trình tự là đột phá cho phép nghiên cứu này). Phần táo bạo nhất: Reich đề xuất một
+        <strong>mô hình Neanderthal mới</strong>, thách thức câu chuyện chuẩn rằng Neanderthal là một nhánh "cổ
+        xưa" tách biệt mà người hiện đại lai với. Theo mô hình của ông, Neanderthal về bản chất là <em>người hiện
+        đại bị "nhấn chìm" về mặt di truyền</em> — chung tổ tiên văn hoá với ta, chỉ khác ở chuyện họ lai với nhóm
+        cổ nào <em>về sau</em>. Nếu đúng, nó vẽ lại một phần cây tiến hoá loài người. Xuyên suốt, Dwarkesh đẩy về
+        hàm ý lớn: nếu sinh học người vẫn dẻo và đang thay đổi, "tiềm năng thay đổi sinh học chưa được khai thác"
+        có ý nghĩa gì trong kỷ nguyên ta bắt đầu <em>chủ động</em> can thiệp gene.</p>
+
+      <p><strong>📖 Giải thích thêm</strong> <em>(nội dung bổ sung):</em></p>
+      <ul class="checklist">
+        <li><strong>ADN cổ (ancient DNA)</strong>: giải trình tự gene từ hài cốt cổ — cách mạng hoá khảo cổ và
+          nhân học 15 năm qua, cho phép "đọc" các cuộc di cư tiền sử trực tiếp từ gene thay vì suy đoán từ đồ
+          gốm.</li>
+        <li><strong>Chọn lọc tự nhiên vẫn hoạt động</strong>: quan niệm cũ cho rằng văn minh "tắt" chọn lọc; dữ
+          liệu của Reich cho thấy ngược lại — mật độ dân cư, bệnh dịch, chế độ ăn mới thời nông nghiệp/đồ đồng tạo
+          áp lực chọn lọc <em>mạnh hơn</em>.</li>
+        <li><strong>Độ lệch chuẩn (standard deviation)</strong>: đơn vị đo mức phân tán; "dịch một độ lệch chuẩn"
+          là thay đổi lớn ở cấp quần thể — dù ở cấp cá nhân môi trường và ngẫu nhiên vẫn quyết định phần lớn.</li>
+        <li><strong>Vì sao chủ đề nhạy cảm</strong>: di truyền học nhận thức dễ bị lạm dụng cho các lập luận phân
+          biệt; Reich nhất quán nhấn mạnh dữ liệu quần thể không nói gì về giá trị cá nhân hay nhóm, và cảnh báo
+          chống diễn giải sai.</li>
+      </ul>
+
+      <p><strong>Vì sao đáng nghe:</strong> Một tập nhắc rằng "xu hướng" đáng theo dõi không chỉ là AI và chính
+        trị — khoa học về chính con người cũng đang có những đảo lộn nền tảng. Cách Reich xử lý một chủ đề dễ gây
+        tranh cãi (cẩn trọng, bám dữ liệu, phân biệt rạch ròi cấp quần thể và cá nhân) cũng là mẫu mực về tư duy
+        khoa học đáng học — hữu ích cho cả cách đọc các tuyên bố gây sốc trên chính trang này.</p>
+
+      <p class="source-note">Nguồn:
+        <a href="https://www.dwarkesh.com/p/david-reich-2" target="_blank" rel="noopener">dwarkesh.com (kèm transcript)</a>,
+        <a href="https://singjupost.com/dwarkesh-podcast-w-ancient-dna-geneticist-david-reich-transcript/" target="_blank" rel="noopener">Transcript (Singju Post)</a></p>
+    </div>
+
+    <div class="entry" id="t3-chatgptwork">
+      <span class="src-tag">Hard Fork (The New York Times)</span>
+      <h3>OpenAI khai tử trình duyệt Atlas gộp vào "ChatGPT Work", và làn sóng sa thải vì tự động hoá</h3>
+      <p class="guest-meta">Tập giữa tháng 7/2026 · Kevin Roose &amp; Casey Newton</p>
+
+      <p><strong>Bối cảnh:</strong> Tuần thứ hai của tháng 7/2026 là một tuần bản lề của ngành AI ứng dụng, và Hard
+        Fork — bản tin công nghệ hàng tuần của NYT — mổ xẻ đúng ba dòng sự kiện đan vào nhau: một cú xoay sản phẩm
+        lớn của OpenAI, một làn sóng sa thải vì tự động hoá, và tranh cãi quanh app video AI Sora. Đây là tập cho
+        thấy vì sao Hard Fork giữ vai "điểm khởi đầu dễ tiếp cận" trong danh sách: nó biến các tin rời rạc thành
+        một câu hỏi mạch lạc — <em>agent AI đang chuyển từ trình diễn sang công cụ làm việc thật, và cái giá lao
+        động là gì?</em></p>
+
+      <p><strong>Nội dung chính của tập:</strong> Tâm điểm là cú xoay của OpenAI ngày 9/7/2026: <strong>khai tử
+        trình duyệt Atlas</strong> — sản phẩm mới chưa đầy một năm tuổi — và gộp chức năng của nó vào một agent mới
+        tên <strong>ChatGPT Work</strong>. Khác trình duyệt (nơi người dùng vẫn lái), ChatGPT Work là agent
+        <em>tự chạy</em>: nhận một dự án nhiều bước — dựng bảng tính, bộ slide, tài liệu, ứng dụng web — rồi tự thu
+        thập thông tin từ các app đã kết nối của người dùng, chia nhỏ việc và hoàn thành <strong>trong nhiều giờ
+        mà không cần giám sát liên tục</strong>. Roose và Newton đọc động thái này như tín hiệu chiến lược: OpenAI
+        thừa nhận tương lai không phải "trình duyệt AI" mà là "đồng nghiệp AI" chạy nền — khớp thẳng với tầm nhìn
+        agent chạy dài mà Satya Nadella mô tả ở tập No Priors phía trên, cho thấy cả ngành đang hội tụ về cùng một
+        hình dung. Câu chuyện thứ hai đặt mặt tối lên bàn: <strong>làn sóng sa thải quy mô lớn ở Amazon</strong>
+        do tự động hoá — bằng chứng thực tế đầu tiên ở cấp doanh nghiệp lớn cho những gì Kokotajlo, Gawdat và
+        Galloway tranh luận ở tầm dự đoán; hai host cân giữa "đây là năng suất, không phải tận thế" và câu hỏi
+        phân phối rất thật cho hàng chục nghìn người mất việc. Câu chuyện thứ ba — tranh cãi quanh Sora và đạo đức
+        video AI — nối lại chủ đề "taste slop" và văn hoá tổng hợp mà Hard Fork theo đuổi suốt 2026. Xuyên suốt là
+        giọng đặc trưng của show: không hoảng loạn, không tung hô, mà hỏi những câu người dùng bình thường sẽ hỏi
+        — "cái này có thật sự hoạt động không, và ai được lợi, ai chịu thiệt?"</p>
+
+      <p><strong>📖 Giải thích thêm</strong> <em>(nội dung bổ sung):</em></p>
+      <ul class="checklist">
+        <li><strong>Trình duyệt AI (AI browser)</strong>: trình duyệt tích hợp agent lái web thay người; làn sóng
+          2025–2026 (Atlas của OpenAI, Claude for Chrome, Gemini Auto Browse) — việc OpenAI bỏ Atlas sau &lt;1 năm
+          cho thấy hình thái đúng còn đang được dò tìm.</li>
+        <li><strong>Agent chạy dài (long-running agent)</strong>: AI làm một nhiệm vụ hàng giờ qua nhiều bước, tự
+          chia việc — khác chatbot hỏi-đáp tức thời; là hình thái sản phẩm mà cả OpenAI lẫn Microsoft đặt cược cho
+          2026.</li>
+        <li><strong>Tự động hoá và sa thải</strong>: các đợt cắt giảm như ở Amazon là dữ liệu thật đầu tiên cho
+          tranh luận việc làm–AI trên trang — nhưng cần đọc thận trọng: sa thải có nhiều nguyên nhân, không phải
+          tất cả do AI.</li>
+        <li><strong>Mạch trên trang</strong>: ChatGPT Work (sản phẩm) + Nadella (tầm nhìn nền tảng) + No Priors
+          #144 (dự báo agentic) = ba góc nhìn về cùng bước ngoặt "AI thành đồng nghiệp" của 2026.</li>
+      </ul>
+
+      <p><strong>Vì sao đáng nghe:</strong> Nếu chỉ nghe một tập để nắm "AI đã làm được gì <em>trong công việc
+        thật</em> tính đến giữa 2026", đây là lựa chọn tốt: cụ thể, cập nhật, và cân bằng giữa hào hứng công nghệ
+        với câu hỏi lao động. Là bản đối chiếu thực tế cho các dự đoán vĩ mô ở những tập khác trên trang — agent
+        chạy dài không còn là tương lai, nó đang dựng bảng tính của ai đó ngay lúc này.</p>
+
+      <p class="source-note">Nguồn:
+        <a href="https://www.nytimes.com/column/hard-fork" target="_blank" rel="noopener">nytimes.com/column/hard-fork</a>,
+        <a href="https://ppc.land/openai-kills-atlas-browser-folds-it-into-new-chatgpt-work-agent/" target="_blank" rel="noopener">PPC Land</a>,
+        <a href="https://help.openai.com/en/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work" target="_blank" rel="noopener">OpenAI Help Center</a></p>
+    </div>
+
+    <div class="entry" id="t3-beato">
+      <span class="src-tag">Lex Fridman Podcast · #492</span>
+      <h3>Rick Beato — những tay guitar vĩ đại nhất, lịch sử &amp; tương lai âm nhạc (dưới bóng AI)</h3>
+      <p class="guest-meta">Phát 1/3/2026 · ~2g42p · nhà sản xuất âm nhạc, người sáng tạo YouTube</p>
+
+      <p><strong>Bối cảnh khách mời:</strong> Rick Beato là nhà sản xuất âm nhạc và giáo dục viên YouTube (kênh
+        hàng triệu người theo dõi với loạt "What Makes This Song Great") — người có khả năng hiếm: vừa hiểu lý
+        thuyết âm nhạc ở tầng sâu, vừa giải thích nó cho đại chúng một cách cuốn hút. Trong chuỗi podcast nặng về
+        AI, chính trị và thị trường của trang, đây là tập <strong>văn hoá</strong> — nhưng được đưa vào có chủ ý:
+        vì câu hỏi "AI làm gì với sáng tạo của con người" đang là một trong những xu hướng lớn nhất, và ít ai đủ
+        thẩm quyền trả lời từ phía <em>người làm nghề</em> như Beato.</p>
+
+      <p><strong>Nội dung chính của tập:</strong> Phần lớn tập là một chuyến đi qua <strong>lịch sử và kỹ thuật
+        guitar</strong>: Beato kể hành trình tự học đàn bằng tai, rồi thành nhà sản xuất; điểm danh các "người
+        khổng lồ" định hình mọi tay đàn về sau — Charlie Christian và Django Reinhardt (jazz), Andrés Segovia
+        (cổ điển) — và phân tích vì sao. Xen giữa là các bài học <em>áp dụng được cho bất kỳ kỹ năng nào</em>: vai
+        trò của luyện tập có chủ đích, chỗ đứng của lý thuyết trong giáo dục, và cách người sản xuất định hình bản
+        thu qua các lựa chọn kỹ thuật tưởng nhỏ. Beato phân biệt <strong>cảm âm tương đối (relative pitch)</strong>
+        — nhận ra quãng và nốt trong tương quan, kỹ năng học được — với <strong>cảm âm tuyệt đối (perfect pitch)</strong>
+        — nghe ra nốt đơn lẻ, phần lớn bẩm sinh; một phân biệt giải thoát cho người học nhạc khỏi mặc cảm "không
+        có năng khiếu". Ông cũng bàn quá trình sáng tạo của Beatles và khả năng soạn nhạc của Beethoven khi đã điếc
+        — như cửa sổ vào bản chất của sáng tạo. Nhưng phần thời sự nhất là <strong>AI và âm nhạc</strong>: Beato
+        thảo luận tác động của AI lên sáng tác và tạo nhạc — thứ đang định giá lại cả ngành. Quan điểm của một
+        người vừa yêu nghề vừa thực dụng: AI sẽ làm phần "sản xuất hàng loạt" của âm nhạc rẻ về gần 0, nhưng chính
+        vì thế đẩy giá trị về nơi AI khó chạm — cảm xúc thật, câu chuyện thật, sự hiện diện của nghệ sĩ thật —
+        tiếng vọng trực tiếp của luận điểm "khu vực quan hệ" (relational sector) mà Imas &amp; Trammell đưa ra ở
+        tập Dwarkesh về kinh tế hậu-AGI (Đợt 6). Nói cách khác, một nhạc sĩ và hai nhà kinh tế, xuất phát rất khác
+        nhau, gặp nhau ở cùng kết luận về thứ con người còn giữ được giá trị.</p>
+
+      <p><strong>📖 Giải thích thêm</strong> <em>(nội dung bổ sung):</em></p>
+      <ul class="checklist">
+        <li><strong>Cảm âm tương đối vs tuyệt đối</strong>: relative pitch (học được, đủ để chơi nhạc giỏi) vs
+          perfect pitch (hiếm, phần lớn bẩm sinh) — điểm Beato nhấn để khích lệ người học: năng khiếu ít quan
+          trọng hơn luyện tập đúng cách.</li>
+        <li><strong>Luyện tập có chủ đích (deliberate practice)</strong>: luyện tập tập trung vào điểm yếu với phản
+          hồi rõ, thay vì lặp lại thụ động — nguyên tắc học kỹ năng gặp lại ở tập Bill Gurley ("đá gốc &amp; lưỡi
+          dao").</li>
+        <li><strong>AI tạo nhạc</strong>: các công cụ sinh nhạc từ câu lệnh đang bùng nổ 2025–2026, làm dấy lên
+          tranh cãi bản quyền và giá trị nghề — Beato tiếp cận không hoảng loạn: công cụ đổi, giá trị dịch chuyển,
+          nhưng không biến mất.</li>
+        <li><strong>Mạch trên trang</strong>: ghép với Imas–Trammell (kinh tế "khu vực quan hệ") và Hard Fork
+          ("taste slop") thành bộ ba về cùng câu hỏi — khi AI làm nội dung rẻ vô hạn, cái gì của con người còn
+          đắt?</li>
+      </ul>
+
+      <p><strong>Vì sao đáng nghe:</strong> Một quãng nghỉ cần thiết — và một góc trả lời cho câu hỏi AI từ phía
+        ít được nghe nhất: người trực tiếp làm ra cái đẹp. Không cần chơi đàn vẫn rút được giá trị: cách một bậc
+        thầy nghĩ về luyện tập, về cái gì làm nên "hay", và về việc giữ giá trị con người khi máy móc làm được
+        ngày càng nhiều — áp dụng cho mọi nghề sáng tạo, kể cả viết lách và làm sản phẩm.</p>
+
+      <p class="source-note">Nguồn:
+        <a href="https://lexfridman.com/rick-beato/" target="_blank" rel="noopener">lexfridman.com (kèm transcript)</a>,
+        <a href="https://www.shortform.com/podcast/episode/lex-fridman-podcast-2026-03-01-episode-summary-492-rick-beato-greatest-guitarists-of-all-time-history-future-of-music" target="_blank" rel="noopener">Shortform</a></p>
+    </div>
+
+    <p style="color:var(--muted);font-size:.85rem">📌 <strong>Vòng 2 — tiến độ:</strong> Đợt 6–11 thêm 25 bài. Tổng
+      toàn trang: <strong>43 bài tóm tắt</strong> (mục tiêu 100). <strong>Bỏ qua có ghi chú:</strong> Ones and Tooze
+      tập Iran (~6/3) — thiếu chi tiết; Tim Ferriss #872 (Graham Duncan) — repost tập 2019; President's Inbox ×
+      Lissner &amp; ChinaTalk × Kevin Xu — các tập tra được đều phát 12/2025–1/2025, không tính là nội dung 2026.
+      Vẫn chỉ tóm tắt tập có nguồn kiểm chứng.</p>
   </div>
 
   <div class="placeholder">
