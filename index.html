@@ -638,8 +638,202 @@
       theo đúng cấu trúc 4 phần như Tuần 1.</p>
   </div>
 
+  <div class="week">
+    <div class="week-head">
+      <h2>Tuần 2 — Tóm tắt tập 2026 (Đợt 1/nhiều đợt)</h2>
+      <span class="range">phủ rộng 18 podcast · 5/8/2026</span>
+    </div>
+    <p style="color:var(--muted);font-size:.88rem;margin:-6px 0 16px">Mở màn chiến dịch tóm tắt các tập năm 2026 của
+      18 podcast trong danh sách gợi ý. Nguyên tắc: <strong>chỉ tóm tắt tập có nguồn kiểm chứng được</strong> (trang
+      chính thức, transcript, bài phân tích uy tín) — tập nào chưa đủ nguồn sẽ ghi rõ và bổ sung ở đợt sau. Đợt 1 gồm
+      3 tập: Lex Fridman #490, Dwarkesh × Jensen Huang, và Acquired về Disney.</p>
+
+    <div class="entry">
+      <span class="src-tag">Lex Fridman Podcast · #490</span>
+      <h3>Nathan Lambert &amp; Sebastian Raschka — "State of AI in 2026"</h3>
+      <p class="guest-meta">Tập: "State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI" · phát 1/2/2026</p>
+
+      <p><strong>Bối cảnh khách mời:</strong> Đây là tập "kiểm kê hiện trạng AI" thường niên của Lex Fridman, với hai
+        khách mời đều là nhà nghiên cứu kiêm nhà giáo dục machine learning có ảnh hưởng lớn trong cộng đồng.
+        <strong>Nathan Lambert</strong> là trưởng nhóm post-training (huấn luyện sau) tại Allen Institute for AI (Ai2)
+        — viện nghiên cứu phi lợi nhuận nổi tiếng với các mô hình mở hoàn toàn — và là tác giả <em>The RLHF Book</em>,
+        cuốn sách tham khảo về kỹ thuật RLHF (học tăng cường từ phản hồi con người). Anh cũng viết bản tin
+        <em>Interconnects</em> được giới kỹ thuật theo dõi rộng rãi, và từng xuất hiện trong tập #459 kinh điển về
+        DeepSeek đầu năm 2025. <strong>Sebastian Raschka</strong> là tác giả bộ sách thực hành <em>Build a Large
+        Language Model (From Scratch)</em> và <em>Build a Reasoning Model (From Scratch)</em> — hai cuốn dạy người học
+        tự tay xây LLM và mô hình suy luận từ con số không. Cặp đôi này bổ khuyết cho nhau: Lambert nhìn từ "bếp lò"
+        huấn luyện mô hình quy mô lớn, Raschka nhìn từ góc người giảng dạy phải giải thích mọi thứ tường minh.</p>
+
+      <p><strong>Nội dung chính của tập:</strong> Chủ đề nổi bật nhất là <strong>sự trỗi dậy của các mô hình mở Trung
+        Quốc</strong>. Hai khách mời điểm danh một hệ sinh thái dày đặc: DeepSeek, Qwen (Alibaba), Kimi (Moonshot),
+        MiniMax, Z.ai... — theo họ, hiện có ít nhất khoảng 10 mô hình mở đáng kể từ Trung Quốc song song với khoảng
+        10 mô hình mở phương Tây (Mistral, Gemma của Google, gpt-oss của OpenAI, Nemotron của Nvidia...). Raschka
+        nhận xét DeepSeek đang "chiếm được cảm tình" của cộng đồng mã nguồn mở, còn Lambert bổ sung một quan sát kinh
+        tế thú vị: khác với Mỹ, người dùng Trung Quốc không có thói quen trả nhiều tiền cho phần mềm — nên các công ty
+        Trung Quốc có động lực phát hành mô hình mở để cạnh tranh về hệ sinh thái và uy tín thay vì doanh thu API
+        trực tiếp. Điểm đáng chú ý thứ hai là việc <strong>OpenAI quay lại cuộc chơi mã nguồn mở</strong>: gpt-oss
+        được đánh giá "thực sự mạnh, làm được một số việc các mô hình khác chưa làm tốt" — một thay đổi chiến lược
+        đáng kể so với nhiều năm đóng kín. Về <strong>vì sao công nghệ lan nhanh giữa các lab</strong>, Raschka chỉ ra
+        cơ chế rất "con người": các nhà nghiên cứu đổi công ty liên tục, nên không kỹ thuật nào giữ độc quyền được
+        lâu — ý tưởng sẽ lan toả, thứ thực sự khan hiếm là <em>tài nguyên tính toán</em> để hiện thực hoá ý tưởng.
+        Phần còn lại của cuộc trò chuyện (dài như truyền thống của show) đi qua: LLM đang thay đổi nghề lập trình ra
+        sao khi coding agent ngày càng tự chủ; định luật scaling còn hiệu lực đến đâu khi chi phí huấn luyện tăng
+        vọt; hạ tầng GPU và giới hạn tài nguyên; và các kịch bản AGI — kèm thảo luận về tự động hoá lực lượng lao
+        động và an toàn AI.</p>
+
+      <p><strong>📖 Giải thích thêm</strong> <em>(nội dung bổ sung, không phải lời nguyên văn của khách mời):</em></p>
+      <ul class="checklist">
+        <li><strong>Mô hình mở (open-weight model)</strong>: mô hình công bố trọng số để ai cũng tải về chạy/tinh
+          chỉnh được — khác mô hình đóng chỉ dùng qua API như GPT-5 hay Claude. "Mở trọng số" chưa chắc mở dữ liệu
+          huấn luyện.</li>
+        <li><strong>Post-training</strong>: giai đoạn "dạy dỗ" sau khi mô hình đã học xong kiến thức thô — gồm RLHF,
+          tinh chỉnh theo chỉ dẫn... — quyết định mô hình có hữu ích, an toàn, biết làm theo yêu cầu hay không.</li>
+        <li><strong>Scaling laws (định luật quy mô)</strong>: quan sát thực nghiệm rằng mô hình càng to, dữ liệu càng
+          nhiều, tính toán càng lớn thì năng lực tăng theo quy luật dự đoán được — nền tảng cho các khoản đầu tư hạ
+          tầng khổng lồ của ngành.</li>
+        <li><strong>Coding agent</strong>: AI không chỉ gợi ý dòng lệnh mà tự lập kế hoạch, viết, chạy thử và sửa mã
+          trong nhiều bước liên tiếp — xu hướng nổi bật nhất của AI ứng dụng giai đoạn 2025–2026.</li>
+      </ul>
+
+      <p><strong>Vì sao đáng nghe:</strong> Nếu chỉ nghe một tập để "bắt mạch" toàn cảnh AI đầu 2026, đây là lựa chọn
+        hợp lý: hai người trong cuộc, không đại diện lợi ích một công ty frontier nào, nói thẳng về cán cân Mỹ–Trung
+        trong mô hình mở — chủ đề ảnh hưởng trực tiếp tới người dùng và doanh nghiệp Việt Nam vì mô hình mở là đường
+        tiếp cận AI rẻ nhất. Quan sát "ý tưởng lan nhanh, tài nguyên mới là rào cản" cũng giải thích vì sao cuộc đua
+        AI ngày càng xoay quanh chip và điện — cầu nối tự nhiên sang tập Jensen Huang ngay bên dưới.</p>
+
+      <p class="source-note">Nguồn:
+        <a href="https://lexfridman.com/ai-sota-2026/" target="_blank" rel="noopener">lexfridman.com (kèm transcript)</a>,
+        <a href="https://www.shortform.com/podcast/episode/lex-fridman-podcast-2026-02-01-episode-summary-490-state-of-ai-in-2026-llms-coding-scaling-laws-china-agents-gpus-agi" target="_blank" rel="noopener">Shortform</a></p>
+    </div>
+
+    <div class="entry">
+      <span class="src-tag">Dwarkesh Podcast</span>
+      <h3>Jensen Huang — CEO Nvidia: cạnh tranh TPU, bán chip cho Trung Quốc &amp; "con hào" chuỗi cung ứng</h3>
+      <p class="guest-meta">Tập: "TPU competition, why we should sell chips to China, &amp; Nvidia's supply chain moat" · phát 15/4/2026 · ~103 phút</p>
+
+      <p><strong>Bối cảnh khách mời:</strong> Jensen Huang đồng sáng lập Nvidia năm 1993 và dẫn dắt công ty từ hãng
+        chip đồ hoạ chơi game thành nhà cung cấp hạ tầng tính toán AI thống trị thế giới — một trong những công ty
+        giá trị nhất hành tinh. Cuộc phỏng vấn này được giới công nghệ đánh giá là một trong những lần Huang cởi mở
+        và "sắc cạnh" nhất: thay vì bài nói quen thuộc ở các sự kiện, ông bị Dwarkesh Patel — người nổi tiếng chuẩn
+        bị kỹ và truy vấn tới cùng — ép tranh luận thật sự về những điểm yếu tiềm tàng của Nvidia. Tập gây tiếng vang
+        lớn tới mức kéo theo cả loạt bài phân tích phản hồi: Noah Smith "chấm điểm" cuộc tranh luận trên Noahpinion
+        (29/4/2026), Jordan Schneider phản biện trên ChinaTalk, và nhiều cây viết AI khác mổ xẻ từng luận điểm.</p>
+
+      <p><strong>Nội dung chính của tập:</strong> Về <strong>"con hào" của Nvidia</strong>, Huang định vị lại: lợi
+        thế thật không nằm ở một con chip cụ thể mà ở việc kiểm soát cả chuỗi cung ứng bán dẫn toàn cầu — ông nói
+        Nvidia đang xây chuỗi cung ứng cho quy mô "cả nghìn tỷ đô la" những năm tới, và gói gọn mô hình kinh doanh
+        trong một câu được trích dẫn khắp nơi: <em>"Đầu vào là electron, đầu ra là token. Ở giữa là Nvidia."</em>
+        Theo ông, mọi nút thắt cổ chai (logic, đóng gói CoWoS, bộ nhớ) đều giải quyết được "trong 2–3 năm" một khi
+        tín hiệu nhu cầu rõ ràng — nghĩa là tốc độ và độ tin cậy giao hàng, chứ không chỉ hiệu năng chip, mới là thứ
+        đối thủ khó sao chép. Về <strong>cạnh tranh TPU</strong>, Dwarkesh ép đúng chỗ đau: vì sao Anthropic chạy
+        phần lớn tính toán trên TPU (Google) và Trainium (Amazon) thay vì chip Nvidia? Huang không né: thời điểm
+        Anthropic thành lập, Nvidia chưa ở vị thế viết những tấm séc đầu tư cổ phần hàng tỷ đô như Google và AWS đã
+        làm — thừa nhận hiếm hoi rằng quan hệ vốn, chứ không chỉ công nghệ, định hình bản đồ hạ tầng AI. Ông cũng
+        khẳng định Nvidia phân bổ GPU theo nguyên tắc "ai đặt trước được trước" chứ không phải "ai trả cao nhất
+        thắng". Phần <strong>gay gắt nhất là tranh luận về bán chip cho Trung Quốc</strong>: Huang lập luận Mỹ nên
+        bán — vì Trung Quốc có khoảng một nửa số nhà nghiên cứu AI thế giới, sản xuất phần lớn chip phổ thông toàn
+        cầu, và lượng tính toán đủ cho mô hình frontier "sẵn có dồi dào" ở Trung Quốc rồi; cấm vận chỉ đẩy họ tự chủ
+        nhanh hơn, trong khi đối thoại nghiên cứu Mỹ–Trung mới là "điều an toàn nhất". Dwarkesh phản bác trực diện
+        theo hướng an ninh: lợi thế tính toán là đòn bẩy chiến lược hiếm hoi của Mỹ. Không ai "thắng" rõ ràng — và
+        chính vì thế tập này thành tư liệu tham chiếu cho cả hai phe trong tranh luận chính sách chip.</p>
+
+      <p><strong>📖 Giải thích thêm</strong> <em>(nội dung bổ sung):</em></p>
+      <ul class="checklist">
+        <li><strong>TPU / Trainium</strong>: chip tăng tốc AI do Google và Amazon tự thiết kế cho đám mây của mình —
+          các "hyperscaler" tự làm chip để bớt phụ thuộc (và bớt trả tiền) cho Nvidia.</li>
+        <li><strong>CoWoS</strong>: công nghệ đóng gói tiên tiến của TSMC xếp chip và bộ nhớ băng thông cao cạnh
+          nhau — nút thắt cổ chai nổi tiếng của nguồn cung GPU AI mấy năm qua.</li>
+        <li><strong>Con hào kinh tế (moat)</strong>: thuật ngữ đầu tư chỉ lợi thế cạnh tranh bền vững khiến đối thủ
+          khó tấn công — ở đây Huang cho rằng hào của Nvidia là chuỗi cung ứng + hệ sinh thái phần mềm, không phải
+          một sản phẩm đơn lẻ.</li>
+        <li><strong>Kiểm soát xuất khẩu chip</strong>: chính sách Mỹ hạn chế bán chip AI tiên tiến cho Trung Quốc vì
+          lo ngại an ninh — trọng tâm tranh cãi suốt từ 2022 tới nay giữa mục tiêu kìm đối thủ và nguy cơ mất thị
+          trường, đẩy nhanh tự chủ công nghệ của Trung Quốc.</li>
+      </ul>
+
+      <p><strong>Vì sao đáng nghe:</strong> Đây là dịp hiếm thấy CEO công ty quan trọng nhất ngành AI phải
+        <em>tranh luận</em> thay vì thuyết trình — đúng "chất" Dwarkesh như đã giới thiệu ở danh sách gợi ý. Nghe cặp
+        với Lex #490 ở trên: một tập cho bức tranh mô hình/thuật toán, một tập cho bức tranh phần cứng/địa chính trị
+        — cộng lại là toàn cảnh cuộc đua AI 2026. Các bài "chấm điểm" của Noah Smith và phản biện của ChinaTalk là
+        tài liệu đọc kèm rất tốt để không nuốt trọn lập luận của bên nào.</p>
+
+      <p class="source-note">Nguồn:
+        <a href="https://www.dwarkesh.com/p/jensen-huang" target="_blank" rel="noopener">dwarkesh.com (kèm transcript)</a>,
+        <a href="https://www.techloy.com/jensen-huang-on-dwarkesh-patel-podcast-8-revelations-on-anthropic-china-and-nvidias-roadmap/" target="_blank" rel="noopener">Techloy</a>,
+        <a href="https://www.noahpinion.blog/p/scoring-the-jensen-dwarkesh-debate" target="_blank" rel="noopener">Noahpinion</a></p>
+    </div>
+
+    <div class="entry">
+      <span class="src-tag">Acquired</span>
+      <h3>The Walt Disney Company (Kỷ nguyên Walt) — cỗ máy "flywheel" đầu tiên của lịch sử kinh doanh</h3>
+      <p class="guest-meta">Tập phát 21–22/6/2026 · dài ~4 giờ 31 phút · Ben Gilbert &amp; David Rosenthal</p>
+
+      <p><strong>Bối cảnh:</strong> Khác các podcast phỏng vấn, Acquired kể chuyện một công ty từ lúc sinh ra — và
+        lần này là "trùm cuối" của thể loại: The Walt Disney Company, mà hai host gọi là "doanh nghiệp thành công
+        nhất từng được tạo ra để kiếm tiền từ hoài niệm của con người" — công ty nắm bản quyền ký ức tuổi thơ của
+        hàng tỷ người. Tập này bao trọn <strong>kỷ nguyên Walt Disney</strong> (từ thập niên 1920 tới cuối thập niên
+        1950), được nghiên cứu công phu theo chuẩn quen thuộc của show. Luận đề xuyên suốt: dưới thời Walt, Disney
+        vận hành như một "nhà máy moonshot mất kiểm soát" — liên tục đặt cược cả công ty vào những dự án bị coi là
+        điên rồ, và chính chuỗi cược đó <em>vô tình phát minh ra</em> mô hình "bánh đà" (flywheel) mà mọi công ty
+        hiện đại từ Amazon tới Netflix đều học theo.</p>
+
+      <p><strong>Nội dung chính của tập:</strong> Câu chuyện mở đầu bằng thất bại định mệnh: năm 1928, Walt
+        <strong>mất trắng bản quyền nhân vật Oswald the Lucky Rabbit</strong> vào tay nhà phân phối vì hợp đồng bất
+        lợi — bài học xương máu khiến ông thề không bao giờ để người khác sở hữu sáng tạo của mình nữa, và ngay trên
+        chuyến tàu trở về đã phác thảo Mickey Mouse. Mickey bùng nổ nhờ cú đặt cược công nghệ đầu tiên:
+        <strong>âm thanh đồng bộ</strong> (Steamboat Willie) khi cả ngành còn làm phim câm, rồi tiếp tục với máy quay
+        đa lớp (multiplane camera) tạo chiều sâu hình ảnh. Giai đoạn 1929–1933, cơn sốt <strong>hàng hoá ăn theo
+        Mickey</strong> dạy Walt bài học lớn thứ hai: nhân vật (IP) có thể kiếm tiền ở nhiều kênh ngoài rạp chiếu.
+        Đỉnh điểm liều lĩnh là <strong>Snow White</strong> — bộ phim hoạt hình dài đầu tiên của thế giới, ngốn 1,5
+        triệu đô la vay nợ suốt ba năm (1934–1937), bị cả Hollywood chế giễu là "Disney's Folly" (sự rồ dại của
+        Disney), bất chấp cả can ngăn của người anh Roy — trước khi trở thành hiện tượng toàn cầu, chứng minh hoạt
+        hình dài là một ngành kinh doanh thật. Hồi hai của tập là <strong>Disneyland</strong>: xuất phát từ đam mê
+        tàu hoả mô hình rất cá nhân của Walt, ông lập công ty riêng WED Enterprises (1952) để thiết kế công viên vì
+        hội đồng quản trị không tin; thuê Viện Nghiên cứu Stanford (SRI) — chuyên gia Harrison Price — chọn ra 160
+        mẫu Anh vườn cam giá rẻ ở Anaheim; và giải bài toán vốn bằng nước cờ thiên tài: <strong>liên doanh với đài
+        truyền hình ABC</strong> (khi đó xếp thứ ba) — ABC bỏ tiền xây công viên đổi lấy quyền kinh doanh ăn uống,
+        đồng thời phát chương trình truyền hình "Disneyland" hàng tuần, biến TV thành cỗ máy quảng bá miễn phí; cơn
+        sốt mũ lông gấu mèo Davy Crockett từ chính chương trình đó minh chứng sức mạnh của vòng lặp. Công viên mở cửa
+        1955; tới ~1958, Disney niêm yết trên sàn NYSE và tự phân phối phim qua Buena Vista — hoàn thiện
+        <strong>bánh đà IP</strong>: phim tạo nhân vật → nhân vật bán hàng hoá &amp; kéo khách tới công viên → công
+        viên và TV nuôi tình yêu nhân vật → vòng sau mạnh hơn vòng trước.</p>
+
+      <p><strong>📖 Giải thích thêm</strong> <em>(nội dung bổ sung):</em></p>
+      <ul class="checklist">
+        <li><strong>Flywheel (bánh đà)</strong>: mô hình kinh doanh trong đó các mảng tự khuếch đại lẫn nhau thành
+          vòng xoáy tăng trưởng — khái niệm sau này được Jim Collins đặt tên và Amazon làm nổi tiếng, nhưng Disney đã
+          vận hành nó từ thập niên 1950 (Walt còn tự tay vẽ sơ đồ này năm 1957).</li>
+        <li><strong>IP (tài sản trí tuệ)</strong>: nhân vật, câu chuyện, thương hiệu được pháp luật bảo hộ — bài học
+          Oswald cho thấy sở hữu IP quan trọng hơn cả sản phẩm đơn lẻ, nguyên tắc mọi công ty nội dung ngày nay đều
+          thuộc lòng.</li>
+        <li><strong>"Bet the company" (đặt cược cả công ty)</strong>: quyết định mà nếu thất bại, công ty phá sản —
+          Walt làm điều này lặp đi lặp lại (Snow White, Disneyland), trái ngược hoàn toàn giáo trình quản trị rủi ro
+          hiện đại.</li>
+        <li><strong>Khan hiếm có kiểm soát</strong>: chiến lược Disney chỉ phát hành lại phim kinh điển theo chu kỳ
+          nhiều năm để giữ giá trị IP, trong khi "phủ sóng" tối đa ở kênh phụ (hàng hoá, TV, công viên).</li>
+      </ul>
+
+      <p><strong>Vì sao đáng nghe:</strong> Đây là "giáo trình" sinh động nhất về xây dựng doanh nghiệp quanh IP —
+        chủ đề nóng trở lại đúng lúc AI đang định nghĩa lại giá trị của nội dung gốc và thương hiệu. Người làm sản
+        phẩm sẽ thấy bài học Oswald (sở hữu nền tảng của mình) và nước cờ ABC (dùng kênh phân phối của người khác để
+        xây tài sản của mình) vẫn nguyên giá trị sau 70 năm. Nghe cùng các tập AI phía trên còn gợi một câu hỏi thú
+        vị: trong kỷ nguyên nội dung do AI tạo ra tràn ngập, "hoài niệm và nhân vật được yêu suốt nhiều thế hệ" — thứ
+        Disney sở hữu — có thể lại là con hào khó sao chép nhất.</p>
+
+      <p class="source-note">Nguồn:
+        <a href="https://www.acquired.fm/episodes/the-walt-disney-company" target="_blank" rel="noopener">acquired.fm</a>,
+        <a href="https://www.acquiredbriefing.com/p/the-walt-disney-company-part-i" target="_blank" rel="noopener">Acquired Briefing (Kyle Westaway)</a></p>
+    </div>
+
+    <p style="color:var(--muted);font-size:.85rem">📌 <strong>Tiến độ chiến dịch:</strong> Đợt 1 phủ 3/18 kênh (Lex
+      Fridman, Dwarkesh, Acquired). Các kênh còn lại sẽ lên ở các đợt sau, ưu tiên tập có nguồn kiểm chứng tốt; kênh
+      ra tập dày đặc (Pod Save America, The Bulwark, All-In...) sẽ chọn các tập tiêu biểu thay vì liệt kê đủ. Tập nào
+      không đủ nguồn sẽ ghi rõ "bỏ qua vì thiếu nguồn" thay vì tóm tắt phỏng đoán.</p>
+  </div>
+
   <div class="placeholder">
-    Chưa có tuần mới. Nói cho mình biết muốn đưa tập/podcast nào vào <strong>Tuần 2</strong>, mình sẽ thêm vào.
+    Đang trong chiến dịch tóm tắt tập 2026 của 18 podcast (nhiều đợt). Đợt tiếp theo: No Priors, Hard Fork, Ezra
+    Klein, ChinaTalk... Muốn ưu tiên kênh/tập nào trước, cứ nói với mình.
   </div>
 
   <footer>
