@@ -88,6 +88,23 @@
     font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
     color:var(--muted);margin:22px 0 4px;
   }
+
+  .toc{
+    background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:16px 20px;margin:24px 0;
+  }
+  .toc h2{margin:0 0 10px;font-size:1.05rem}
+  .toc h4{
+    margin:12px 0 4px;font-size:.78rem;font-weight:700;text-transform:uppercase;
+    letter-spacing:.05em;color:var(--muted);
+  }
+  .toc ul{list-style:none;margin:0;padding:0}
+  .toc li{padding:2px 0 2px 16px;position:relative;font-size:.88rem}
+  .toc li::before{content:"›";position:absolute;left:2px;color:var(--accent)}
+  .toc a{text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+  .toc .toc-sub{color:var(--muted);font-size:.8rem}
+  html{scroll-behavior:smooth}
   .entry .why{
     background:var(--accent-soft);border-radius:8px;padding:8px 12px;
     font-size:.86rem;margin:8px 0 4px;
@@ -128,7 +145,50 @@
     có bản quyền.
   </div>
 
-  <div class="week">
+  <nav class="toc" id="muc-luc">
+    <h2>📑 Mục lục</h2>
+
+    <h4><a href="#tuan-1">Tuần 1 — 4 khách mời AI trên Diary of a CEO</a></h4>
+    <ul>
+      <li><a href="#e-harari">Yuval Noah Harari</a> <span class="toc-sub">— câu chuyện chung, trí tuệ vs ý thức</span></li>
+      <li><a href="#e-hinton">Geoffrey Hinton</a> <span class="toc-sub">— "cha đẻ AI" cảnh báo rủi ro</span></li>
+      <li><a href="#e-gawdat">Mo Gawdat</a> <span class="toc-sub">— việc làm 2027, hai kịch bản tương lai</span></li>
+      <li><a href="#e-yampolskiy">Roman Yampolskiy</a> <span class="toc-sub">— an toàn AI, P(doom)</span></li>
+    </ul>
+
+    <h4><a href="#goi-y">Gợi ý — 18 podcast đáng theo dõi (5 nhóm)</a></h4>
+    <ul>
+      <li><a href="#g-lex">① AI &amp; công nghệ chuyên sâu</a> <span class="toc-sub">— Lex Fridman · Dwarkesh · No Priors</span></li>
+      <li><a href="#g-acquired">② Kinh doanh &amp; chiến lược</a> <span class="toc-sub">— Acquired · Tim Ferriss · All-In</span></li>
+      <li><a href="#g-hardfork">③ Tin tức công nghệ &amp; tư duy</a> <span class="toc-sub">— Hard Fork · Knowledge Project · a16z</span></li>
+      <li><a href="#g-trip">④ Chính trị &amp; thời sự quốc tế</a> <span class="toc-sub">— TRIP · GZERO · Ezra Klein · PSA · Bulwark</span></li>
+      <li><a href="#g-fa">⑤ Địa chính trị &amp; quan hệ quốc tế</a> <span class="toc-sub">— Foreign Affairs · President's Inbox · ChinaTalk · Ones and Tooze</span></li>
+    </ul>
+
+    <h4><a href="#tuan-2">Tuần 2 — Tóm tắt tập 2026 (17/18 kênh + 1 bonus)</a></h4>
+    <ul>
+      <li><a href="#t-lex490">Lex Fridman #490</a> <span class="toc-sub">— State of AI in 2026</span></li>
+      <li><a href="#t-jensen">Dwarkesh × Jensen Huang</a> <span class="toc-sub">— TPU, chip Trung Quốc, con hào Nvidia</span></li>
+      <li><a href="#t-disney">Acquired — Disney (kỷ nguyên Walt)</a> <span class="toc-sub">— flywheel đầu tiên</span></li>
+      <li><a href="#t-nopriors">No Priors #144</a> <span class="toc-sub">— dự báo AI 2026</span></li>
+      <li><a href="#t-duss">Ezra Klein × Matt Duss</a> <span class="toc-sub">— đối ngoại cánh tả sau Trump</span></li>
+      <li><a href="#t-hardfork">Hard Fork #208</a> <span class="toc-sub">— kiểm soát AI, robot bầu bạn, taste slop</span></li>
+      <li><a href="#t-varoufakis">TRIP × Yanis Varoufakis</a> <span class="toc-sub">— 2008 → dân tuý, technofeudalism</span></li>
+      <li><a href="#t-torbati">GZERO × Yeganeh Torbati</a> <span class="toc-sub">— cái giá con người của chiến tranh Iran</span></li>
+      <li><a href="#t-allin">All-In — 2026 Predictions</a> <span class="toc-sub">— GDP, thuế tài sản, kèo cả năm</span></li>
+      <li><a href="#t-gil">Tim Ferriss #863 × Elad Gil</a> <span class="toc-sub">— power law, defensibility, exit AI</span></li>
+      <li><a href="#t-gurley">Knowledge Project × Bill Gurley</a> <span class="toc-sub">— mô hình tư duy</span></li>
+      <li><a href="#t-fayyad">Foreign Affairs × Salam Fayyad</a> <span class="toc-sub">— Gaza, Bờ Tây, nhà nước Palestine</span></li>
+      <li><a href="#t-tooze">Ones and Tooze #252</a> <span class="toc-sub">— tân Thủ tướng Anh &amp; "Manchesterism"</span></li>
+      <li><a href="#t-dalio">Bonus: DOAC × Ray Dalio</a> <span class="toc-sub">— bong bóng AI, đại chu kỳ 80 năm</span></li>
+      <li><a href="#t-a16z">a16z — Big Ideas 2026</a> <span class="toc-sub">— Physical AI, tầng công nghiệp</span></li>
+      <li><a href="#t-psa">Pod Save America</a> <span class="toc-sub">— khủng hoảng DNC trước midterms</span></li>
+      <li><a href="#t-walz">Bulwark × Tim Walz</a> <span class="toc-sub">— "cuộc tấn công vào Minnesota"</span></li>
+      <li><a href="#t-kaye">President's Inbox × Dalia Kaye</a> <span class="toc-sub">— Trump chọn chiến tranh với Iran</span></li>
+    </ul>
+  </nav>
+
+  <div class="week" id="tuan-1">
     <div class="week-head">
       <h2>Tuần 1 — 4 khách mời AI nổi bật trên Diary of a CEO</h2>
       <span class="range">chuyển từ Học AI · 2/8/2026</span>
@@ -137,7 +197,7 @@
       Học AI, nay chuyển sang đây vì phù hợp diện rộng (kinh doanh/công nghệ/tương lai công việc) hơn là phạm vi
       riêng AI.</p>
 
-    <div class="entry">
+    <div class="entry" id="e-harari">
       <span class="src-tag">The Diary of a CEO</span>
       <h3>Yuval Noah Harari — sử gia, tác giả sách "Sapiens"</h3>
       <p class="guest-meta">Xuất hiện 2 lần bàn về AI: 11/1/2024 và 5/9/2024</p>
@@ -197,7 +257,7 @@
         <a href="https://podcasts.apple.com/us/podcast/yuval-noah-harari-the-urgent-warning-they-hope-you/id1291423644?i=1000641266529" target="_blank" rel="noopener">Apple Podcasts</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="e-hinton">
       <span class="src-tag">The Diary of a CEO</span>
       <h3>Geoffrey Hinton — "Cha đẻ của AI" (Godfather of AI)</h3>
       <p class="guest-meta">Tập: "I Tried to Warn Them, But We've Already Lost Control!" · phát 16/6/2025</p>
@@ -260,7 +320,7 @@
         <a href="https://www.uniladtech.com/news/ai/steven-bartlett-ai-leaders-lying-to-the-public-902500-20250617" target="_blank" rel="noopener">UNILAD Tech</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="e-gawdat">
       <span class="src-tag">The Diary of a CEO</span>
       <h3>Mo Gawdat — cựu Giám đốc Kinh doanh Google X, tác giả "Scary Smart"</h3>
       <p class="guest-meta">Khách mời nhiều lần về AI, đáng chú ý nhất: 4/8/2025 và 1/6/2026</p>
@@ -319,7 +379,7 @@
         <a href="https://www.cnbc.com/2025/08/05/ex-google-exec-the-idea-that-ai-will-create-new-jobs-is-100percent-crap.html" target="_blank" rel="noopener">CNBC</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="e-yampolskiy">
       <span class="src-tag">The Diary of a CEO</span>
       <h3>Roman Yampolskiy — nhà nghiên cứu an toàn AI (AI safety)</h3>
       <p class="guest-meta">Tập: "These Are The Only 5 Jobs That Will Remain In 2030 & Proof We're Living In a
@@ -383,7 +443,7 @@
       <a href="https://huyneo1101-dotcom.github.io/Hoc_AI/#agentic" target="_blank" rel="noopener">trang Học AI</a>.</p>
   </div>
 
-  <div class="week">
+  <div class="week" id="goi-y">
     <div class="week-head">
       <h2>🎧 Gợi ý — Podcast chất lượng khác đáng theo dõi</h2>
       <span class="range">tuyển chọn · 2/8/2026</span>
@@ -395,7 +455,7 @@
 
     <div class="rec-cat">① AI &amp; công nghệ chuyên sâu</div>
 
-    <div class="entry">
+    <div class="entry" id="g-lex">
       <span class="src-tag">Lex Fridman Podcast</span>
       <h3>Lex Fridman — nhà nghiên cứu AI, dẫn hội thoại dài</h3>
       <p class="guest-meta">Hội thoại dài (2–5 giờ) · AI, khoa học, công nghệ, triết học, chính trị</p>
@@ -407,7 +467,7 @@
       <p class="source-note">Nguồn: <a href="https://lexfridman.com/podcast" target="_blank" rel="noopener">lexfridman.com/podcast</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-dwarkesh">
       <span class="src-tag">Dwarkesh Podcast</span>
       <h3>Dwarkesh Patel — phỏng vấn nghiên cứu kỹ, đào sâu</h3>
       <p class="guest-meta">AI, kinh tế, lịch sử, sinh học · nổi tiếng vì chuẩn bị câu hỏi rất kỹ</p>
@@ -419,7 +479,7 @@
       <p class="source-note">Nguồn: <a href="https://www.dwarkesh.com" target="_blank" rel="noopener">dwarkesh.com</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-nopriors">
       <span class="src-tag">No Priors</span>
       <h3>Sarah Guo &amp; Elad Gil — hai nhà đầu tư công nghệ</h3>
       <p class="guest-meta">AI, startup, "Software 3.0" · góc nhìn người rót vốn và xây công ty</p>
@@ -433,7 +493,7 @@
 
     <div class="rec-cat">② Kinh doanh &amp; chiến lược</div>
 
-    <div class="entry">
+    <div class="entry" id="g-acquired">
       <span class="src-tag">Acquired</span>
       <h3>Ben Gilbert &amp; David Rosenthal — mổ xẻ lịch sử công ty</h3>
       <p class="guest-meta">Mỗi tập ~3–4 giờ về một công ty (Nvidia, TSMC, Costco, LVMH...)</p>
@@ -445,7 +505,7 @@
       <p class="source-note">Nguồn: <a href="https://www.acquired.fm" target="_blank" rel="noopener">acquired.fm</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-ferriss">
       <span class="src-tag">The Tim Ferriss Show</span>
       <h3>Tim Ferriss — "giải mã" thói quen của người xuất sắc</h3>
       <p class="guest-meta">Một trong các podcast phỏng vấn lâu đời &amp; nhiều lượt nghe nhất</p>
@@ -457,7 +517,7 @@
       <p class="source-note">Nguồn: <a href="https://tim.blog/podcast" target="_blank" rel="noopener">tim.blog/podcast</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-allin">
       <span class="src-tag">All-In Podcast</span>
       <h3>Chamath, Jason, Sacks &amp; Friedberg — bàn tròn giới đầu tư</h3>
       <p class="guest-meta">Kinh tế, công nghệ, thị trường, chính trị · hàng tuần</p>
@@ -471,7 +531,7 @@
 
     <div class="rec-cat">③ Tin tức công nghệ &amp; tư duy</div>
 
-    <div class="entry">
+    <div class="entry" id="g-hardfork">
       <span class="src-tag">Hard Fork (The New York Times)</span>
       <h3>Kevin Roose &amp; Casey Newton — tin công nghệ hàng tuần</h3>
       <p class="guest-meta">Hai nhà báo công nghệ · nhẹ nhàng, dễ nghe, cập nhật</p>
@@ -483,7 +543,7 @@
       <p class="source-note">Nguồn: <a href="https://www.nytimes.com/column/hard-fork" target="_blank" rel="noopener">nytimes.com/column/hard-fork</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-kp">
       <span class="src-tag">The Knowledge Project</span>
       <h3>Shane Parrish (Farnam Street) — tư duy &amp; ra quyết định</h3>
       <p class="guest-meta">Mô hình tư duy, ra quyết định, tâm lý học ứng dụng</p>
@@ -495,7 +555,7 @@
       <p class="source-note">Nguồn: <a href="https://fs.blog/podcast" target="_blank" rel="noopener">fs.blog/podcast</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-a16z">
       <span class="src-tag">a16z Podcast</span>
       <h3>Andreessen Horowitz — xu hướng startup &amp; công nghệ mới</h3>
       <p class="guest-meta">Do quỹ đầu tư a16z sản xuất · AI, fintech, y sinh, hạ tầng</p>
@@ -512,7 +572,7 @@
       sách này cố ý trải rộng phổ quan điểm và <strong>ghi rõ khuynh hướng từng kênh</strong>. Cách nghe khoẻ nhất là
       nghe chéo nhiều nguồn thay vì bám một kênh — để nắm luận điểm của cả các bên mình không đồng tình.</p>
 
-    <div class="entry">
+    <div class="entry" id="g-trip">
       <span class="src-tag">The Rest Is Politics</span>
       <h3>Alastair Campbell &amp; Rory Stewart — "bất đồng một cách văn minh"</h3>
       <p class="guest-meta">Anh &amp; chính trị toàn cầu · một cựu chiến lược gia Công đảng + một cựu bộ trưởng Bảo thủ</p>
@@ -525,7 +585,7 @@
       <p class="source-note">Nguồn: <a href="https://therestispolitics.com" target="_blank" rel="noopener">therestispolitics.com</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-gzero">
       <span class="src-tag">GZERO World with Ian Bremmer</span>
       <h3>Ian Bremmer — địa chính trị &amp; quan hệ quốc tế</h3>
       <p class="guest-meta">Nhà khoa học chính trị, sáng lập hãng phân tích rủi ro Eurasia Group</p>
@@ -537,7 +597,7 @@
       <p class="source-note">Nguồn: <a href="https://www.gzeromedia.com/podcast/gzero-world-podcast/" target="_blank" rel="noopener">gzeromedia.com</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-ezra">
       <span class="src-tag">The Ezra Klein Show (The New York Times)</span>
       <h3>Ezra Klein — chính trị qua lăng kính ý tưởng &amp; chính sách</h3>
       <p class="guest-meta">Thiên tả (center-left) · đào sâu tư tưởng, ít giật gân</p>
@@ -550,7 +610,7 @@
       <p class="source-note">Nguồn: <a href="https://www.nytimes.com/column/ezra-klein-podcast" target="_blank" rel="noopener">nytimes.com/column/ezra-klein-podcast</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-psa">
       <span class="src-tag">Pod Save America</span>
       <h3>Crooked Media — góc nhìn cấp tiến/Dân chủ (Mỹ)</h3>
       <p class="guest-meta">Do các cựu trợ lý thời Tổng thống Obama sáng lập · thiên tả rõ rệt</p>
@@ -562,7 +622,7 @@
       <p class="source-note">Nguồn: <a href="https://crooked.com" target="_blank" rel="noopener">crooked.com</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-bulwark">
       <span class="src-tag">The Bulwark Podcast</span>
       <h3>The Bulwark — bảo thủ phản-Trump (center-right)</h3>
       <p class="guest-meta">Người bảo thủ chỉ trích chủ nghĩa Trump · "bảo vệ dân chủ tự do"</p>
@@ -579,7 +639,7 @@
       tích thế giới theo góc chuyên môn, ít đảng phái, hợp người đọc quốc tế — thì đây là các kênh cùng "chất": do các
       tạp chí/viện nghiên cứu đối ngoại uy tín làm, tập trung phân tích thay vì tranh cãi phe phái.</p>
 
-    <div class="entry">
+    <div class="entry" id="g-fa">
       <span class="src-tag">The Foreign Affairs Interview</span>
       <h3>Tạp chí Foreign Affairs — phỏng vấn tư tưởng đối ngoại</h3>
       <p class="guest-meta">Dẫn bởi Daniel Kurtz-Phelan (tổng biên tập) · khách là học giả &amp; nhà hoạch định chính sách</p>
@@ -591,7 +651,7 @@
       <p class="source-note">Nguồn: <a href="https://www.foreignaffairs.com/podcasts/foreign-affairs-interview" target="_blank" rel="noopener">foreignaffairs.com</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-pi">
       <span class="src-tag">The President's Inbox</span>
       <h3>Council on Foreign Relations — phân tích chính sách đối ngoại Mỹ</h3>
       <p class="guest-meta">Dẫn bởi James M. Lindsay (CFR) · viện nghiên cứu phi đảng phái</p>
@@ -603,7 +663,7 @@
       <p class="source-note">Nguồn: <a href="https://www.cfr.org/podcasts/presidents-inbox" target="_blank" rel="noopener">cfr.org/podcasts/presidents-inbox</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-chinatalk">
       <span class="src-tag">ChinaTalk</span>
       <h3>Jordan Schneider — Trung Quốc, công nghệ &amp; cạnh tranh Mỹ–Trung</h3>
       <p class="guest-meta">Chuyên sâu về Trung Quốc, chính sách công nghệ, bán dẫn</p>
@@ -615,7 +675,7 @@
       <p class="source-note">Nguồn: <a href="https://www.chinatalk.media" target="_blank" rel="noopener">chinatalk.media</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="g-tooze">
       <span class="src-tag">Ones and Tooze</span>
       <h3>Adam Tooze &amp; Cameron Abadi — kinh tế gặp địa chính trị</h3>
       <p class="guest-meta">Do tạp chí Foreign Policy sản xuất · sử gia kinh tế Adam Tooze</p>
@@ -638,7 +698,7 @@
       theo đúng cấu trúc 4 phần như Tuần 1.</p>
   </div>
 
-  <div class="week">
+  <div class="week" id="tuan-2">
     <div class="week-head">
       <h2>Tuần 2 — Tóm tắt tập 2026 (Đợt 1/nhiều đợt)</h2>
       <span class="range">phủ rộng 18 podcast · 5/8/2026</span>
@@ -648,7 +708,7 @@
       chính thức, transcript, bài phân tích uy tín) — tập nào chưa đủ nguồn sẽ ghi rõ và bổ sung ở đợt sau. Đợt 1 gồm
       3 tập: Lex Fridman #490, Dwarkesh × Jensen Huang, và Acquired về Disney.</p>
 
-    <div class="entry">
+    <div class="entry" id="t-lex490">
       <span class="src-tag">Lex Fridman Podcast · #490</span>
       <h3>Nathan Lambert &amp; Sebastian Raschka — "State of AI in 2026"</h3>
       <p class="guest-meta">Tập: "State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI" · phát 1/2/2026</p>
@@ -706,7 +766,7 @@
         <a href="https://www.shortform.com/podcast/episode/lex-fridman-podcast-2026-02-01-episode-summary-490-state-of-ai-in-2026-llms-coding-scaling-laws-china-agents-gpus-agi" target="_blank" rel="noopener">Shortform</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-jensen">
       <span class="src-tag">Dwarkesh Podcast</span>
       <h3>Jensen Huang — CEO Nvidia: cạnh tranh TPU, bán chip cho Trung Quốc &amp; "con hào" chuỗi cung ứng</h3>
       <p class="guest-meta">Tập: "TPU competition, why we should sell chips to China, &amp; Nvidia's supply chain moat" · phát 15/4/2026 · ~103 phút</p>
@@ -763,7 +823,7 @@
         <a href="https://www.noahpinion.blog/p/scoring-the-jensen-dwarkesh-debate" target="_blank" rel="noopener">Noahpinion</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-disney">
       <span class="src-tag">Acquired</span>
       <h3>The Walt Disney Company (Kỷ nguyên Walt) — cỗ máy "flywheel" đầu tiên của lịch sử kinh doanh</h3>
       <p class="guest-meta">Tập phát 21–22/6/2026 · dài ~4 giờ 31 phút · Ben Gilbert &amp; David Rosenthal</p>
@@ -825,7 +885,7 @@
         <a href="https://www.acquiredbriefing.com/p/the-walt-disney-company-part-i" target="_blank" rel="noopener">Acquired Briefing (Kyle Westaway)</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-nopriors">
       <span class="src-tag">No Priors · #144</span>
       <h3>Sarah Guo &amp; Elad Gil — "The 2026 AI Forecast": dự báo AI, robot &amp; thị trường vốn</h3>
       <p class="guest-meta">Tập: "The 2026 AI Forecast: Foundation Models, IPOs, and Robotics" · phát 19/12/2025 (tập
@@ -881,7 +941,7 @@
         <a href="https://www.youtube.com/watch?v=TOsNrV3bXtQ" target="_blank" rel="noopener">YouTube chính thức</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-duss">
       <span class="src-tag">The Ezra Klein Show</span>
       <h3>Matt Duss — "Tầm nhìn đối ngoại của cánh tả sau Trump là gì?"</h3>
       <p class="guest-meta">Tập: "What's the Left's Vision for Foreign Policy After Trump?" · phát ~10/6/2026</p>
@@ -931,7 +991,7 @@
         <a href="https://3quarksdaily.com/3quarksdaily/2026/06/whats-the-lefts-vision-for-foreign-policy-after-trump-ezra-klein-talks-to-matt-duss.html" target="_blank" rel="noopener">3 Quarks Daily</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-hardfork">
       <span class="src-tag">Hard Fork (The New York Times)</span>
       <h3>Tập #208 — kiểm soát truy cập mô hình AI, robot bầu bạn &amp; "taste slop"</h3>
       <p class="guest-meta">Phát 31/7/2026 · ~64 phút · Kevin Roose &amp; Casey Newton cùng các khách mời NYT</p>
@@ -982,7 +1042,7 @@
         <a href="https://variety.com/2026/biz/news/hard-fork-kevin-roose-casey-newton-uta-exclusive-1236789128/" target="_blank" rel="noopener">Variety</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-varoufakis">
       <span class="src-tag">The Rest Is Politics: Leading</span>
       <h3>Yanis Varoufakis — "Từ khủng hoảng 2008 tới sự trỗi dậy của chủ nghĩa dân tuý"</h3>
       <p class="guest-meta">Tập: "From the 2008 Crash to the Rise of Populism" · phát ~3/5/2026 · nhánh phỏng vấn "Leading"</p>
@@ -1034,7 +1094,7 @@
         <a href="https://singjupost.com/from-the-2008-crash-to-the-rise-of-populism-yanis-varoufakis-transcript/" target="_blank" rel="noopener">Transcript (Singju Post)</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-torbati">
       <span class="src-tag">GZERO World with Ian Bremmer</span>
       <h3>Yeganeh Torbati — "Cái giá con người của cuộc chiến Iran"</h3>
       <p class="guest-meta">Tập: "The Iran War's Human Cost" · phát ~20/7/2026 (bản TV trên PBS/KPBS)</p>
@@ -1084,7 +1144,7 @@
         <a href="https://www.gzeromedia.com/podcast/gzero-world-podcast/" target="_blank" rel="noopener">gzeromedia.com</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-allin">
       <span class="src-tag">All-In Podcast</span>
       <h3>"All-In's 2026 Predictions" — bốn nhà đầu tư đặt cược cho năm mới</h3>
       <p class="guest-meta">Phát 10/1/2026 · Chamath Palihapitiya, Jason Calacanis, David Sacks, David Friedberg</p>
@@ -1133,7 +1193,7 @@
         <a href="https://allin.com/episodes" target="_blank" rel="noopener">allin.com</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-gil">
       <span class="src-tag">The Tim Ferriss Show · #863</span>
       <h3>Elad Gil — "Quân sư của những người xây đế chế": nhận diện công ty tỷ đô trước đám đông</h3>
       <p class="guest-meta">Tập: "Consigliere to Empire Builders — How to Spot Billion-Dollar Companies Before
@@ -1189,7 +1249,7 @@
         <a href="https://podcasts.apple.com/us/podcast/863-elad-gil-consigliere-to-empire-builders-how-to/id863897795?i=1000764580528" target="_blank" rel="noopener">Apple Podcasts</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-gurley">
       <span class="src-tag">The Knowledge Project</span>
       <h3>Bill Gurley — "Những mô hình tư duy thay đổi cách bạn nghĩ"</h3>
       <p class="guest-meta">Tập: "Mental Models That Change How You Think" · phát 9/6/2026</p>
@@ -1247,7 +1307,7 @@
         <a href="https://podcastnotes.org/knowledge-project/bill-gurley-mental-models-that-change-how-you-think-the-knowledge-project-with-shane-parrish/" target="_blank" rel="noopener">Podcast Notes</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-fayyad">
       <span class="src-tag">The Foreign Affairs Interview</span>
       <h3>Salam Fayyad — tương lai Palestine: "Không lệnh ngừng bắn nào trụ được nếu Gaza và Bờ Tây bị cai trị tách rời"</h3>
       <p class="guest-meta">Ghi hình 15/7/2026 bên lề Aspen Security Forum · phát 23/7/2026 · host Daniel Kurtz-Phelan</p>
@@ -1300,7 +1360,7 @@
         <a href="https://www.youtube.com/watch?v=mWaFiKOA3Go" target="_blank" rel="noopener">YouTube chính thức</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-tooze">
       <span class="src-tag">Ones and Tooze · #252</span>
       <h3>"Kinh tế học của Andy Burnham" — tân Thủ tướng Anh và "Manchesterism"</h3>
       <p class="guest-meta">Phát ~24/7/2026 · Adam Tooze &amp; Cameron Abadi (Foreign Policy)</p>
@@ -1355,7 +1415,7 @@
         <a href="https://www.cfr.org/articles/andy-burnham-what-to-expect-from-the-uks-new-prime-minister" target="_blank" rel="noopener">CFR</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-dalio">
       <span class="src-tag">The Diary of a CEO · bonus</span>
       <h3>Ray Dalio — "Tôi đã dự đoán khủng hoảng 2008. Tôi biết điều gì sắp tới"</h3>
       <p class="guest-meta">Phát 30/7/2026 · nhà sáng lập Bridgewater Associates · (bonus ngoài danh sách 18 kênh —
@@ -1413,7 +1473,7 @@
         <a href="https://singjupost.com/transcript-of-ray-dalio-interview-on-ai-bubble-diary-of-a-ceo/" target="_blank" rel="noopener">Transcript (Singju Post)</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-a16z">
       <span class="src-tag">The a16z Show</span>
       <h3>"Big Ideas 2026: Physical AI và tầng công nghiệp" — khi AI rời màn hình bước vào nhà máy</h3>
       <p class="guest-meta">Phát 25/12/2025 (tập định hình chủ đề 2026) · ~22 phút · các General Partner của a16z</p>
@@ -1466,7 +1526,7 @@
         <a href="https://podscan.fm/podcasts/the-a16z-show/episodes/big-ideas-2026-physical-ai-and-the-industrial-stack" target="_blank" rel="noopener">Podscan</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-psa">
       <span class="src-tag">Pod Save America</span>
       <h3>"Phones and Blame Fly at the DNC" — khủng hoảng nội bộ Đảng Dân chủ trước thềm midterms</h3>
       <p class="guest-meta">Phát 28/7/2026 · Crooked Media · (kênh thiên tả công khai — đọc kèm ghi chú khuynh hướng ở nhóm ④)</p>
@@ -1512,7 +1572,7 @@
         <a href="https://podcasts.apple.com/us/podcast/pod-save-america/id1192761536" target="_blank" rel="noopener">Apple Podcasts</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-walz">
       <span class="src-tag">The Bulwark Podcast</span>
       <h3>Thống đốc Tim Walz &amp; Jason Zengerle — "Cuộc tấn công vào Minnesota"</h3>
       <p class="guest-meta">Tập: "The Assault on Minnesota" · phát 27/1/2026 · ~66 phút · host Tim Miller</p>
@@ -1565,7 +1625,7 @@
         <a href="https://podcasts.apple.com/ro/podcast/gov-tim-walz-and-jason-zengerle-the-assault-on-minnesota/id1447684472?i=1000746915445" target="_blank" rel="noopener">Apple Podcasts</a></p>
     </div>
 
-    <div class="entry">
+    <div class="entry" id="t-kaye">
       <span class="src-tag">The President's Inbox (CFR)</span>
       <h3>Dalia Dassa Kaye — TẬP ĐẶC BIỆT: "Trump chọn chiến tranh với Iran"</h3>
       <p class="guest-meta">Tập: "SPECIAL EPISODE | Trump Chooses War With Iran" · phát 2/3/2026 · host James M. Lindsay</p>
