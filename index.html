@@ -105,6 +105,17 @@
   .toc a:hover{text-decoration:underline}
   .toc .toc-sub{color:var(--muted);font-size:.8rem}
   html{scroll-behavior:smooth}
+
+  #phan-loai{margin:24px 0}
+  details.classify{margin:12px 0}
+  details.classify > summary{
+    cursor:pointer;font-size:1.05rem;font-weight:700;margin:0;padding:6px 0;
+    list-style:none;color:var(--ink);
+  }
+  details.classify > summary::-webkit-details-marker{display:none}
+  details.classify > summary::before{content:"▸ ";color:var(--accent)}
+  details.classify[open] > summary::before{content:"▾ "}
+  details.classify[open] > summary{border-bottom:1px solid var(--border);margin-bottom:8px}
   .entry .why{
     background:var(--accent-soft);border-radius:8px;padding:8px 12px;
     font-size:.86rem;margin:8px 0 4px;
@@ -147,6 +158,7 @@
 
   <nav class="toc" id="muc-luc">
     <h2>📑 Mục lục</h2>
+    <p style="font-size:.86rem;margin:0 0 10px"><a href="#phan-loai">↕ Duyệt nhanh: phân loại theo kênh &amp; theo chủ đề</a></p>
 
     <h4><a href="#tuan-1">Tuần 1 — 4 khách mời AI trên Diary of a CEO</a></h4>
     <ul>
@@ -273,6 +285,309 @@
       <li><a href="#t3-mallaby">Foreign Affairs × Sebastian Mallaby</a> <span class="toc-sub">— "tam nan AI" (AI trilemma)</span></li>
     </ul>
   </nav>
+
+  <div id="phan-loai">
+  <details class="toc classify" id="pl-kenh">
+    <summary>🎙️ Phân loại theo kênh (podcast)</summary>
+    <p style="color:var(--muted);font-size:.84rem;margin:0 0 8px">104 bài tóm tắt, gom theo 18 podcast (ChinaTalk chưa có tập 2026 đủ nguồn nên trống). Bấm để nhảy tới bài.</p>
+    <h4><a href="#g-lex">Lex Fridman Podcast</a> <span class="toc-sub">(9 bài)</span></h4>
+    <ul>
+      <li><a href="#t-lex490">Nathan Lambert &amp; Sebastian Raschka</a></li>
+      <li><a href="#t3-openclaw">Peter Steinberger</a></li>
+      <li><a href="#t3-beato">Rick Beato</a></li>
+      <li><a href="#t3-kaplan">Jeff Kaplan</a></li>
+      <li><a href="#t3-ffmpeg">FFmpeg</a></li>
+      <li><a href="#t3-vikings">Lars Brownworth</a></li>
+      <li><a href="#t3-lincoln">Don Lincoln</a></li>
+      <li><a href="#t3-kaldellis">Anthony Kaldellis</a></li>
+      <li><a href="#t3-gallagher">Gary Gallagher</a></li>
+    </ul>
+    <h4><a href="#g-dwarkesh">Dwarkesh Podcast</a> <span class="toc-sub">(10 bài)</span></h4>
+    <ul>
+      <li><a href="#t-jensen">Jensen Huang</a></li>
+      <li><a href="#t3-imas">Alex Imas &amp; Phil Trammell</a></li>
+      <li><a href="#t3-palmer">Ada Palmer</a></li>
+      <li><a href="#t3-pope">Reiner Pope</a></li>
+      <li><a href="#t3-reich">David Reich</a></li>
+      <li><a href="#t3-jang">Eric Jang</a></li>
+      <li><a href="#t3-pope2">Reiner Pope (phần 2)</a></li>
+      <li><a href="#t3-palmer1">Ada Palmer (lần 1)</a></li>
+      <li><a href="#t3-amodei">Dario Amodei</a></li>
+      <li><a href="#t3-computepricing">Vì sao mô hình AI thông minh hơn có thể đẩy giá co…</a></li>
+    </ul>
+    <h4><a href="#g-nopriors">No Priors</a> <span class="toc-sub">(6 bài)</span></h4>
+    <ul>
+      <li><a href="#t-nopriors">Sarah Guo &amp; Elad Gil</a></li>
+      <li><a href="#t3-nadella">Satya Nadella</a></li>
+      <li><a href="#t3-elevenlabs">Mati Staniszewski (ElevenLabs)</a></li>
+      <li><a href="#t3-mcdermott">Bill McDermott (ServiceNow)</a></li>
+      <li><a href="#t3-herzig">Philipp Herzig (SAP)</a></li>
+      <li><a href="#t3-noambrown">Noam Brown (OpenAI)</a></li>
+    </ul>
+    <h4><a href="#g-acquired">Acquired</a> <span class="toc-sub">(5 bài)</span></h4>
+    <ul>
+      <li><a href="#t-disney">The Walt Disney Company (Kỷ nguyên Walt)</a></li>
+      <li><a href="#t3-nfl">The NFL (bản 2026 Update)</a></li>
+      <li><a href="#t3-f1">Formula 1</a></li>
+      <li><a href="#t3-ballmer">Steve Ballmer</a></li>
+      <li><a href="#t3-google">Google</a></li>
+    </ul>
+    <h4><a href="#g-ferriss">The Tim Ferriss Show</a> <span class="toc-sub">(6 bài)</span></h4>
+    <ul>
+      <li><a href="#t-gil">Elad Gil</a></li>
+      <li><a href="#t3-random875">The Random Show</a></li>
+      <li><a href="#t3-huberman">Dr. Andrew Huberman</a></li>
+      <li><a href="#t3-oseary">Guy Oseary</a></li>
+      <li><a href="#t3-ferriss877">Q&amp;A với Tim</a></li>
+      <li><a href="#t3-ferriss859">Q&amp;A với Tim</a></li>
+    </ul>
+    <h4><a href="#g-allin">All-In Podcast</a> <span class="toc-sub">(5 bài)</span></h4>
+    <ul>
+      <li><a href="#t-allin">All-In's 2026 Predictions</a></li>
+      <li><a href="#t3-allin2">All-In × Gavin Baker</a></li>
+      <li><a href="#t3-allin3">All-In × Nate Silver</a></li>
+      <li><a href="#t3-allin4">Mùa hè chính sách AI</a></li>
+      <li><a href="#t3-allin5">Cổ phiếu chip lao dốc, quỹ $20 tỷ bị margin call, …</a></li>
+    </ul>
+    <h4><a href="#g-hardfork">Hard Fork</a> <span class="toc-sub">(3 bài)</span></h4>
+    <ul>
+      <li><a href="#t-hardfork">Tập #208</a></li>
+      <li><a href="#t3-chatgptwork">OpenAI khai tử trình duyệt Atlas gộp vào "ChatGPT …</a></li>
+      <li><a href="#t3-containment">Sự cố "thoát containment": mô hình OpenAI vượt san…</a></li>
+    </ul>
+    <h4><a href="#g-kp">The Knowledge Project</a> <span class="toc-sub">(7 bài)</span></h4>
+    <ul>
+      <li><a href="#t-gurley">Bill Gurley</a></li>
+      <li><a href="#t3-nejatian">Kaz Nejatian</a></li>
+      <li><a href="#t3-pincus">Mark Pincus</a></li>
+      <li><a href="#t3-valiante">Dr. Gio Valiante</a></li>
+      <li><a href="#t3-enders">Dr. Giulia Enders</a></li>
+      <li><a href="#t3-housel">Morgan Housel</a></li>
+      <li><a href="#t3-ovitz">Michael Ovitz</a></li>
+    </ul>
+    <h4><a href="#g-a16z">a16z</a> <span class="toc-sub">(1 bài)</span></h4>
+    <ul>
+      <li><a href="#t-a16z">Big Ideas 2026: Physical AI và tầng công nghiệp</a></li>
+    </ul>
+    <h4><a href="#g-trip">The Rest Is Politics</a> <span class="toc-sub">(5 bài)</span></h4>
+    <ul>
+      <li><a href="#t-varoufakis">Yanis Varoufakis</a></li>
+      <li><a href="#t3-trip516">#516</a></li>
+      <li><a href="#t3-zucman">Gabriel Zucman</a></li>
+      <li><a href="#t3-trip556">#556</a></li>
+      <li><a href="#t3-rhodes">Ben Rhodes</a></li>
+    </ul>
+    <h4><a href="#g-gzero">GZERO World</a> <span class="toc-sub">(8 bài)</span></h4>
+    <ul>
+      <li><a href="#t-torbati">Yeganeh Torbati</a></li>
+      <li><a href="#t3-ghattas">Kim Ghattas</a></li>
+      <li><a href="#t3-bustamante">Michael Bustamante</a></li>
+      <li><a href="#t3-manson">Katrina Manson</a></li>
+      <li><a href="#t3-daalder">Ivo Daalder</a></li>
+      <li><a href="#t3-toprisks">Những rủi ro địa chính trị lớn nhất 2026</a></li>
+      <li><a href="#t3-danwang">Dan Wang</a></li>
+      <li><a href="#t3-georgieva">Kristalina Georgieva (IMF)</a></li>
+    </ul>
+    <h4><a href="#g-ezra">The Ezra Klein Show</a> <span class="toc-sub">(6 bài)</span></h4>
+    <ul>
+      <li><a href="#t-duss">Matt Duss</a></li>
+      <li><a href="#t3-drutman">Lee Drutman</a></li>
+      <li><a href="#t3-lewis">Helen Lewis</a></li>
+      <li><a href="#t3-abundance">Chúng tôi đúng</a></li>
+      <li><a href="#t3-telhami">Shibley Telhami</a></li>
+      <li><a href="#t3-stevenson">Bryan Stevenson</a></li>
+    </ul>
+    <h4><a href="#g-psa">Pod Save America</a> <span class="toc-sub">(2 bài)</span></h4>
+    <ul>
+      <li><a href="#t-psa">Phones and Blame Fly at the DNC</a></li>
+      <li><a href="#t3-psa2">Abolish Bad Tweets</a></li>
+    </ul>
+    <h4><a href="#g-bulwark">The Bulwark Podcast</a> <span class="toc-sub">(3 bài)</span></h4>
+    <ul>
+      <li><a href="#t-walz">Thống đốc Tim Walz &amp; Jason Zengerle</a></li>
+      <li><a href="#t3-piers">Tim Miller đối chất Piers Morgan</a></li>
+      <li><a href="#t3-wilson">Tim Miller phản bác mục sư Doug Wilson</a></li>
+    </ul>
+    <h4><a href="#g-fa">The Foreign Affairs Interview</a> <span class="toc-sub">(6 bài)</span></h4>
+    <ul>
+      <li><a href="#t-fayyad">Salam Fayyad</a></li>
+      <li><a href="#t3-gordon">Philip Gordon &amp; Mara Karlin</a></li>
+      <li><a href="#t3-hill">Fiona Hill</a></li>
+      <li><a href="#t3-schell">Orville Schell</a></li>
+      <li><a href="#t3-burns">William J. Burns</a></li>
+      <li><a href="#t3-mallaby">Sebastian Mallaby</a></li>
+    </ul>
+    <h4><a href="#g-pi">The President's Inbox</a> <span class="toc-sub">(3 bài)</span></h4>
+    <ul>
+      <li><a href="#t-kaye">Dalia Dassa Kaye</a></li>
+      <li><a href="#t3-horowitz">Michael Horowitz</a></li>
+      <li><a href="#t3-gavin">Michelle Gavin</a></li>
+    </ul>
+    <h4><a href="#g-tooze">Ones and Tooze</a> <span class="toc-sub">(5 bài)</span></h4>
+    <ul>
+      <li><a href="#t-tooze">Kinh tế học của Andy Burnham</a></li>
+      <li><a href="#t3-toozechina">Kinh tế Trung Quốc</a></li>
+      <li><a href="#t3-toozeberlin">Trực tiếp từ Berlin</a></li>
+      <li><a href="#t3-tooze230">AI thâu tóm kinh tế toàn cầu" và nước Đức của Frie…</a></li>
+      <li><a href="#t3-toozeoil">Giá dầu và cuộc chiến Iran</a></li>
+    </ul>
+    <h4><a href="#e-harari">The Diary of a CEO</a> <span class="toc-sub">(14 bài)</span></h4>
+    <ul>
+      <li><a href="#e-harari">Yuval Noah Harari</a></li>
+      <li><a href="#e-hinton">Geoffrey Hinton</a></li>
+      <li><a href="#e-gawdat">Mo Gawdat</a></li>
+      <li><a href="#e-yampolskiy">Roman Yampolskiy</a></li>
+      <li><a href="#t-dalio">Ray Dalio</a></li>
+      <li><a href="#t3-kokotajlo">Daniel Kokotajlo</a></li>
+      <li><a href="#t3-grantham">Jeremy Grantham</a></li>
+      <li><a href="#t3-galloway">Scott Galloway</a></li>
+      <li><a href="#t3-priestley">Daniel Priestley</a></li>
+      <li><a href="#t3-gawdat2">Mo Gawdat (lần 2)</a></li>
+      <li><a href="#t3-breus">Dr. Michael Breus</a></li>
+      <li><a href="#t3-hormozi">Alex Hormozi</a></li>
+      <li><a href="#t3-sinclair">Dr. David Sinclair</a></li>
+      <li><a href="#t3-felix">Ben Felix</a></li>
+    </ul>
+  </details>
+  <details class="toc classify" id="pl-chu-de">
+    <summary>🏷️ Phân loại theo chủ đề</summary>
+    <p style="color:var(--muted);font-size:.84rem;margin:0 0 8px">Cùng 104 bài, gom theo 10 chủ đề (mỗi bài xếp vào chủ đề chính; nhiều bài liên kết chéo nhiều mảng — xem các "mạch đọc" ở cuối trang).</p>
+    <h4>① AI — mô hình, hạ tầng &amp; sản phẩm <span class="toc-sub">(16 bài)</span></h4>
+    <ul>
+      <li><a href="#t-lex490">Nathan Lambert &amp; Sebastian Raschka</a></li>
+      <li><a href="#t-jensen">Jensen Huang</a></li>
+      <li><a href="#t-nopriors">Sarah Guo &amp; Elad Gil</a></li>
+      <li><a href="#t-a16z">Big Ideas 2026: Physical AI và tầng công nghiệp</a></li>
+      <li><a href="#t3-pope">Reiner Pope</a></li>
+      <li><a href="#t3-pope2">Reiner Pope (phần 2)</a></li>
+      <li><a href="#t3-jang">Eric Jang</a></li>
+      <li><a href="#t3-openclaw">Peter Steinberger</a></li>
+      <li><a href="#t3-nadella">Satya Nadella</a></li>
+      <li><a href="#t3-elevenlabs">Mati Staniszewski (ElevenLabs)</a></li>
+      <li><a href="#t3-mcdermott">Bill McDermott (ServiceNow)</a></li>
+      <li><a href="#t3-herzig">Philipp Herzig (SAP)</a></li>
+      <li><a href="#t3-amodei">Dario Amodei</a></li>
+      <li><a href="#t3-computepricing">Vì sao mô hình AI thông minh hơn có thể đẩy giá co…</a></li>
+      <li><a href="#t3-noambrown">Noam Brown (OpenAI)</a></li>
+      <li><a href="#t3-chatgptwork">OpenAI khai tử trình duyệt Atlas gộp vào "ChatGPT …</a></li>
+    </ul>
+    <h4>② AI — rủi ro, an toàn, việc làm &amp; xã hội <span class="toc-sub">(11 bài)</span></h4>
+    <ul>
+      <li><a href="#e-harari">Yuval Noah Harari</a></li>
+      <li><a href="#e-hinton">Geoffrey Hinton</a></li>
+      <li><a href="#e-yampolskiy">Roman Yampolskiy</a></li>
+      <li><a href="#e-gawdat">Mo Gawdat</a></li>
+      <li><a href="#t-hardfork">Tập #208</a></li>
+      <li><a href="#t3-kokotajlo">Daniel Kokotajlo</a></li>
+      <li><a href="#t3-gawdat2">Mo Gawdat (lần 2)</a></li>
+      <li><a href="#t3-galloway">Scott Galloway</a></li>
+      <li><a href="#t3-priestley">Daniel Priestley</a></li>
+      <li><a href="#t3-imas">Alex Imas &amp; Phil Trammell</a></li>
+      <li><a href="#t3-containment">Sự cố "thoát containment": mô hình OpenAI vượt san…</a></li>
+    </ul>
+    <h4>③ AI — chính sách &amp; địa chính trị công nghệ <span class="toc-sub">(5 bài)</span></h4>
+    <ul>
+      <li><a href="#t3-allin4">Mùa hè chính sách AI</a></li>
+      <li><a href="#t3-mallaby">Sebastian Mallaby</a></li>
+      <li><a href="#t3-manson">Katrina Manson</a></li>
+      <li><a href="#t3-horowitz">Michael Horowitz</a></li>
+      <li><a href="#t3-trip556">#556</a></li>
+    </ul>
+    <h4>④ Kinh doanh, chiến lược &amp; khởi nghiệp <span class="toc-sub">(12 bài)</span></h4>
+    <ul>
+      <li><a href="#t-disney">The Walt Disney Company (Kỷ nguyên Walt)</a></li>
+      <li><a href="#t-gil">Elad Gil</a></li>
+      <li><a href="#t-gurley">Bill Gurley</a></li>
+      <li><a href="#t3-nfl">The NFL (bản 2026 Update)</a></li>
+      <li><a href="#t3-f1">Formula 1</a></li>
+      <li><a href="#t3-nejatian">Kaz Nejatian</a></li>
+      <li><a href="#t3-pincus">Mark Pincus</a></li>
+      <li><a href="#t3-hormozi">Alex Hormozi</a></li>
+      <li><a href="#t3-oseary">Guy Oseary</a></li>
+      <li><a href="#t3-ballmer">Steve Ballmer</a></li>
+      <li><a href="#t3-google">Google</a></li>
+      <li><a href="#t3-ovitz">Michael Ovitz</a></li>
+    </ul>
+    <h4>⑤ Đầu tư, thị trường &amp; kinh tế vĩ mô <span class="toc-sub">(12 bài)</span></h4>
+    <ul>
+      <li><a href="#t-dalio">Ray Dalio</a></li>
+      <li><a href="#t-allin">All-In's 2026 Predictions</a></li>
+      <li><a href="#t-tooze">Kinh tế học của Andy Burnham</a></li>
+      <li><a href="#t3-grantham">Jeremy Grantham</a></li>
+      <li><a href="#t3-allin2">All-In × Gavin Baker</a></li>
+      <li><a href="#t3-allin3">All-In × Nate Silver</a></li>
+      <li><a href="#t3-allin5">Cổ phiếu chip lao dốc, quỹ $20 tỷ bị margin call, …</a></li>
+      <li><a href="#t3-georgieva">Kristalina Georgieva (IMF)</a></li>
+      <li><a href="#t3-tooze230">AI thâu tóm kinh tế toàn cầu" và nước Đức của Frie…</a></li>
+      <li><a href="#t3-toozechina">Kinh tế Trung Quốc</a></li>
+      <li><a href="#t3-toozeberlin">Trực tiếp từ Berlin</a></li>
+      <li><a href="#t3-toozeoil">Giá dầu và cuộc chiến Iran</a></li>
+    </ul>
+    <h4>⑥ Tài chính cá nhân &amp; tâm lý thành tích <span class="toc-sub">(3 bài)</span></h4>
+    <ul>
+      <li><a href="#t3-housel">Morgan Housel</a></li>
+      <li><a href="#t3-felix">Ben Felix</a></li>
+      <li><a href="#t3-valiante">Dr. Gio Valiante</a></li>
+    </ul>
+    <h4>⑦ Chính trị Mỹ &amp; dân chủ <span class="toc-sub">(13 bài)</span></h4>
+    <ul>
+      <li><a href="#t-duss">Matt Duss</a></li>
+      <li><a href="#t-psa">Phones and Blame Fly at the DNC</a></li>
+      <li><a href="#t-walz">Thống đốc Tim Walz &amp; Jason Zengerle</a></li>
+      <li><a href="#t3-drutman">Lee Drutman</a></li>
+      <li><a href="#t3-lewis">Helen Lewis</a></li>
+      <li><a href="#t3-abundance">Chúng tôi đúng</a></li>
+      <li><a href="#t3-telhami">Shibley Telhami</a></li>
+      <li><a href="#t3-stevenson">Bryan Stevenson</a></li>
+      <li><a href="#t3-piers">Tim Miller đối chất Piers Morgan</a></li>
+      <li><a href="#t3-psa2">Abolish Bad Tweets</a></li>
+      <li><a href="#t3-wilson">Tim Miller phản bác mục sư Doug Wilson</a></li>
+      <li><a href="#t3-rhodes">Ben Rhodes</a></li>
+      <li><a href="#t3-toprisks">Những rủi ro địa chính trị lớn nhất 2026</a></li>
+    </ul>
+    <h4>⑧ Địa chính trị &amp; quan hệ quốc tế <span class="toc-sub">(15 bài)</span></h4>
+    <ul>
+      <li><a href="#t-fayyad">Salam Fayyad</a></li>
+      <li><a href="#t-kaye">Dalia Dassa Kaye</a></li>
+      <li><a href="#t-torbati">Yeganeh Torbati</a></li>
+      <li><a href="#t-varoufakis">Yanis Varoufakis</a></li>
+      <li><a href="#t3-ghattas">Kim Ghattas</a></li>
+      <li><a href="#t3-gordon">Philip Gordon &amp; Mara Karlin</a></li>
+      <li><a href="#t3-hill">Fiona Hill</a></li>
+      <li><a href="#t3-schell">Orville Schell</a></li>
+      <li><a href="#t3-bustamante">Michael Bustamante</a></li>
+      <li><a href="#t3-trip516">#516</a></li>
+      <li><a href="#t3-gavin">Michelle Gavin</a></li>
+      <li><a href="#t3-daalder">Ivo Daalder</a></li>
+      <li><a href="#t3-burns">William J. Burns</a></li>
+      <li><a href="#t3-danwang">Dan Wang</a></li>
+      <li><a href="#t3-zucman">Gabriel Zucman</a></li>
+    </ul>
+    <h4>⑨ Khoa học &amp; sức khoẻ <span class="toc-sub">(6 bài)</span></h4>
+    <ul>
+      <li><a href="#t3-lincoln">Don Lincoln</a></li>
+      <li><a href="#t3-reich">David Reich</a></li>
+      <li><a href="#t3-breus">Dr. Michael Breus</a></li>
+      <li><a href="#t3-enders">Dr. Giulia Enders</a></li>
+      <li><a href="#t3-sinclair">Dr. David Sinclair</a></li>
+      <li><a href="#t3-huberman">Dr. Andrew Huberman</a></li>
+    </ul>
+    <h4>⑩ Lịch sử, văn hoá &amp; đời sống <span class="toc-sub">(11 bài)</span></h4>
+    <ul>
+      <li><a href="#t3-palmer">Ada Palmer</a></li>
+      <li><a href="#t3-palmer1">Ada Palmer (lần 1)</a></li>
+      <li><a href="#t3-kaldellis">Anthony Kaldellis</a></li>
+      <li><a href="#t3-gallagher">Gary Gallagher</a></li>
+      <li><a href="#t3-vikings">Lars Brownworth</a></li>
+      <li><a href="#t3-beato">Rick Beato</a></li>
+      <li><a href="#t3-kaplan">Jeff Kaplan</a></li>
+      <li><a href="#t3-ffmpeg">FFmpeg</a></li>
+      <li><a href="#t3-random875">The Random Show</a></li>
+      <li><a href="#t3-ferriss877">Q&amp;A với Tim</a></li>
+      <li><a href="#t3-ferriss859">Q&amp;A với Tim</a></li>
+    </ul>
+  </details>
+  </div>
 
   <div class="week" id="tuan-1">
     <div class="week-head">
