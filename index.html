@@ -193,6 +193,71 @@
   .mp-empty{padding:24px 12px;text-align:center;color:var(--muted);font-size:.9rem}
   @media (max-width:520px){ #menuFab{right:12px;bottom:12px} }
 
+
+  /* ===== Trang chủ (browse) + trình đọc ===== */
+  #home[hidden],#library[hidden],#reader-bar[hidden],.browse-view[hidden]{display:none!important}
+  #browse{margin:20px 0 40px}
+  .browse-head{
+    position:sticky;top:0;z-index:20;background:var(--bg);
+    padding:12px 0 10px;margin-bottom:8px;border-bottom:1px solid var(--border);
+    display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+  }
+  .browse-tabs{display:inline-flex;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:3px}
+  .browse-tab{
+    cursor:pointer;font-family:inherit;font-size:.9rem;font-weight:600;
+    border:none;background:none;color:var(--muted);padding:7px 16px;border-radius:999px;
+  }
+  .browse-tab.active{background:var(--accent);color:#fff}
+  #browse-search{
+    flex:1;min-width:180px;box-sizing:border-box;padding:9px 13px;font-size:.9rem;font-family:inherit;
+    border:1px solid var(--border);border-radius:999px;background:var(--card);color:var(--ink);
+  }
+  #browse-search:focus{outline:2px solid var(--accent-soft);border-color:var(--accent)}
+  .browse-sec{margin:22px 0}
+  .browse-h{
+    font-size:1.12rem;margin:0 0 4px;display:flex;align-items:baseline;gap:8px;
+    border-bottom:2px solid var(--border);padding-bottom:8px;
+  }
+  .browse-h .cnt{
+    font-size:.72rem;font-weight:700;color:var(--accent);background:var(--accent-soft);
+    border-radius:999px;padding:2px 9px;
+  }
+  .browse-desc{color:var(--muted);font-size:.86rem;margin:6px 0 12px}
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px;margin-top:12px}
+  a.card{
+    display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink);
+    background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:14px 16px;transition:transform .12s,box-shadow .12s,border-color .12s;
+  }
+  a.card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(30,58,138,.1);border-color:var(--accent)}
+  .card-chip{
+    align-self:flex-start;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;
+    color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:2px 8px;
+  }
+  .card-title{font-size:.96rem;font-weight:600;line-height:1.34}
+  .card-sub{font-size:.79rem;color:var(--muted);line-height:1.35}
+  .browse-empty{color:var(--muted);text-align:center;padding:40px 0}
+
+  #reader-bar{
+    position:sticky;top:0;z-index:20;background:var(--bg);
+    padding:12px 0;margin-bottom:4px;border-bottom:1px solid var(--border);
+    display:flex;align-items:center;gap:6px;font-size:.9rem;
+  }
+  .rb-back{
+    cursor:pointer;font-family:inherit;font-size:.9rem;font-weight:600;
+    background:var(--accent-soft);color:var(--accent);border:none;border-radius:999px;padding:8px 16px;
+  }
+  .rb-back:hover{background:#dbe7fd}
+  #rb-crumb{color:var(--muted);font-size:.85rem}
+  #library[hidden]{display:none}
+  #library.reading .week{margin:0}
+  #library.reading .week-head,
+  #library.reading .week > p,
+  #library.reading .rec-cat,
+  #library.reading .placeholder{display:none}
+  #library.reading .entry{display:none}
+  #library.reading .entry.active{display:block;margin:20px 0 8px}
+
 </style>
 </head>
 <body>
@@ -214,6 +279,13 @@
 
 <div class="wrap">
 
+  <div id="reader-bar" hidden>
+    <button class="rb-back" onclick="goHome()">← Tất cả bài viết</button>
+    <span id="rb-crumb"></span>
+  </div>
+
+  <div id="home">
+
   <div class="meta-strip">
     <span class="pill">📅 Cập nhật hàng tuần</span>
     <span class="pill">🎙️ Đa nguồn (Diary of a CEO, Lex Fridman...)</span>
@@ -226,10 +298,20 @@
     có bản quyền.
   </div>
 
-  <div class="menu-strip">
-    <span class="ms-info"><strong>📚 104 bài tóm tắt podcast 2026</strong> · 18 kênh · 10 chủ đề — dùng menu để lọc &amp; nhảy nhanh tới bài.</span>
-    <button class="btn-menu" onclick="openMenu()">☰ Mục lục &amp; tìm bài</button>
+  <div id="browse">
+    <div class="browse-head">
+      <div class="browse-tabs">
+        <button class="browse-tab active" data-view="topic">🏷️ Theo chủ đề</button>
+        <button class="browse-tab" data-view="chan">🎙️ Theo podcast</button>
+      </div>
+      <input id="browse-search" type="search" placeholder="🔍 Tìm bài, khách mời, kênh…" autocomplete="off">
+    </div>
+    <div id="view-topic" class="browse-view"></div>
+    <div id="view-chan" class="browse-view" hidden></div>
   </div>
+  </div>
+
+  <section id="library" hidden>
 
 
   <div class="week" id="tuan-1">
@@ -5958,9 +6040,7 @@
       soi hiện tại. Muốn đào sâu tập nào, mở chủ đề mới, hay bắt đầu Tuần 4 — cứ nói với mình.</p>
   </div>
 
-  <div class="placeholder">
-    Vòng 2 đang chạy — đã 4 bài. Muốn ưu tiên kênh/tập nào tiếp theo, cứ nói với mình.
-  </div>
+  </section>
 
   <footer>
     Trang cá nhân · Tóm tắt phi chính thức từ các nguồn công khai, không thay thế nội dung gốc.
@@ -5968,28 +6048,11 @@
 </div>
 
 
-<button id="menuFab" class="btn-menu" onclick="openMenu()">☰ Mục lục</button>
-<div id="menuOverlay" onclick="if(event.target===this)closeMenu()">
-  <aside id="menuPanel" role="dialog" aria-label="Mục lục">
-    <div class="mp-head">
-      <h3>Mục lục &amp; tìm bài</h3>
-      <button class="mp-close" onclick="closeMenu()" aria-label="Đóng">&times;</button>
-    </div>
-    <div class="mp-search"><input id="menuSearch" type="search" placeholder="🔍 Tìm theo tên khách/chủ đề/kênh…" autocomplete="off"></div>
-    <div class="mp-tabs">
-      <button class="mp-tab active" data-view="topic">🏷️ Chủ đề</button>
-      <button class="mp-tab" data-view="chan">🎙️ Kênh</button>
-      <button class="mp-tab" data-view="week">🗓️ Tuần</button>
-    </div>
-    <div id="menuList"></div>
-  </aside>
-</div>
+
+
 <script>
 (function(){
-  var TOPIC={"t-lex490":0,"t-jensen":0,"t-nopriors":0,"t-a16z":0,"t3-pope":0,"t3-pope2":0,"t3-jang":0,"t3-openclaw":0,"t3-nadella":0,"t3-elevenlabs":0,"t3-mcdermott":0,"t3-herzig":0,"t3-amodei":0,"t3-computepricing":0,"t3-noambrown":0,"t3-chatgptwork":0,"e-harari":1,"e-hinton":1,"e-yampolskiy":1,"e-gawdat":1,"t-hardfork":1,"t3-kokotajlo":1,"t3-gawdat2":1,"t3-galloway":1,"t3-priestley":1,"t3-imas":1,"t3-containment":1,"t3-allin4":2,"t3-mallaby":2,"t3-manson":2,"t3-horowitz":2,"t3-trip556":2,"t-disney":3,"t-gil":3,"t-gurley":3,"t3-nfl":3,"t3-f1":3,"t3-nejatian":3,"t3-pincus":3,"t3-hormozi":3,"t3-oseary":3,"t3-ballmer":3,"t3-google":3,"t3-ovitz":3,"t-dalio":4,"t-allin":4,"t-tooze":4,"t3-grantham":4,"t3-allin2":4,"t3-allin3":4,"t3-allin5":4,"t3-georgieva":4,"t3-tooze230":4,"t3-toozechina":4,"t3-toozeberlin":4,"t3-toozeoil":4,"t3-housel":5,"t3-felix":5,"t3-valiante":5,"t-duss":6,"t-psa":6,"t-walz":6,"t3-drutman":6,"t3-lewis":6,"t3-abundance":6,"t3-telhami":6,"t3-stevenson":6,"t3-piers":6,"t3-psa2":6,"t3-wilson":6,"t3-rhodes":6,"t3-toprisks":6,"t-fayyad":7,"t-kaye":7,"t-torbati":7,"t-varoufakis":7,"t3-ghattas":7,"t3-gordon":7,"t3-hill":7,"t3-schell":7,"t3-bustamante":7,"t3-trip516":7,"t3-gavin":7,"t3-daalder":7,"t3-burns":7,"t3-danwang":7,"t3-zucman":7,"t3-lincoln":8,"t3-reich":8,"t3-breus":8,"t3-enders":8,"t3-sinclair":8,"t3-huberman":8,"t3-palmer":9,"t3-palmer1":9,"t3-kaldellis":9,"t3-gallagher":9,"t3-vikings":9,"t3-beato":9,"t3-kaplan":9,"t3-ffmpeg":9,"t3-random875":9,"t3-ferriss877":9,"t3-ferriss859":9}, TNAMES=["① AI — mô hình, hạ tầng &amp; sản phẩm", "② AI — rủi ro, an toàn, việc làm &amp; xã hội", "③ AI — chính sách &amp; địa chính trị công nghệ", "④ Kinh doanh, chiến lược &amp; khởi nghiệp", "⑤ Đầu tư, thị trường &amp; kinh tế vĩ mô", "⑥ Tài chính cá nhân &amp; tâm lý thành tích", "⑦ Chính trị Mỹ &amp; dân chủ", "⑧ Địa chính trị &amp; quan hệ quốc tế", "⑨ Khoa học &amp; sức khoẻ", "⑩ Lịch sử, văn hoá &amp; đời sống"];
-  var WEEKS={e:'Tuần 1 · 4 khách mời AI (Diary of a CEO)', t:'Tuần 2 · vòng 1 (17/18 kênh)', t3:'Tuần 3 · vòng 2 (đào sâu)'};
-  var WEEK_ORDER=['e','t','t3'];
-  var CHAN_ORDER=['The Diary of a CEO','Dwarkesh Podcast','Lex Fridman Podcast','GZERO World','The Knowledge Project','No Priors','The Tim Ferriss Show','The Ezra Klein Show','The Foreign Affairs Interview','Acquired','All-In Podcast','The Rest Is Politics','Ones and Tooze','Hard Fork','The Bulwark Podcast',"The President's Inbox",'Pod Save America','a16z'];
+  var TOPIC={"t-lex490":0,"t-jensen":0,"t-nopriors":0,"t-a16z":0,"t3-pope":0,"t3-pope2":0,"t3-jang":0,"t3-openclaw":0,"t3-nadella":0,"t3-elevenlabs":0,"t3-mcdermott":0,"t3-herzig":0,"t3-amodei":0,"t3-computepricing":0,"t3-noambrown":0,"t3-chatgptwork":0,"e-harari":1,"e-hinton":1,"e-yampolskiy":1,"e-gawdat":1,"t-hardfork":1,"t3-kokotajlo":1,"t3-gawdat2":1,"t3-galloway":1,"t3-priestley":1,"t3-imas":1,"t3-containment":1,"t3-allin4":2,"t3-mallaby":2,"t3-manson":2,"t3-horowitz":2,"t3-trip556":2,"t-disney":3,"t-gil":3,"t-gurley":3,"t3-nfl":3,"t3-f1":3,"t3-nejatian":3,"t3-pincus":3,"t3-hormozi":3,"t3-oseary":3,"t3-ballmer":3,"t3-google":3,"t3-ovitz":3,"t-dalio":4,"t-allin":4,"t-tooze":4,"t3-grantham":4,"t3-allin2":4,"t3-allin3":4,"t3-allin5":4,"t3-georgieva":4,"t3-tooze230":4,"t3-toozechina":4,"t3-toozeberlin":4,"t3-toozeoil":4,"t3-housel":5,"t3-felix":5,"t3-valiante":5,"t-duss":6,"t-psa":6,"t-walz":6,"t3-drutman":6,"t3-lewis":6,"t3-abundance":6,"t3-telhami":6,"t3-stevenson":6,"t3-piers":6,"t3-psa2":6,"t3-wilson":6,"t3-rhodes":6,"t3-toprisks":6,"t-fayyad":7,"t-kaye":7,"t-torbati":7,"t-varoufakis":7,"t3-ghattas":7,"t3-gordon":7,"t3-hill":7,"t3-schell":7,"t3-bustamante":7,"t3-trip516":7,"t3-gavin":7,"t3-daalder":7,"t3-burns":7,"t3-danwang":7,"t3-zucman":7,"t3-lincoln":8,"t3-reich":8,"t3-breus":8,"t3-enders":8,"t3-sinclair":8,"t3-huberman":8,"t3-palmer":9,"t3-palmer1":9,"t3-kaldellis":9,"t3-gallagher":9,"t3-vikings":9,"t3-beato":9,"t3-kaplan":9,"t3-ffmpeg":9,"t3-random875":9,"t3-ferriss877":9,"t3-ferriss859":9}, TNAMES=["① AI — mô hình, hạ tầng & sản phẩm", "② AI — rủi ro, an toàn, việc làm & xã hội", "③ AI — chính sách & địa chính trị công nghệ", "④ Kinh doanh, chiến lược & khởi nghiệp", "⑤ Đầu tư, thị trường & kinh tế vĩ mô", "⑥ Tài chính cá nhân & tâm lý thành tích", "⑦ Chính trị Mỹ & dân chủ", "⑧ Địa chính trị & quan hệ quốc tế", "⑨ Khoa học & sức khoẻ", "⑩ Lịch sử, văn hoá & đời sống"], CHAN_ORDER=["The Diary of a CEO", "Dwarkesh Podcast", "Lex Fridman Podcast", "GZERO World", "The Knowledge Project", "No Priors", "The Tim Ferriss Show", "The Ezra Klein Show", "The Foreign Affairs Interview", "Acquired", "All-In Podcast", "The Rest Is Politics", "Ones and Tooze", "Hard Fork", "The Bulwark Podcast", "The President's Inbox", "Pod Save America", "a16z"], CHAN_DESC={"The Diary of a CEO": "Phỏng vấn khách mời nổi bật về kinh doanh, AI, sức khoẻ.", "Dwarkesh Podcast": "Phỏng vấn AI & khoa học, người dẫn chuẩn bị kỹ, truy vấn tới cùng.", "Lex Fridman Podcast": "Hội thoại dài, chuyên sâu về AI, khoa học, công nghệ, lịch sử.", "GZERO World": "Địa chính trị & quan hệ quốc tế, phân tích ít đảng phái.", "The Knowledge Project": "Mô hình tư duy, ra quyết định, tâm lý ứng dụng.", "No Priors": "Góc nhà đầu tư về AI, startup và sản phẩm công nghệ.", "The Tim Ferriss Show": "Công cụ, thói quen & tư duy của người xuất sắc.", "The Ezra Klein Show": "Chính trị Mỹ qua lăng kính ý tưởng & chính sách (thiên tả).", "The Foreign Affairs Interview": "Phỏng vấn đối ngoại chuyên sâu (tạp chí Foreign Affairs).", "Acquired": "Mổ xẻ lịch sử & chiến lược các công ty lớn.", "All-In Podcast": "Bàn tròn giới đầu tư về kinh tế, công nghệ, chính trị (có khuynh hướng).", "The Rest Is Politics": "Chính trị Anh & toàn cầu, 'bất đồng văn minh'.", "Ones and Tooze": "Kinh tế gặp địa chính trị (Adam Tooze).", "Hard Fork": "Tin công nghệ hàng tuần, dễ tiếp cận (NYT).", "The Bulwark Podcast": "Bảo thủ phản-Trump, bảo vệ dân chủ tự do.", "The President's Inbox": "Phân tích chính sách đối ngoại Mỹ (CFR, phi đảng phái).", "Pod Save America": "Chính trị Mỹ từ góc cấp tiến/Dân chủ (thiên tả rõ).", "a16z": "Xu hướng startup & công nghệ mới (quỹ a16z)."};
   function norm(x){return (x||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d');}
   function baseChan(tag){
     var t=tag.replace(/\s*·.*$/,'').replace(/\s*×.*$/,'')
@@ -5999,63 +6062,71 @@
     return t;
   }
   var items=[];
-  document.querySelectorAll('.entry[id]').forEach(function(el){
+  document.querySelectorAll('#library .entry[id]').forEach(function(el){
     var id=el.id; if(!/^(e|t|t3)-/.test(id)) return;
-    var tagEl=el.querySelector('.src-tag'), h3=el.querySelector('h3');
+    var tagEl=el.querySelector('.src-tag'), h3=el.querySelector('h3'), meta=el.querySelector('.guest-meta');
     if(!tagEl||!h3) return;
-    var tag=tagEl.textContent.trim();
-    var title=h3.textContent.replace(/\s+/g,' ').trim();
-    var short=title.split(/\s+[—–]\s+/)[0].replace(/^["“]+|["”]+$/g,'').trim();
-    var week=id.indexOf('t3-')===0?'t3':(id.indexOf('t-')===0?'t':'e');
-    items.push({id:id,tag:tag,chan:baseChan(tag),title:title,short:short,week:week,topic:TOPIC[id]});
+    items.push({id:id, chan:baseChan(tagEl.textContent.trim()),
+      title:h3.textContent.replace(/\s+/g,' ').trim(),
+      sub:meta?meta.textContent.replace(/\s+/g,' ').trim():'',
+      topic:TOPIC[id]});
   });
-  var view='topic', panel=document.getElementById('menuPanel'),
-      list=document.getElementById('menuList'), search=document.getElementById('menuSearch');
-
-  function grouped(view,q){
-    var f=items;
-    if(q){var nq=norm(q); f=items.filter(function(it){return norm(it.title).indexOf(nq)>-1||norm(it.chan).indexOf(nq)>-1||norm(TNAMES[it.topic]).indexOf(nq)>-1;});}
-    var groups=[], gmap={};
-    function push(key,name,it){ if(!(key in gmap)){gmap[key]={name:name,items:[]};groups.push(key);} gmap[key].items.push(it); }
-    if(view==='topic'){
-      f.forEach(function(it){push('tp'+it.topic, TNAMES[it.topic], it);});
-      groups.sort(function(a,b){return gmap[a].name.localeCompare(gmap[b].name,'vi');});
-    } else if(view==='chan'){
-      f.forEach(function(it){push('ch'+it.chan, it.chan, it);});
-      groups.sort(function(a,b){return CHAN_ORDER.indexOf(gmap[a].name)-CHAN_ORDER.indexOf(gmap[b].name);});
-    } else {
-      f.forEach(function(it){push('wk'+it.week, WEEKS[it.week], it);});
-      groups.sort(function(a,b){return WEEK_ORDER.indexOf(a.slice(2))-WEEK_ORDER.indexOf(b.slice(2));});
-    }
-    return {groups:groups,gmap:gmap,total:f.length};
+  function esc(x){return (x||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function card(it){
+    return '<a class="card" href="#read/'+it.id+'">'
+      +'<span class="card-chip">'+esc(it.chan)+'</span>'
+      +'<span class="card-title">'+esc(it.title)+'</span>'
+      +(it.sub?'<span class="card-sub">'+esc(it.sub)+'</span>':'')+'</a>';
   }
-  function esc(x){return x.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
-  function render(){
-    var q=search.value.trim(), g=grouped(view,q);
-    if(!g.total){ list.innerHTML='<div class="mp-empty">Không tìm thấy bài nào khớp “'+esc(q)+'”.</div>'; return; }
-    var html='';
-    g.groups.forEach(function(k){
-      var grp=g.gmap[k];
-      html+='<div class="mp-group"><div class="mp-group-h">'+esc(grp.name)+' <span class="cnt">('+grp.items.length+')</span></div>';
-      grp.items.forEach(function(it){
-        var sub = view==='chan' ? (WEEKS[it.week].split(' · ')[0]) : it.chan;
-        html+='<a class="mp-item" href="#'+it.id+'" data-id="'+it.id+'">'+esc(it.short)+'<span class="mp-sub">'+esc(sub)+'</span></a>';
-      });
-      html+='</div>';
-    });
-    list.innerHTML=html;
+  function section(name,desc,arr){
+    return '<section class="browse-sec"><h2 class="browse-h">'+esc(name)+' <span class="cnt">'+arr.length+' bài</span></h2>'
+      +(desc?'<p class="browse-desc">'+esc(desc)+'</p>':'')
+      +'<div class="card-grid">'+arr.map(card).join('')+'</div></section>';
   }
-  list.addEventListener('click',function(e){ var a=e.target.closest('a.mp-item'); if(a) closeMenu(); });
-  search.addEventListener('input',render);
-  document.querySelectorAll('.mp-tab').forEach(function(t){
+  function filt(q){ if(!q)return items; var n=norm(q);
+    return items.filter(function(it){return norm(it.title).indexOf(n)>-1||norm(it.chan).indexOf(n)>-1||norm(TNAMES[it.topic]).indexOf(n)>-1;}); }
+  function renderTopic(q){ var f=filt(q), h=''; for(var i=0;i<TNAMES.length;i++){ var a=f.filter(function(it){return it.topic===i;}); if(a.length) h+=section(TNAMES[i],'',a);} 
+    document.getElementById('view-topic').innerHTML=h||'<p class="browse-empty">Không tìm thấy bài nào.</p>'; }
+  function renderChan(q){ var f=filt(q), h=''; CHAN_ORDER.forEach(function(c){ var a=f.filter(function(it){return it.chan===c;}); if(a.length) h+=section(c,CHAN_DESC[c]||'',a);});
+    document.getElementById('view-chan').innerHTML=h||'<p class="browse-empty">Không tìm thấy bài nào.</p>'; }
+  function renderAll(){ var q=document.getElementById('browse-search').value.trim(); renderTopic(q); renderChan(q); }
+  document.querySelectorAll('.browse-tab').forEach(function(t){
     t.addEventListener('click',function(){
-      document.querySelectorAll('.mp-tab').forEach(function(x){x.classList.remove('active');});
-      t.classList.add('active'); view=t.getAttribute('data-view'); render(); list.scrollTop=0;
+      document.querySelectorAll('.browse-tab').forEach(function(x){x.classList.remove('active');});
+      t.classList.add('active'); var v=t.getAttribute('data-view');
+      document.getElementById('view-topic').hidden=(v!=='topic');
+      document.getElementById('view-chan').hidden=(v!=='chan');
+      window.scrollTo(0,0);
     });
   });
-  window.openMenu=function(){ document.getElementById('menuOverlay').classList.add('open'); render(); setTimeout(function(){search.focus();},250); };
-  window.closeMenu=function(){ document.getElementById('menuOverlay').classList.remove('open'); };
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeMenu(); });
+  document.getElementById('browse-search').addEventListener('input',renderAll);
+
+  var home=document.getElementById('home'), lib=document.getElementById('library'),
+      rbar=document.getElementById('reader-bar'), crumb=document.getElementById('rb-crumb'), activeEl=null;
+  function showReader(id){
+    var el=document.getElementById(id); if(!el) return showHome();
+    if(activeEl) activeEl.classList.remove('active');
+    el.classList.add('active'); activeEl=el;
+    home.hidden=true; lib.hidden=false; lib.classList.add('reading'); rbar.hidden=false;
+    var it=null; for(var i=0;i<items.length;i++) if(items[i].id===id){it=items[i];break;}
+    crumb.textContent = it ? ('› '+it.chan) : '';
+    var h3=el.querySelector('h3'); document.title=(h3?h3.textContent.split(/\s+[—–]\s+/)[0].trim():'Bài viết')+' · Cập nhật xu hướng';
+    window.scrollTo(0,0);
+  }
+  function showHome(){
+    if(activeEl){activeEl.classList.remove('active');activeEl=null;}
+    lib.classList.remove('reading'); lib.hidden=true; rbar.hidden=true; home.hidden=false;
+    document.title='Cập nhật xu hướng';
+  }
+  window.goHome=function(){ if(location.hash) location.hash=''; else showHome(); };
+  function route(){
+    var m=(location.hash||'').match(/^#read\/(.+)$/);
+    if(m && /^(e|t|t3)-/.test(m[1]) && document.getElementById(m[1])) showReader(m[1]);
+    else showHome();
+  }
+  renderTopic(''); renderChan('');
+  window.addEventListener('hashchange',route);
+  route();
 })();
 </script>
 
