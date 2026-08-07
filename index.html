@@ -622,6 +622,62 @@
       <p class="pt-kicker">Đo bằng <code>HuongDien/do-giu-chan-doanh-thu.py</code> (10 ca kiểm, 7 bản hỏng
         đều bị bắt). Chạy lại sau mỗi quý để có dãy số thay vì một điểm.</p>
 
+
+      <h4>3.8 &nbsp;Ai rơi, và rơi lúc nào <span style="font-weight:400;color:var(--muted)">(đo 7/8/2026)</span></h4>
+      <p>Mục 3.7 nói 2.377 khách biến mất nhưng không nói ai. Cắt ra thì tín hiệu rất gọn:
+        <strong>số lần đã mua quyết định gần như mọi thứ.</strong></p>
+      <div class="pt-tablewrap">
+        <table class="pt-table">
+          <thead><tr><th>Đã mua ở kỳ trước</th><th>Số khách</th><th>Ở lại</th><th>Tiền rò</th></tr></thead>
+          <tbody>
+            <tr><td>1 lần</td><td>2.180</td><td><span class="tag bad">23,1%</span></td><td><strong>1.325 tr</strong></td></tr>
+            <tr><td>2 lần</td><td>710</td><td><span class="tag warn">41,4%</span></td><td>682 tr</td></tr>
+            <tr><td>3–4 lần</td><td>539</td><td><span class="tag warn">56,6%</span></td><td>660 tr</td></tr>
+            <tr><td>5 lần trở lên</td><td>258</td><td><span class="tag ok">80,2%</span></td><td>365 tr</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><em>Tiền rò</em> là doanh thu kỳ trước của riêng nhóm đã bỏ đi. Nhóm mua đúng một lần vừa đông
+        nhất (59% khách), vừa rụng nặng nhất, vừa gánh <strong>44% toàn bộ tiền rò</strong>. Ngược lại, ai
+        đã mua từ 5 lần thì gần như ở lại. <strong>Lần mua thứ hai là bản lề.</strong></p>
+      <p>Ba lát cắt còn lại loại bớt các giả thuyết:</p>
+      <ul class="pt-list">
+        <li><strong>Không phải lỗi một chi nhánh.</strong> Nguyễn Khuyến giữ 35,4%, Đỗ Quang 35,7% — chênh
+          0,3 điểm, tức cùng một vấn đề ở cả hai nơi.</li>
+        <li><strong>Khách chi ít rụng nặng hơn, nhưng tiền rò lớn nhất nằm ở nhóm giữa.</strong> Dưới 500k
+          chỉ giữ 22,0%, trên 5 triệu giữ 68,1%; còn nhóm 500k–2 triệu rò nhiều tiền nhất (1.263 tr) vì
+          vừa đông vừa rụng.</li>
+        <li><strong>Theo nhóm hàng, sữa nước giữ chân kém nhất trong các nhóm lớn</strong> (1.127 khách,
+          giữ 30,7%, rò 742 tr), so với sữa bột 43,9%. Các mã nhóm nội bộ như <code>HD1</code>,
+          <code>KCT</code> chưa rõ nghĩa nên không diễn giải ở đây.</li>
+      </ul>
+
+      <h4>3.9 &nbsp;Cửa sổ để giữ khách là 8 tuần đầu</h4>
+      <p>Trong 4.915 khách thật sự mua lần đầu, tỷ lệ quay lại theo thời gian:</p>
+      <div class="pt-tablewrap">
+        <table class="pt-table">
+          <thead><tr><th>Sau</th><th>1 tuần</th><th>4 tuần</th><th>8 tuần</th><th>12 tuần</th><th>26 tuần</th><th>52 tuần</th></tr></thead>
+          <tbody>
+            <tr><td>Đã quay lại</td><td>5,2%</td><td>17,4%</td><td><strong>26,2%</strong></td><td>31,7%</td><td>41,7%</td><td>57,4%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Đường cong dốc nhất trong 8 tuần đầu rồi thoải hẳn: từ tuần 12 tới tuần 26 chỉ thêm 10 điểm cho
+        14 tuần. Nghĩa là <strong>hơn bốn trong năm khách mới không quay lại trong tháng đầu</strong>, và
+        sau tuần thứ 8 thì khả năng kéo về giảm nhanh.</p>
+      <p class="pt-why">Ghép 3.8 với 3.9 ra đúng một việc, không phải một danh sách:
+        <strong>nhắm vào nhóm vừa mua lần đầu, trong vòng 8 tuần, để đẩy họ tới lần mua thứ hai.</strong>
+        Đó là chỗ nhiều tiền nhất (1.325 triệu), tỷ lệ rụng cao nhất (76,9%), và là ngưỡng mà vượt qua
+        được thì tỷ lệ ở lại nhảy từ 23,1% lên 41,4% rồi 80,2%.</p>
+      <p class="pt-kicker"><strong>Hai chỗ phải cẩn thận.</strong> (i) Đã loại 1.007 khách xuất hiện trong
+        tháng mở sổ khỏi đường cong: họ là khách quen lâu năm lần đầu được ghi vào phần mềm, để lẫn vào
+        thì đường cong bị kéo cao (mốc 52 tuần 61,0% thành 57,4% sau khi loại). (ii) Mỗi mốc chỉ tính
+        trên khách đã có đủ chừng ấy thời gian, nên mốc 52 tuần dựng trên 805 người chứ không phải cả
+        4.915 — con số ở mốc xa vì thế kém chắc hơn mốc gần.</p>
+      <p class="pt-kicker">Đo bằng <code>HuongDien/soi-roi-rung-khach.py</code> (7 ca kiểm, 8 bản hỏng đều
+        bị bắt). Hai hộ còn lại: HD114 giữ chân doanh thu <strong>48,4%</strong>, khách <strong>32,4%</strong>;
+        hộ DQ <strong>không đo được</strong> vì chỉ có dữ liệu từ 1/2026, không có kỳ trước để so.</p>
+
       <h4>3.3 &nbsp;Bài học đắt nhất: đừng xây trên đất của người khác</h4>
       <p>Ba tập kể cùng một câu chuyện, cách nhau gần một thế kỷ.
         <a href="#read/t-disney">Disney 1928</a>: mất trắng bản quyền nhân vật Oswald vào tay nhà phân phối
@@ -844,7 +900,7 @@
     </section>
 
     <div class="pt-foot">
-      Mục phân tích dựng trên 104 bài tóm tắt hiện có, cập nhật 7/8/2026 (đã bổ sung mục 3.7 — số đo giữ chân doanh thu). Mỗi lần thêm bài mới đáng kể thì
+      Mục phân tích dựng trên 104 bài tóm tắt hiện có, cập nhật 7/8/2026 (đã bổ sung mục 3.7–3.9 — số đo giữ chân, ai rơi rụng, và cửa sổ 8 tuần). Mỗi lần thêm bài mới đáng kể thì
       soi lại mục 02 (bốn chỗ mâu thuẫn) và mục 07 (chỗ còn thiếu) trước, vì đó là hai chỗ đổi nhanh nhất.
     </div>
     </div>
