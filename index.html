@@ -258,6 +258,97 @@
   #library.reading .entry{display:none}
   #library.reading .entry.active{display:block;margin:20px 0 8px}
 
+  /* ===== Mục Phân tích ===== */
+  .pt-lead{
+    background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;
+    border-radius:16px;padding:22px 24px;margin:18px 0 26px;
+  }
+  .pt-lead h2{margin:0 0 8px;font-size:1.22rem}
+  .pt-lead p{margin:0;font-size:.93rem;opacity:.95}
+  .pt-lead strong{color:#fff}
+  .pt-sec{
+    background:var(--card);border:1px solid var(--border);border-radius:16px;
+    padding:20px 22px;margin:18px 0;
+  }
+  .pt-sec > h3{
+    margin:0 0 14px;font-size:1.1rem;display:flex;align-items:baseline;gap:10px;
+    border-bottom:2px solid var(--border);padding-bottom:10px;
+  }
+  .pt-num{
+    flex:none;font-size:.72rem;font-weight:800;letter-spacing:.04em;
+    color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:3px 10px;
+  }
+  .pt-sec h4{
+    margin:22px 0 8px;font-size:.98rem;color:var(--ink);
+    padding-left:11px;border-left:3px solid var(--accent);
+  }
+  .pt-sec > h4:first-of-type{margin-top:6px}
+  .pt-sec p{margin:0 0 10px;font-size:.94rem}
+  .pt-list{list-style:none;padding:0;margin:0 0 10px}
+  .pt-list > li{
+    position:relative;padding:7px 0 7px 15px;font-size:.94rem;
+    border-bottom:1px solid var(--border);
+  }
+  .pt-list > li:last-child{border-bottom:none}
+  .pt-list > li::before{content:"";position:absolute;left:0;top:15px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+  .pt-why{
+    background:var(--accent-soft);border-radius:10px;padding:11px 14px;
+    font-size:.91rem;margin:12px 0 4px;display:block;
+  }
+  li .pt-why{margin:8px 0 2px}
+  .pt-kicker{border-left:3px solid var(--accent);padding-left:12px;margin:12px 0 6px!important}
+  .pt-foot{
+    border:1.5px dashed var(--border);border-radius:14px;
+    padding:14px 18px;color:var(--muted);font-size:.85rem;margin:22px 0 10px;
+  }
+
+  .pt-clash{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:14px 0 16px}
+  .pt-clash-row{display:flex;flex-wrap:wrap;border-top:1px solid var(--border)}
+  .pt-clash-row:first-child{border-top:none}
+  .pt-clash-q{
+    flex:0 0 172px;background:var(--bg);padding:12px 14px;
+    font-size:.86rem;font-weight:700;color:var(--ink);
+  }
+  .pt-clash-a{flex:1 1 260px;padding:12px 14px;font-size:.89rem;line-height:1.55}
+  .pt-clash-vs{
+    display:inline-block;margin:0 5px;font-size:.7rem;font-weight:800;text-transform:uppercase;
+    letter-spacing:.05em;color:#b45309;background:#fef3c7;border-radius:5px;padding:1px 7px;
+  }
+  .pt-clash-note{display:block;margin-top:6px;font-size:.81rem;color:var(--muted)}
+
+  .pt-tablewrap{overflow-x:auto;margin:12px 0 14px;-webkit-overflow-scrolling:touch}
+  table.pt-table{border-collapse:collapse;width:100%;min-width:520px;font-size:.87rem}
+  table.pt-table th,table.pt-table td{
+    border:1px solid var(--border);padding:9px 11px;text-align:left;vertical-align:top;
+  }
+  table.pt-table thead th{background:var(--bg);font-size:.8rem;color:var(--muted);font-weight:700}
+  table.pt-table .th-sub{font-weight:400;font-size:.74rem;color:var(--muted)}
+  table.pt-table td:first-child{font-weight:600}
+  table.pt-table-2{min-width:640px}
+  table.pt-table-2 td:not(:first-child):not(:last-child){color:var(--muted)}
+  .tag{
+    display:inline-block;font-size:.72rem;font-weight:700;border-radius:6px;
+    padding:2px 8px;margin:0 4px 3px 0;white-space:nowrap;
+  }
+  .tag.ok{background:#dcfce7;color:#166534}
+  .tag.warn{background:#fef3c7;color:#92400e}
+  .tag.bad{background:#fee2e2;color:#991b1b}
+
+  .pt-cta{
+    display:block;text-decoration:none;background:var(--card);
+    border:1px solid var(--accent);border-left:5px solid var(--accent);border-radius:14px;
+    padding:14px 18px;margin:18px 0 4px;color:var(--ink);
+  }
+  .pt-cta:hover{background:var(--accent-soft)}
+  .pt-cta b{color:var(--accent)}
+  .pt-cta span{display:block;font-size:.86rem;color:var(--muted);margin-top:3px}
+
+  @media (max-width:560px){
+    .pt-sec{padding:16px 15px}
+    .pt-clash-q{flex-basis:100%;padding-bottom:4px}
+    .pt-clash-a{padding-top:6px}
+  }
+
 </style>
 </head>
 <body>
@@ -298,16 +389,415 @@
     có bản quyền.
   </div>
 
+  <a class="pt-cta" href="#" onclick="moPhanTich();return false;">
+    🧭 <b>Mới: mục Phân tích</b> &mdash; 104 bài này ảnh hưởng gì tới Hương Diện và tới cuộc sống, tương lai của tôi?
+    <span>Bảy mục, có bảng chấm điểm và bảng quyết định. Bấm để mở.</span>
+  </a>
+
   <div id="browse">
     <div class="browse-head">
       <div class="browse-tabs">
         <button class="browse-tab active" data-view="topic">🏷️ Theo chủ đề</button>
         <button class="browse-tab" data-view="chan">🎙️ Theo podcast</button>
+        <button class="browse-tab" data-view="phantich">🧭 Phân tích</button>
       </div>
       <input id="browse-search" type="search" placeholder="🔍 Tìm bài, khách mời, kênh…" autocomplete="off">
     </div>
     <div id="view-topic" class="browse-view"></div>
     <div id="view-chan" class="browse-view" hidden></div>
+    <div id="view-phantich" class="browse-view" hidden>
+
+    <div class="pt-lead">
+      <h2>Đọc xong 104 bài rồi thì phải làm gì khác đi?</h2>
+      <p>Mục này không tóm tắt lại các bài đã có. Nó trả lời đúng một câu hỏi: toàn bộ những gì
+        104 bài tóm tắt trên trang này nói ra thì <strong>chạm vào Hương Diện</strong> ở chỗ nào,
+        và <strong>chạm vào đời sống, công việc, tương lai của người đọc nó</strong> ở chỗ nào.
+        Mọi luận điểm dưới đây đều dẫn ngược về bài gốc, bấm vào là mở ra đọc.</p>
+    </div>
+
+    <section class="pt-sec">
+      <h3><span class="pt-num">01</span> Kho này thực sự đang nói về cái gì</h3>
+      <p>Đếm theo chủ đề, 104 bài chia ra: AI 32 bài (mô hình và hạ tầng 16, rủi ro và việc làm 11,
+        chính sách 5); địa chính trị và chính trị Mỹ 28 bài; kinh doanh và chiến lược 12; đầu tư và
+        kinh tế vĩ mô 12; lịch sử, văn hoá, đời sống 11; khoa học và sức khoẻ 6; tài chính cá nhân 3.</p>
+      <p>Ba dữ kiện rút thẳng từ con số đó:</p>
+      <ul class="pt-list">
+        <li>(i) Kho nghiêng rất nặng về <strong>AI</strong> và về <strong>nước Mỹ</strong>. Sáu trong mười
+          chủ đề nói về một trong hai thứ này.</li>
+        <li>(ii) Phần trực tiếp chạm được vào một cửa hàng bán lẻ là <strong>15 bài</strong>: kinh doanh 12
+          cộng tài chính cá nhân 3. Phần còn lại chạm gián tiếp, qua giá nhập, tỷ giá và sức mua.</li>
+        <li>(iii) <strong>Không có bài nào về Việt Nam, về ngành Mẹ &amp; Bé, hay về hành vi người tiêu
+          dùng châu Á.</strong> Đây là lỗ hổng lớn nhất, được nói kỹ ở mục 07.</li>
+      </ul>
+    </section>
+
+    <section class="pt-sec">
+      <h3><span class="pt-num">02</span> Bốn chỗ kho tự mâu thuẫn, và vì sao đó mới là thông tin</h3>
+      <p>Điều dễ bỏ qua nhất khi đọc 104 bài rời rạc: chúng <strong>không đồng thuận với nhau</strong>,
+        và ở bốn chỗ thì mức bất đồng lớn tới mức không thể coi là khác biệt sắc thái.</p>
+
+      <div class="pt-clash">
+        <div class="pt-clash-row">
+          <div class="pt-clash-q">Xác suất AI dẫn tới thảm hoạ</div>
+          <div class="pt-clash-a">
+            <a href="#read/e-hinton">Hinton</a> ~20% &nbsp;·&nbsp;
+            <a href="#read/t3-kokotajlo">Kokotajlo</a> ~70% &nbsp;·&nbsp;
+            <a href="#read/e-yampolskiy">Yampolskiy</a> &gt;99%
+            <span class="pt-clash-note">Ba người đều ở trong ngành. Dải ước lượng phủ gần trọn khoảng
+              từ 0 tới 100.</span>
+          </div>
+        </div>
+        <div class="pt-clash-row">
+          <div class="pt-clash-q">AI có xoá việc làm không</div>
+          <div class="pt-clash-a">
+            <a href="#read/t3-amodei">Amodei</a> 50% việc văn phòng khởi điểm mất trong 5 năm ·
+            <a href="#read/e-gawdat">Gawdat</a> 30% việc một số ngành mất tới 2027
+            <span class="pt-clash-vs">đối lại</span>
+            <a href="#read/t3-galloway">Galloway</a>: tin tuyển bác sĩ X-quang <em>tăng</em>, tin tuyển
+            lập trình viên <em>+11%</em>; và
+            <a href="#read/t3-priestley">Priestley</a>: nghịch lý Jevons làm tổng cầu dịch vụ tăng khi
+            dịch vụ rẻ đi
+            <span class="pt-clash-note">Hai bên không tranh cãi về dữ liệu. Một bên dự báo, một bên
+              đếm tin tuyển dụng thật.</span>
+          </div>
+        </div>
+        <div class="pt-clash-row">
+          <div class="pt-clash-q">Thị trường đang ở đâu</div>
+          <div class="pt-clash-a">
+            <a href="#read/t-allin">All-In</a> dự GDP Mỹ 2026 tăng 4,6–6,2%
+            <span class="pt-clash-vs">đối lại</span>
+            <a href="#read/t-dalio">Dalio</a> đọc đây là bong bóng cỡ 1929 và 2000 ·
+            <a href="#read/t3-grantham">Grantham</a> gọi là bong bóng lớn nhất lịch sử Mỹ, khả dĩ rơi 70%
+            <span class="pt-clash-vs">ở giữa</span>
+            <a href="#read/t3-georgieva">IMF</a> nâng dự báo tăng trưởng nhưng kèm câu
+            &ldquo;đừng coi điều này là đương nhiên&rdquo;
+            <span class="pt-clash-note">Cùng một năm, cùng một bộ dữ liệu công khai.</span>
+          </div>
+        </div>
+        <div class="pt-clash-row">
+          <div class="pt-clash-q">AI sẽ đắt lên hay rẻ đi</div>
+          <div class="pt-clash-a">
+            <a href="#read/t3-computepricing">Dwarkesh</a>: giá tính toán có thể tăng 10–15 lần vì cung
+            tăng ~3 lần/năm còn cầu tăng ~10 lần/năm
+            <span class="pt-clash-vs">đối lại</span>
+            <a href="#read/t3-jang">Jang</a> dựng lại AlphaGo với 10.000 đô ·
+            <a href="#read/t-lex490">Lex #490</a>: khoảng 10 mô hình mở Trung Quốc đang cạnh tranh bằng
+            cách phát hành miễn phí
+            <span class="pt-clash-note">Hai chiều này có thể cùng đúng: biên giới đắt lên trong khi
+              phần đã chín rẻ đi.</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="pt-kicker">Bốn cặp trên không phải bốn cuộc tranh cãi chờ phân xử. Chúng là
+        <strong>phép đo mức bất định</strong>, và chính giới chuyên môn là bên đo.
+        <a href="#read/t3-imas">Alex Imas</a> nói thẳng điều đó: dự báo điểm là ảo tưởng, việc nên làm là
+        chuẩn bị cho nhiều kịch bản. <a href="#read/t-gurley">Bill Gurley</a> bổ sung cơ chế: các hệ phức
+        hợp chạy ổn định rất lâu rồi lật hẳn trạng thái khi chỉ một biến số đổi, nên đừng ngoại suy tuyến
+        tính từ quá khứ, và hãy truy hiệu ứng bậc hai, bậc ba thay vì dừng ở hệ quả đầu tiên.</p>
+      <p class="pt-kicker">Quy tắc thực hành duy nhất rút ra được: <strong>chỉ chọn những việc đúng
+        trong cả hai kịch bản.</strong> Bảng cụ thể ở mục 06.</p>
+    </section>
+
+    <section class="pt-sec">
+      <h3><span class="pt-num">03</span> Ảnh hưởng tới Hương Diện</h3>
+
+      <h4>3.1 &nbsp;Luận điểm quan trọng nhất của cả kho, và nó đứng về phía một cửa hàng Mẹ &amp; Bé</h4>
+      <p>Ba nguồn xuất phát từ ba thế giới khác hẳn nhau gặp nhau ở cùng một kết luận.
+        <a href="#read/t3-imas">Imas &amp; Trammell</a> (kinh tế học): thứ còn khan hiếm sau AGI là
+        <strong>&ldquo;khu vực quan hệ&rdquo;</strong>, tức những hàng hoá mà việc có con người thật trong
+        đó chính là một phần của giá trị, nên robot làm giỏi hơn cũng không thay được.
+        <a href="#read/t3-beato">Rick Beato</a> (âm nhạc) và <a href="#read/t3-kaplan">Jeff Kaplan</a>
+        (thiết kế game) nói cùng một điều từ nghề của họ: AI kéo chi phí phần sản xuất hàng loạt về gần 0,
+        và <em>chính vì thế</em> dồn giá trị về phía cảm xúc thật, câu chuyện thật, sự hiện diện thật.
+        <a href="#read/t3-priestley">Daniel Priestley</a> đóng khung bằng hai đường cong cắt nhau: giá trị
+        bị nén ở công việc xử lý thông tin thuần tuý, không nén được ở việc cần đôi tay và mặt người ở
+        hiện trường.</p>
+      <p>Bán lẻ Mẹ &amp; Bé nằm gần như trọn trong nhóm không nén được. Một người mẹ mới sinh mua hộp sữa
+        không chỉ mua hộp sữa, mà mua sự trấn an từ một người đã bán đúng mặt hàng đó suốt 18 năm và nhớ
+        con chị mấy tháng tuổi. Đó là hàng hoá thuộc khu vực quan hệ theo đúng định nghĩa của Imas.</p>
+      <p>Nhưng luận điểm ấy có mặt sắc, và mặt sắc mới là phần đáng làm gì đó. Nó chỉ bảo vệ được phần
+        không nén được. Phần còn lại của cùng một cửa hàng, gồm báo giá, tra tồn kho, trả lời &ldquo;còn
+        hàng không&rdquo;, soạn mô tả sản phẩm, nhắc đơn, đối chiếu kho, nằm <strong>trọn trong phần đang
+        bị nén về 0</strong>. Hệ quả: mỗi giờ người còn đang tiêu vào phần nén được là một giờ bị lấy khỏi
+        phần duy nhất đang lên giá.</p>
+      <p class="pt-why">Đó là lập luận thật cho việc tự động hoá ở Hương Diện, và nó không phải lập luận
+        cắt người: <strong>tự động hoá để dồn giờ người về đúng chỗ AI không với tới.</strong></p>
+
+      <h4>3.2 &nbsp;Chấm Hương Diện theo khung năm lợi thế</h4>
+      <p><a href="#read/t3-hormozi">Alex Hormozi</a> liệt kê năm lợi thế cấu trúc quyết định một doanh
+        nghiệp có mở rộng sinh lời được hay không, và nhấn mạnh rằng chọn đúng cuộc chơi từ đầu quan trọng
+        hơn cố gắng anh hùng trong một cuộc chơi tệ. Chấm thẳng:</p>
+      <div class="pt-tablewrap">
+        <table class="pt-table">
+          <thead><tr><th>Lợi thế</th><th>Hương Diện</th><th>Căn cứ</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>01. Giữ chân khách</td>
+              <td><span class="tag ok">Mạnh về cấu trúc</span><span class="tag warn">chưa đo</span></td>
+              <td>Vòng đời khách có nhịp tự nhiên hiếm ngành nào có: mang thai, sơ sinh, ăn dặm, 1–3 tuổi,
+                khách quay lại theo tháng. Nhưng Hormozi nói giữ chân doanh thu là thước đo sức khoẻ
+                <em>quan trọng nhất</em>, mà con số &ldquo;bao nhiêu phần trăm doanh thu năm nay đến từ
+                khách đã mua năm ngoái&rdquo; hiện chưa được đo. Đây là phép đo đáng làm trước mọi phép đo khác.</td>
+            </tr>
+            <tr>
+              <td>02. Biên lợi nhuận</td>
+              <td><span class="tag bad">Yếu</span></td>
+              <td>Bán lẻ hàng hãng, giá bị so công khai trên sàn từng phút.</td>
+            </tr>
+            <tr>
+              <td>03. Thị trường đang mở rộng</td>
+              <td><span class="tag bad">Ngược chiều</span></td>
+              <td>Tổng tỷ suất sinh Việt Nam 1,96 con (2023) xuống 1,91 (2024), nhích lên 1,93 (2025),
+                vẫn dưới mức sinh thay thế 2,1 và đô thị lớn thấp hơn hẳn. Tổng cầu của ngành co lại theo năm.</td>
+            </tr>
+            <tr>
+              <td>04. Độ phức tạp vận hành</td>
+              <td><span class="tag bad">Cao</span></td>
+              <td>Trên 400 mã đang bán, hàng có hạn dùng, nhiều kênh bán song song.</td>
+            </tr>
+            <tr>
+              <td>05. Khác biệt cạnh tranh</td>
+              <td><span class="tag ok">Mạnh</span><span class="tag warn">nằm ở người</span></td>
+              <td>Hàng thì ai cũng nhập được. Quan hệ và năng lực tư vấn thì không.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Hai ô mạnh nằm cùng một chỗ: <strong>con người</strong>. Ba ô yếu nằm cùng một chỗ khác:
+        <strong>hàng hoá</strong>.</p>
+      <p class="pt-why">Hàm ý đi ngược bản năng bán lẻ thông thường: hướng tăng trưởng của Hương Diện
+        <strong>không phải thêm mã hàng hay thêm điểm bán</strong>, vì cả hai đều đẩy sâu hơn vào ba ô yếu.
+        Hướng còn lại là tăng giá trị mỗi khách và tăng biên, tức hàng nhập riêng (sữa non Avenir là ví dụ
+        đúng hướng: biên cao hơn và có khác biệt), dịch vụ tư vấn có thu, và gói hàng theo giai đoạn tuổi
+        của bé thay vì bán rời từng mã.</p>
+
+      <h4>3.3 &nbsp;Bài học đắt nhất: đừng xây trên đất của người khác</h4>
+      <p>Ba tập kể cùng một câu chuyện, cách nhau gần một thế kỷ.
+        <a href="#read/t-disney">Disney 1928</a>: mất trắng bản quyền nhân vật Oswald vào tay nhà phân phối
+        vì một hợp đồng bất lợi, và ngay trên chuyến tàu trở về đã phác thảo Mickey cùng lời thề không bao
+        giờ để người khác sở hữu sáng tạo của mình.
+        <a href="#read/t3-ballmer">Microsoft 1980</a>: cấp phép DOS cho IBM nhưng <em>giữ quyền bán cho
+        hãng khác</em>, và chính điều khoản đó biến Microsoft thành nền tảng của cả ngành PC.
+        <a href="#read/t-varoufakis">Varoufakis 2026</a>: quyền lực kinh tế nay không nằm ở người sở hữu
+        nhà máy mà ở các <strong>&ldquo;lãnh chúa nền tảng&rdquo;</strong> thu địa tô số từ mọi hoạt động
+        diễn ra trên hạ tầng họ kiểm soát.</p>
+      <p>Áp vào Hương Diện: khách đến qua cửa hàng, qua Facebook và Zalo, qua website riêng; đơn và kho
+        chạy trên KiotViet. Trong đó Facebook, Zalo và phần mềm bán hàng đều là <strong>đất thuê</strong>,
+        có thể đổi thuật toán, đổi phí, đổi luật hiển thị mà không hỏi ai. Phần đất thuộc sở hữu chỉ gồm ba
+        thứ: website riêng, danh sách khách kèm số liên lạc, và lịch sử mua hàng.</p>
+      <p class="pt-why">Đây là lý do chiến lược để giữ website riêng dù nó không phải kênh ra nhiều đơn
+        nhất. Nó không cạnh tranh với Facebook về lượng đơn. Nó là mảnh đất duy nhất không ai đuổi được.</p>
+
+      <h4>3.4 &nbsp;Tài sản thật là 18 năm dữ liệu, không phải phần mềm</h4>
+      <p>Bốn nguồn độc lập nói cùng một điều, và đây là điểm hội tụ rõ nhất trong cả kho.
+        <a href="#read/t3-nadella">Nadella</a>: khi ai cũng thuê được mô hình giỏi ngang nhau, thứ phân
+        biệt là bộ đánh giá riêng, tức khả năng đo AI làm tốt <em>việc của riêng bạn</em> tới đâu.
+        <a href="#read/t3-mcdermott">McDermott</a>: trí tuệ AI đang bị hàng hoá hoá, nên khác biệt cạnh
+        tranh chuyển sang khả năng điều phối.
+        <a href="#read/t3-herzig">Herzig (SAP)</a>: lợi thế nằm ở dữ liệu và ngữ cảnh doanh nghiệp tích luỹ
+        hàng chục năm, thứ mô hình nền dù mạnh tới đâu cũng không có sẵn.
+        <a href="#read/t-a16z">a16z</a> nói mạnh nhất: 2026 là năm con lắc xoay từ ràng buộc tính toán sang
+        <strong>ràng buộc dữ liệu</strong>, và người thắng là người sở hữu nguồn thu thập dữ liệu từ thế
+        giới thật, thứ <em>không crawl được từ internet</em>.</p>
+      <p>18 năm bán hàng ở Hương Diện đúng là một kho như vậy: ai mua gì ở tháng tuổi nào của con, mua lại
+        sau bao lâu, hỏi gì trước khi quyết, đổi sang hãng khác vì lý do gì. Sàn thương mại điện tử có
+        nhiều đơn hơn, nhưng không có 18 năm quan hệ với từng bà mẹ ở một khu phố Hà Nội.</p>
+      <p class="pt-why">Việc phải làm suy ra rất gọn: mọi cuộc trò chuyện với khách đều là dữ liệu, và dữ
+        liệu chỉ thành tài sản khi được ghi lại <strong>có cấu trúc</strong>. Một câu hỏi khách nhắn qua
+        Messenger mà không được lưu là một mẩu tài sản bị vứt đi.</p>
+
+      <h4>3.5 &nbsp;Đòn bẩy rẻ nhất, và nó không cần AI</h4>
+      <p><a href="#read/t3-nejatian">Kaz Nejatian</a> cứu Opendoor khỏi phá sản chủ yếu bằng một việc: đếm
+        số bước từ lúc chủ nhà nhập địa chỉ tới lúc nhận được đề nghị giá, thấy nó đi qua
+        <strong>11 con người</strong>, rồi cắt từng nút một. Quy luật ông rút ra:
+        <strong>mỗi điểm ma sát được gỡ bỏ, nhu cầu tăng lên.</strong> Kết quả sau chín tháng là lượng mua
+        nhà gấp 6–7 lần cùng kỳ năm trước, mà theo ông gần như hoàn toàn nhờ giảm ma sát, chưa cần phép màu
+        công nghệ nào.</p>
+      <p>Phép thử tương ứng cho Hương Diện là đếm số bước và số phút từ lúc khách nhắn tin đầu tiên tới lúc
+        hàng ra khỏi cửa. Mỗi bước bỏ được là doanh thu tăng, đo được ngay trong tháng, không phải chờ công
+        nghệ nào chín.</p>
+      <p>Nejatian còn hai điểm khó nghe hơn, và cả hai đều áp được: ông <em>đóng cửa hai mảng đang có lãi</em>
+        nhưng lệch lõi, để giữ tập trung; và ông cảnh báo rằng người giỏi mà không tin vào việc chung sẽ phá
+        tổ chức trong im lặng, nguy hiểm hơn người kém vì không ai dám đụng tới họ.</p>
+
+      <h4>3.6 &nbsp;Ba đường vĩ mô chạm thẳng vào một cửa hàng ở Hà Nội</h4>
+      <p>Kho có 12 bài vĩ mô, phần lớn bàn chuyện nước Mỹ. Nhưng có đúng ba đường truyền đi thẳng tới
+        bảng giá của một cửa hàng Mẹ &amp; Bé.</p>
+      <ul class="pt-list">
+        <li><strong>(i) Giá nhập và cước vận chuyển.</strong> <a href="#read/t3-toozeoil">Tooze</a> chỉ ra
+          khoảng 20% dầu thế giới đi qua eo Hormuz, và bên chịu nặng nhất khi tuyến này nghẽn
+          <em>không phải Mỹ mà là châu Á</em>, nơi nhận khoảng 75% xuất khẩu dầu của khu vực; Mỹ được cách
+          ly nhờ dầu đá phiến. Một cuộc chiến &ldquo;xa xôi&rdquo; ở Trung Đông đi thẳng vào cước tàu và
+          giá hàng nhập, mà Hương Diện thì nhập sữa và đồ dùng từ Pháp, Nhật, Úc, Hàn.</li>
+        <li><strong>(ii) Dư cung Trung Quốc.</strong> <a href="#read/t3-toozechina">Tooze</a> gọi tên
+          &ldquo;China Shock 2.0&rdquo;: thặng dư thương mại Trung Quốc chạm khoảng 1,2 nghìn tỷ đô, làn
+          sóng dư thừa công suất tràn ra thế giới. Với ngành Mẹ &amp; Bé, đây là hai mặt của một đồng xu:
+          giá nhập một số nhóm hàng rẻ đi (cơ hội), và hàng giá rẻ tràn lên sàn ép biên (đe doạ). Ô
+          &ldquo;biên lợi nhuận&rdquo; vốn đã yếu ở mục 3.2 chịu áp lực từ đúng hướng này.</li>
+        <li><strong>(iii) Nếu bong bóng AI vỡ.</strong> <a href="#read/t-dalio">Dalio</a> và
+          <a href="#read/t3-grantham">Grantham</a> cùng chẩn đoán bong bóng;
+          <a href="#read/t3-tooze230">Tooze</a> đưa quy mô: các hãng công nghệ lớn dự chi khoảng 650 tỷ đô
+          cho hạ tầng AI riêng năm 2026, được mô tả là cuộc huy động công nghiệp thời bình lớn nhất lịch sử
+          Mỹ. Điểm đáng yên tâm: hàng thiết yếu cho trẻ nhỏ là <strong>nhóm phòng thủ</strong>, bỉm và sữa
+          không phải thứ bị cắt đầu tiên khi túi tiền eo lại. Rủi ro thật vì thế không nằm ở phía cầu mà ở
+          <strong>phía vốn</strong>: tín dụng siết, chi phí vốn lưu động tăng, và hàng tồn trở nên đắt hơn
+          để nắm giữ.</li>
+      </ul>
+    </section>
+
+    <section class="pt-sec">
+      <h3><span class="pt-num">04</span> Ảnh hưởng tới công việc và tương lai của tôi</h3>
+
+      <h4>4.1 &nbsp;Mô hình mà kho mô tả chính là mô hình đang chạy</h4>
+      <p><a href="#read/t3-nadella">Nadella</a> đặt tên cho hai nhân vật mới của kỷ nguyên này:
+        <strong>&ldquo;full-stack builder&rdquo;</strong> và
+        <strong>&ldquo;hyper-leveraged generalist&rdquo;</strong>. Luận điểm: khi bộ khung điều khiển
+        (harness) đủ tốt, một người đa năng dùng AI có thể làm việc của cả một đội chuyên gia, và câu hỏi
+        còn mở là tổ chức truyền thống thích nghi ra sao với những cá nhân đòn bẩy siêu cao như vậy.</p>
+      <p>Cách một người vận hành hơn chục ứng dụng cùng lúc, mỗi ứng dụng một mảng, từ bán hàng, kế toán
+        thuế, tài chính gia đình tới phân tích quân sự, là hiện thân đúng của mô tả đó. Kho cho biết thêm
+        một điều đáng giá: mô hình này <em>chưa phổ biến</em>, tức nó còn đang là lợi thế chứ chưa thành
+        mặt bằng.</p>
+
+      <h4>4.2 &nbsp;Nhưng kho cũng chỉ đúng ba chỗ mô hình đó gãy</h4>
+      <ul class="pt-list">
+        <li><strong>(i) Bộ đánh giá riêng là tài sản, không phải chi phí phụ.</strong>
+          <a href="#read/t3-nadella">Nadella</a> nói thẳng rằng bộ đánh giá riêng giờ là tài sản trí tuệ
+          quan trọng nhất của một công ty. <a href="#read/t3-noambrown">Noam Brown</a> giải thích vì sao:
+          các thước đo truyền thống đã thất bại, mô hình đạt điểm gần tối đa trên benchmark cũ mà điểm đó
+          không còn phản ánh mức hữu ích thật trong công việc nhiều bước của thế giới thực. Nói cách khác,
+          hệ cổng kiểm và bộ ca thử đang dựng cho từng mảng không phải phần việc phụ trợ,
+          <strong>nó chính là thứ kho gọi là tài sản quan trọng nhất</strong>.</li>
+        <li><strong>(ii) Agent tự chạy đi lạc mà chính người tạo ra cũng không biết.</strong>
+          <a href="#read/t3-containment">Hard Fork</a> ghi lại sự cố một mô hình nghiên cứu của OpenAI
+          thoát khỏi sandbox để thực hiện hành vi tấn công mạng; sau đó Anthropic tiết lộ agent của họ đã
+          làm điều tương tự <em>ba lần trong tháng 4/2026 mà không ai nhận ra cho tới sau này</em>. Tập
+          <a href="#read/t3-openclaw">OpenClaw</a> kể cùng loại chuyện từ phía người xây: prompt injection,
+          cô lập sandbox, vệ sinh bộ nhớ. <a href="#read/t3-mcdermott">McDermott</a> bổ sung yêu cầu ở tầm
+          doanh nghiệp: phải có nút dừng và các lớp kiểm soát, vì hỗn loạn sẽ tới khi mỗi bộ phận cắm agent
+          riêng vào hệ thống.
+          <span class="pt-why">Đây là mô tả chính xác rủi ro của việc chạy agent nền trên dữ liệu tiền
+          thật: kho hàng, sổ thu chi gia đình, báo cáo thuế. Nếu các phòng lab hàng đầu còn không phát hiện
+          kịp agent của mình đi lạc, một người vận hành đơn độc càng không.</span></li>
+        <li><strong>(iii) Đòn bẩy càng cao càng dễ nhầm &ldquo;làm được nhiều&rdquo; với &ldquo;làm
+          đúng&rdquo;.</strong> <a href="#read/t3-hormozi">Hormozi</a> cảnh báo việc thuê ngoài tư duy phản
+          biện cho công nghệ là sai lầm: AI nên là đòn bẩy, không phải thứ thay thế phán đoán chiến lược.
+          <a href="#read/t3-ferriss859">Ferriss</a> gọi tên phần đối trọng là
+          <strong>&ldquo;lợi thế ngoại tuyến&rdquo;</strong>: khi ai cũng dùng AI, khả năng tập trung sâu
+          và tư duy độc lập trở nên khan hiếm hơn chứ không ít đi.</li>
+      </ul>
+
+      <h4>4.3 &nbsp;Kho khuyên học tiếp cái gì</h4>
+      <p><a href="#read/e-gawdat">Gawdat</a> khuyên rèn &ldquo;AI fluency&rdquo; cùng các kỹ năng chỉ con
+        người mới có, và nhận xét người giỏi nhất trong nghề trụ lại lâu hơn nhóm còn lại, chứ không phải
+        cả nghề cùng chìm.
+        <a href="#read/t3-priestley">Priestley</a> cụ thể hơn với hai kỹ năng sống sót: thương hiệu cá
+        nhân (con người mua từ con người, càng đúng khi nội dung do AI tạo tràn ngập) và tư duy khởi
+        nghiệp.
+        <a href="#read/t-gurley">Gurley</a> thêm một điều kiện ít ai nói: muốn giỏi một lĩnh vực phải nắm
+        cả <em>tầng đá gốc</em> lẫn <em>mép lưỡi dao</em>, tức vừa thuộc lịch sử nền của ngành vừa bám sát
+        biên giới mới nhất.
+        <a href="#read/t3-pincus">Pincus</a> đưa công thức làm sản phẩm ít tốn nhất:
+        <strong>Proven, Better, New</strong>, bắt đầu từ cơ chế đã được chứng minh, làm nó tốt hơn, và chỉ
+        thêm <em>một</em> lớp mới, thay vì phát minh từ số không.</p>
+    </section>
+
+    <section class="pt-sec">
+      <h3><span class="pt-num">05</span> Ảnh hưởng tới cuộc sống</h3>
+      <p>Đây là phần dễ bị lướt qua nhất của kho, và cũng là phần nhất quán nhất. Sáu nguồn từ sáu ngành
+        không liên quan gì tới nhau chỉ về cùng một hướng.</p>
+      <ul class="pt-list">
+        <li><a href="#read/t3-priestley">Priestley</a>, sau trọn một tập dự báo về đảo lộn nghề nghiệp, kết
+          bằng câu tài sản quý nhất của kỷ nguyên tự động hoá vẫn là <strong>các mối quan hệ con người và
+          gia đình</strong>.</li>
+        <li><a href="#read/t3-housel">Housel</a>: của cải là thứ bạn có trừ đi thứ bạn muốn; và thứ đáng
+          giá nhất tiền mua được là <strong>sự độc lập và quyền kiểm soát thời gian</strong>, không phải đồ
+          vật. Kỹ năng tài chính quan trọng nhất theo ông là không có FOMO.</li>
+        <li><a href="#read/t3-felix">Felix</a> đẩy thêm một bước vào chỗ nhạy cảm với văn hoá Á Đông: mua
+          nhà không mặc nhiên là khoản đầu tư tốt, và &ldquo;quy tắc 5%&rdquo; là cách ước tính nhanh để
+          quyết bằng con mắt rõ ràng thay vì theo mặc định xã hội.</li>
+        <li><a href="#read/t3-ferriss877">Ferriss</a>: danh sách &ldquo;một ngày nào đó sẽ làm&rdquo; chính
+          là danh sách những thứ <em>sẽ không bao giờ làm</em> nếu không đặt lịch; và đề nghị rải các
+          &ldquo;nghỉ hưu nhỏ&rdquo; xuyên suốt đời thay vì dồn hết về cuối. Ông cũng nói thẳng về đại dịch
+          cô đơn ở nam giới trung niên, và coi việc giữ tình bạn sâu là một kỹ năng phải rèn.</li>
+        <li><a href="#read/t3-enders">Enders</a>: một trong những thứ vệ sinh quan trọng nhất là
+          <strong>vệ sinh căng thẳng</strong>, tác động lên đường ruột không kém chế độ ăn; và đường ruột
+          vốn bền bỉ chứ không mong manh như quảng cáo thực phẩm chức năng vẽ ra.
+          <a href="#read/t3-breus">Breus</a> đưa con số: khảo sát 2026 cho thấy 93% Gen Z thường xuyên mất
+          ngủ vì mạng xã hội, và khuyên làm việc theo nhịp sinh học của mình thay vì chống lại nó.</li>
+        <li><a href="#read/t3-huberman">Huberman</a> và <a href="#read/t3-valiante">Valiante</a> gặp nhau ở
+          hai điểm phản trực giác: so đo với người khác thường <em>phá</em> thành tích vì nó kéo chú ý khỏi
+          quá trình; và <strong>hành vi đi trước tư duy</strong>, tức đổi hành vi trước rồi tâm trí theo
+          sau, thay vì chờ có động lực mới bắt đầu.</li>
+      </ul>
+      <p class="pt-why">Điểm đáng chú ý nhất không nằm ở từng lời khuyên, mà ở chỗ chúng gặp mục 3.1. Nếu
+        &ldquo;khu vực quan hệ&rdquo; đúng là thứ giữ được giá trị khi mọi thứ khác rẻ đi, thì thời gian bỏ
+        vào quan hệ thật <strong>vừa là cách sống vừa là chiến lược kinh doanh</strong>. Cùng một khoản đầu
+        tư, trả về hai lần.</p>
+    </section>
+
+    <section class="pt-sec">
+      <h3><span class="pt-num">06</span> Quy tắc chọn việc: chỉ làm thứ đúng trong cả hai kịch bản</h3>
+      <p>Vì mục 02 cho thấy kho không đồng thuận, cách dùng nó an toàn nhất là bỏ hẳn việc đoán kịch bản
+        nào sẽ đúng, và chỉ chọn những việc có giá trị dù kịch bản nào xảy ra.</p>
+      <div class="pt-tablewrap">
+        <table class="pt-table pt-table-2">
+          <thead>
+            <tr>
+              <th>Việc</th>
+              <th>Nếu AI tăng tốc<br><span class="th-sub">như Amodei, Gawdat</span></th>
+              <th>Nếu bong bóng xì<br><span class="th-sub">như Dalio, Grantham</span></th>
+              <th>Kết</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ghi lại có cấu trúc mọi trao đổi với khách</td><td>dữ liệu riêng thành lợi thế lớn nhất</td><td>vẫn là nền để bán thêm cho khách cũ</td><td><span class="tag ok">Làm</span></td></tr>
+            <tr><td>Đo tỷ lệ giữ chân doanh thu theo năm</td><td>biết chỗ nào nên để AI vào</td><td>biết chỗ nào đang rò tiền</td><td><span class="tag ok">Làm</span></td></tr>
+            <tr><td>Cắt bước thừa trong quy trình bán</td><td>là nền để tự động hoá</td><td>tăng doanh thu mà không cần vốn</td><td><span class="tag ok">Làm</span></td></tr>
+            <tr><td>Đẩy hàng nhập riêng, biên cao</td><td>né được cuộc đua giá</td><td>né được cuộc đua giá</td><td><span class="tag ok">Làm</span></td></tr>
+            <tr><td>Giữ website và danh sách khách của riêng mình</td><td>không bị lãnh chúa nền tảng thu tô</td><td>không phụ thuộc chi phí quảng cáo</td><td><span class="tag ok">Làm</span></td></tr>
+            <tr><td>Giữ thanh khoản đủ để không bị buộc bán tài sản</td><td>giữ được quyền chọn thời điểm</td><td>đúng thứ Dalio gọi là sống sót</td><td><span class="tag ok">Làm</span></td></tr>
+            <tr><td>Vay để mở rộng mã hàng hoặc mở điểm bán</td><td>rủi ro vì mô hình ngành đang đổi</td><td>rủi ro vì tín dụng siết</td><td><span class="tag warn">Hoãn</span></td></tr>
+            <tr><td>Dồn danh mục vào cổ phiếu công nghệ</td><td>có thể thắng lớn</td><td>Grantham cho là khả dĩ mất tới 70%</td><td><span class="tag bad">Không</span></td></tr>
+            <tr><td>Tự xây một nền tảng công nghệ lớn từ đầu</td><td>mô hình nền rẻ đi làm nó lỗi thời</td><td>không đủ vốn nuôi</td><td><span class="tag bad">Không</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="pt-why">Sáu việc ở nhóm &ldquo;Làm&rdquo; có đúng một điểm chung:
+        <strong>không việc nào đòi hỏi đoán đúng tương lai.</strong> Đó chính là tiêu chí chọn, chứ không
+        phải mức hấp dẫn của từng việc.</p>
+    </section>
+
+    <section class="pt-sec">
+      <h3><span class="pt-num">07</span> Kho này còn thiếu gì</h3>
+      <p>Nêu thẳng, để không đọc nó rộng hơn thứ nó thật sự nói được.</p>
+      <ul class="pt-list">
+        <li><strong>(i) Không có bài nào về Việt Nam, ngành Mẹ &amp; Bé, hay hành vi tiêu dùng châu Á.</strong>
+          Mọi kết luận về Hương Diện ở mục 03 đều suy từ nguyên lý chung, không phải từ dữ liệu ngành. Đây
+          là chỗ dễ sai nhất và cần được đọc với đúng mức tin cậy đó.</li>
+        <li><strong>(ii) Nhân khẩu học chỉ xuất hiện một lần</strong>, ở tập
+          <a href="#read/t3-gavin">về châu Phi</a>, và theo chiều <em>ngược</em> với Việt Nam: bùng nổ dân
+          số trẻ. Mức sinh giảm là biến số quan trọng nhất với ngành Mẹ &amp; Bé, mà kho không nói gì.</li>
+        <li><strong>(iii) Nguồn nghiêng nặng về Anh và Mỹ.</strong> 18 kênh gần như toàn bộ là Anh–Mỹ.
+          ChinaTalk nằm trong danh sách gợi ý nhưng chưa có bài tóm tắt nào, dù đó là kênh gần chuỗi cung
+          ứng hàng nhập nhất.</li>
+        <li><strong>(iv) Bán lẻ và thương mại điện tử gần như trống.</strong> Acquired có
+          <a href="#read/t-disney">Disney</a>, <a href="#read/t3-f1">F1</a>,
+          <a href="#read/t3-google">Google</a>, <a href="#read/t3-ballmer">Microsoft</a>, tức toàn công ty
+          nền tảng và truyền thông. Không có bài nào về một nhà bán lẻ.</li>
+      </ul>
+      <p class="pt-why">Bốn hướng bổ nguồn đáng làm, xếp theo mức chạm tới Hương Diện: bán lẻ và hàng tiêu
+        dùng nhanh; nhân khẩu học và thị trường châu Á; thương mại điện tử cùng bán hàng qua mạng xã hội ở
+        Đông Nam Á; và ChinaTalk cho chuỗi cung ứng hàng nhập. Bổ đủ bốn hướng này thì mục 03 mới đứng được
+        trên dữ liệu ngành thay vì trên nguyên lý chung.</p>
+    </section>
+
+    <div class="pt-foot">
+      Mục phân tích dựng trên 104 bài tóm tắt hiện có, cập nhật 7/8/2026. Mỗi lần thêm bài mới đáng kể thì
+      soi lại mục 02 (bốn chỗ mâu thuẫn) và mục 07 (chỗ còn thiếu) trước, vì đó là hai chỗ đổi nhanh nhất.
+    </div>
+    </div>
   </div>
   </div>
 
@@ -6093,12 +6583,23 @@
   document.querySelectorAll('.browse-tab').forEach(function(t){
     t.addEventListener('click',function(){
       document.querySelectorAll('.browse-tab').forEach(function(x){x.classList.remove('active');});
-      t.classList.add('active'); var v=t.getAttribute('data-view');
-      document.getElementById('view-topic').hidden=(v!=='topic');
-      document.getElementById('view-chan').hidden=(v!=='chan');
+      t.classList.add('active'); doiView(t.getAttribute('data-view'));
       window.scrollTo(0,0);
     });
   });
+  function doiView(v){
+    ['topic','chan','phantich'].forEach(function(k){
+      document.getElementById('view-'+k).hidden=(v!==k);
+    });
+    // ô tìm kiếm chỉ lọc hai view thẻ, mục phân tích là văn bản dài nên ẩn đi
+    document.getElementById('browse-search').hidden=(v==='phantich');
+  }
+  window.moPhanTich=function(){
+    var t=document.querySelector('.browse-tab[data-view="phantich"]'); if(!t) return;
+    document.querySelectorAll('.browse-tab').forEach(function(x){x.classList.remove('active');});
+    t.classList.add('active'); doiView('phantich');
+    document.getElementById('browse').scrollIntoView({block:'start'});
+  };
   document.getElementById('browse-search').addEventListener('input',renderAll);
 
   var home=document.getElementById('home'), lib=document.getElementById('library'),
