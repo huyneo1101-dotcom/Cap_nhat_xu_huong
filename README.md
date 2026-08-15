@@ -17,8 +17,9 @@ Lex Fridman...).
 
 Ngoài hai tab duyệt bài (theo chủ đề / theo podcast) còn tab **🧭 Phân tích**: bài tổng hợp trả lời câu hỏi
 "104 bài này chạm vào cửa hàng Hương Diện ở chỗ nào", gồm 06 mục — bản đồ kho, bốn chỗ các nguồn tự mâu
-thuẫn, ảnh hưởng tới cửa hàng (12 tiểu mục, gồm 3.6 số ngành Mẹ & Bé Việt Nam, 3.7 so giá 04 chuỗi và
-3.12 hành vi người mua ở châu Á, Việt Nam, Hà Nội), đưa AI vào cửa hàng, bảng quyết định "đúng trong cả
+thuẫn, ảnh hưởng tới cửa hàng (14 tiểu mục, gồm 3.6 số ngành Mẹ & Bé Việt Nam, 3.7 so giá 04 chuỗi,
+3.12 hành vi người mua ở châu Á, Việt Nam, Hà Nội, 3.13 hệ quả mức sinh giảm với ngành bán lẻ ở Nhật,
+Hàn, Trung, và 3.14 đọc kỹ nhà bán lẻ Kidswant), đưa AI vào cửa hàng, bảng quyết định "đúng trong cả
 hai kịch bản", và chỗ kho còn thiếu.
 
 ⛔ **Bài chỉ bàn cửa hàng** (Huy chốt 15/8/2026). Bản trước có mục "ảnh hưởng tới công việc và tương lai
@@ -33,8 +34,15 @@ bảng giá 32 cặp đã bị đẩy lên bản công khai rồi phải gỡ ng
 
 ⚠ **Số ngoài kho phải mang mốc đo ngay cạnh** và có nguồn trên đĩa: nghiên cứu ngành và so giá ở
 `App/HuongDienWork/nghien-cuu-thi-truong-va-so-gia-08-08.md`, hành vi người mua ở
-`App/HuongDienWork/nghien-cuu-hanh-vi-nguoi-mua-15-08.md` (nguồn của mục 3.12), số bán hàng ở
+`App/HuongDienWork/nghien-cuu-hanh-vi-nguoi-mua-15-08.md` (nguồn của mục 3.12), nhân khẩu học và nhà
+bán lẻ châu Á ở `App/HuongDienWork/nghien-cuu-nhan-khau-va-nha-ban-le-15-08.md` (nguồn của mục 3.13,
+3.14 và của ba nguồn độc lập thêm vào mục 3.11 (ii)), số bán hàng ở
 `App/HuongDien/NEN-KINH-DOANH.md` (chỉ lấy sổ tổng HDTONG, cộng cả ba sổ là thổi doanh thu ~1,8 lần).
+
+⚠ **Hai chỗ số nguồn ngoài tự lệch nhau, đã khai thẳng trong bài, đừng lặng lẽ chọn một bên**: số đếm
+cửa hàng mẹ và bé Trung Quốc năm 2024 (129.000 theo nguồn này, 180.000 theo nguồn kia — dùng chiều,
+đừng dùng mức, mục 3.13 (ii)); và số điểm bán Con Cưng (~700 điểm năm 2023 theo báo chí, 1.146 điểm
+theo phép đếm trên trang tra cứu ngày 12/8/2026 — không xếp thành chuỗi thời gian, cuối mục 3.13).
 
 ⚠ **Ba con số quy mô ngành không thể cùng đúng** (33,8 nghìn tỷ cho 04 sàn 2026 · ~7 tỷ USD toàn thị
 trường · tỷ trọng bán qua mạng 45-50%). Chưa phân định được số nào sai — mục 3.12 khai thẳng chỗ này,
