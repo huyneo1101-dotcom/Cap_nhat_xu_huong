@@ -17,8 +17,9 @@ Lex Fridman...).
 
 Ngoài hai tab duyệt bài (theo chủ đề / theo podcast) còn tab **🧭 Phân tích**: bài tổng hợp trả lời câu hỏi
 "104 bài này chạm vào cửa hàng Hương Diện ở chỗ nào", gồm 06 mục — bản đồ kho, bốn chỗ các nguồn tự mâu
-thuẫn, ảnh hưởng tới cửa hàng (11 tiểu mục, gồm 3.6 số ngành Mẹ & Bé Việt Nam và 3.7 so giá 04 chuỗi),
-đưa AI vào cửa hàng, bảng quyết định "đúng trong cả hai kịch bản", và chỗ kho còn thiếu.
+thuẫn, ảnh hưởng tới cửa hàng (12 tiểu mục, gồm 3.6 số ngành Mẹ & Bé Việt Nam, 3.7 so giá 04 chuỗi và
+3.12 hành vi người mua ở châu Á, Việt Nam, Hà Nội), đưa AI vào cửa hàng, bảng quyết định "đúng trong cả
+hai kịch bản", và chỗ kho còn thiếu.
 
 ⛔ **Bài chỉ bàn cửa hàng** (Huy chốt 15/8/2026). Bản trước có mục "ảnh hưởng tới công việc và tương lai
 của tôi" cùng mục "ảnh hưởng tới cuộc sống" — đã bỏ, cùng với mọi câu mô tả Huy đang quản lý hàng chục
@@ -31,8 +32,13 @@ bảng giá 32 cặp đã bị đẩy lên bản công khai rồi phải gỡ ng
 *"bản này KHÔNG lên app"*. Nội dung mang số tiền đi bản riêng, gửi qua Google Docs riêng tư.
 
 ⚠ **Số ngoài kho phải mang mốc đo ngay cạnh** và có nguồn trên đĩa: nghiên cứu ngành và so giá ở
-`App/HuongDienWork/nghien-cuu-thi-truong-va-so-gia-08-08.md`, số bán hàng ở `App/HuongDien/NEN-KINH-DOANH.md`
-(chỉ lấy sổ tổng HDTONG, cộng cả ba sổ là thổi doanh thu ~1,8 lần).
+`App/HuongDienWork/nghien-cuu-thi-truong-va-so-gia-08-08.md`, hành vi người mua ở
+`App/HuongDienWork/nghien-cuu-hanh-vi-nguoi-mua-15-08.md` (nguồn của mục 3.12), số bán hàng ở
+`App/HuongDien/NEN-KINH-DOANH.md` (chỉ lấy sổ tổng HDTONG, cộng cả ba sổ là thổi doanh thu ~1,8 lần).
+
+⚠ **Ba con số quy mô ngành không thể cùng đúng** (33,8 nghìn tỷ cho 04 sàn 2026 · ~7 tỷ USD toàn thị
+trường · tỷ trọng bán qua mạng 45-50%). Chưa phân định được số nào sai — mục 3.12 khai thẳng chỗ này,
+đừng dùng cả ba trong cùng một luận điểm.
 
 - Nội dung nằm trong `<div id="view-phantich">` của `index.html`, viết tay chứ không sinh bằng JS.
 - Mọi luận điểm dẫn ngược về bài gốc bằng `<a href="#read/&lt;id&gt;">`. **Thêm liên kết mới thì id phải
