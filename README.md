@@ -24,6 +24,12 @@ thuẫn, ảnh hưởng tới cửa hàng (11 tiểu mục, gồm 3.6 số ngàn
 của tôi" cùng mục "ảnh hưởng tới cuộc sống" — đã bỏ, cùng với mọi câu mô tả Huy đang quản lý hàng chục
 ứng dụng hay viết phân tích quân sự. Thêm nội dung mới thì giữ đúng phạm vi này.
 
+⛔ **REPO NÀY PUBLIC VÀ TRANG CHẠY TRÊN GITHUB PAGES CÔNG KHAI** — ai có đường dẫn đều đọc được,
+kể cả mã nguồn. Vì thế **cấm đưa vào đây**: giá bán từng mã, mức chênh với từng chuỗi, giá vốn và
+biên, doanh thu theo con số tuyệt đối. Tỷ lệ phần trăm và luận điểm thì được. Vấp thật 15/8/2026:
+bảng giá 32 cặp đã bị đẩy lên bản công khai rồi phải gỡ ngay trong lượt, dù file nguồn ghi rõ
+*"bản này KHÔNG lên app"*. Nội dung mang số tiền đi bản riêng, gửi qua Google Docs riêng tư.
+
 ⚠ **Số ngoài kho phải mang mốc đo ngay cạnh** và có nguồn trên đĩa: nghiên cứu ngành và so giá ở
 `App/HuongDienWork/nghien-cuu-thi-truong-va-so-gia-08-08.md`, số bán hàng ở `App/HuongDien/NEN-KINH-DOANH.md`
 (chỉ lấy sổ tổng HDTONG, cộng cả ba sổ là thổi doanh thu ~1,8 lần).
