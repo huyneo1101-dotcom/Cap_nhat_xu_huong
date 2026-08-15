@@ -16,14 +16,22 @@ Lex Fridman...).
 ## Mục "Phân tích" (tab thứ ba ở trang chủ)
 
 Ngoài hai tab duyệt bài (theo chủ đề / theo podcast) còn tab **🧭 Phân tích**: bài tổng hợp trả lời câu hỏi
-"104 bài này ảnh hưởng gì tới Hương Diện và tới cuộc sống, tương lai của tôi", gồm 07 mục — bản đồ kho,
-bốn chỗ các nguồn tự mâu thuẫn, ảnh hưởng tới cửa hàng, tới công việc, tới cuộc sống, bảng quyết định
-"đúng trong cả hai kịch bản", và chỗ kho còn thiếu.
+"104 bài này chạm vào cửa hàng Hương Diện ở chỗ nào", gồm 06 mục — bản đồ kho, bốn chỗ các nguồn tự mâu
+thuẫn, ảnh hưởng tới cửa hàng (11 tiểu mục, gồm 3.6 số ngành Mẹ & Bé Việt Nam và 3.7 so giá 04 chuỗi),
+đưa AI vào cửa hàng, bảng quyết định "đúng trong cả hai kịch bản", và chỗ kho còn thiếu.
+
+⛔ **Bài chỉ bàn cửa hàng** (Huy chốt 15/8/2026). Bản trước có mục "ảnh hưởng tới công việc và tương lai
+của tôi" cùng mục "ảnh hưởng tới cuộc sống" — đã bỏ, cùng với mọi câu mô tả Huy đang quản lý hàng chục
+ứng dụng hay viết phân tích quân sự. Thêm nội dung mới thì giữ đúng phạm vi này.
+
+⚠ **Số ngoài kho phải mang mốc đo ngay cạnh** và có nguồn trên đĩa: nghiên cứu ngành và so giá ở
+`App/HuongDienWork/nghien-cuu-thi-truong-va-so-gia-08-08.md`, số bán hàng ở `App/HuongDien/NEN-KINH-DOANH.md`
+(chỉ lấy sổ tổng HDTONG, cộng cả ba sổ là thổi doanh thu ~1,8 lần).
 
 - Nội dung nằm trong `<div id="view-phantich">` của `index.html`, viết tay chứ không sinh bằng JS.
 - Mọi luận điểm dẫn ngược về bài gốc bằng `<a href="#read/&lt;id&gt;">`. **Thêm liên kết mới thì id phải
   khớp một `<div class="entry" id="...">` có thật**, nếu không bấm vào sẽ rơi về trang chủ mà không báo lỗi.
-- Thêm bài mới đáng kể thì soi lại mục 02 (bốn chỗ mâu thuẫn) và mục 07 (chỗ còn thiếu) trước — hai mục đó
+- Thêm bài mới đáng kể thì soi lại mục 02 (bốn chỗ mâu thuẫn) và mục 06 (chỗ còn thiếu) trước — hai mục đó
   đổi nhanh nhất, và mục 01 có đếm số bài theo chủ đề nên cũng phải cập nhật.
 
 ## Cách thêm nội dung tuần mới
