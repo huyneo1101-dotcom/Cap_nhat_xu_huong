@@ -349,7 +349,68 @@
     .pt-clash-a{padding-top:6px}
   }
 
+  /* ===== Chỉnh cỡ chữ =====
+     Mọi cỡ chữ trong trang viết bằng rem nên chỉ cần đổi font-size của <html>.
+     Riêng khối điều khiển này dùng px để bản thân nó không phình theo. */
+  #fsFab{
+    position:fixed;right:18px;bottom:18px;z-index:60;
+    width:52px;height:52px;border-radius:999px;border:none;cursor:pointer;
+    background:var(--accent);color:#fff;font-family:inherit;
+    display:flex;align-items:center;justify-content:center;gap:1px;
+    box-shadow:0 8px 22px rgba(30,58,138,.35);
+  }
+  #fsFab .fs-a-lon{font-size:19px;font-weight:700;line-height:1}
+  #fsFab .fs-a-nho{font-size:12px;font-weight:700;line-height:1}
+  #fsFab:hover{background:#1d4ed8}
+  #fsPanel{
+    position:fixed;right:18px;bottom:80px;z-index:61;
+    width:250px;padding:14px 16px 12px;
+    background:var(--card);border:1px solid var(--border);border-radius:16px;
+    box-shadow:0 14px 34px rgba(15,23,42,.22);
+    opacity:0;visibility:hidden;transform:translateY(8px);
+    transition:opacity .18s,transform .18s,visibility .18s;
+  }
+  #fsPanel.open{opacity:1;visibility:visible;transform:translateY(0)}
+  #fsPanel .fs-tieude{
+    font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+    color:var(--muted);margin:0 0 10px;
+  }
+  .fs-hang{display:flex;align-items:center;gap:8px}
+  .fs-nut{
+    width:46px;height:46px;flex:none;cursor:pointer;
+    border:1px solid var(--border);border-radius:12px;background:var(--bg);
+    color:var(--ink);font-family:inherit;font-size:18px;font-weight:700;line-height:1;
+  }
+  .fs-nut:hover:not(:disabled){background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+  .fs-nut:disabled{opacity:.4;cursor:default}
+  #fsMuc{
+    flex:1;text-align:center;font-size:13px;font-weight:600;color:var(--ink);
+    line-height:1.3;
+  }
+  #fsMuc small{display:block;font-size:11px;font-weight:400;color:var(--muted)}
+  #fsReset{
+    display:block;width:100%;margin-top:10px;padding:9px 0;min-height:38px;
+    cursor:pointer;border:1px solid var(--border);border-radius:10px;
+    background:var(--card);color:var(--muted);font-family:inherit;font-size:12px;font-weight:600;
+  }
+  #fsReset:hover{background:var(--bg);color:var(--ink)}
+  /* display:block ở trên thắng [hidden] mặc định của trình duyệt, phải khai lại */
+  #fsReset[hidden]{display:none}
+  @media (max-width:520px){
+    #fsFab{right:12px;bottom:12px}
+    #fsPanel{right:12px;bottom:74px}
+  }
+
 </style>
+<script>
+  /* Áp cỡ chữ đã lưu NGAY trước khi trang vẽ, để không nháy một nhịp cỡ mặc định. */
+  (function(){
+    var PX=[14,16,18,20,22], i=1;
+    try{ var v=parseInt(localStorage.getItem('trendy-co-chu'),10); if(v>=0&&v<PX.length) i=v; }catch(e){}
+    window.__FS={px:PX,muc:i};
+    if(i!==1) document.documentElement.style.fontSize=PX[i]+'px';
+  })();
+</script>
 </head>
 <body>
 
@@ -7039,6 +7100,51 @@
   renderTopic(''); renderChan('');
   window.addEventListener('hashchange',route);
   route();
+})();
+</script>
+
+<!-- ===== Nút chỉnh cỡ chữ ===== -->
+<button id="fsFab" type="button" aria-label="Chỉnh cỡ chữ" aria-expanded="false">
+  <span class="fs-a-lon" aria-hidden="true">A</span><span class="fs-a-nho" aria-hidden="true">A</span>
+</button>
+<div id="fsPanel" role="dialog" aria-label="Chỉnh cỡ chữ">
+  <p class="fs-tieude">Cỡ chữ</p>
+  <div class="fs-hang">
+    <button class="fs-nut" id="fsGiam" type="button" aria-label="Giảm cỡ chữ">−</button>
+    <span id="fsMuc" aria-live="polite"></span>
+    <button class="fs-nut" id="fsTang" type="button" aria-label="Tăng cỡ chữ">+</button>
+  </div>
+  <button id="fsReset" type="button">Về cỡ mặc định</button>
+</div>
+
+<script>
+(function(){
+  var PX=window.__FS.px, muc=window.__FS.muc,
+      TEN=['Nhỏ','Vừa','Lớn','Rất lớn','Cực lớn'],
+      fab=document.getElementById('fsFab'), panel=document.getElementById('fsPanel'),
+      nhan=document.getElementById('fsMuc'),
+      giam=document.getElementById('fsGiam'), tang=document.getElementById('fsTang'),
+      reset=document.getElementById('fsReset');
+
+  function ve(){
+    document.documentElement.style.fontSize=PX[muc]+'px';
+    nhan.innerHTML=TEN[muc]+'<small>'+Math.round(PX[muc]/16*100)+'%'+(muc===1?' · mặc định':'')+'</small>';
+    giam.disabled=(muc===0); tang.disabled=(muc===PX.length-1);
+    reset.hidden=(muc===1);
+    try{ localStorage.setItem('trendy-co-chu',muc); }catch(e){}
+  }
+  function doi(d){ var m=muc+d; if(m<0||m>=PX.length) return; muc=m; ve(); }
+  function mo(v){ panel.classList.toggle('open',v); fab.setAttribute('aria-expanded',v?'true':'false'); }
+
+  giam.addEventListener('click',function(){doi(-1);});
+  tang.addEventListener('click',function(){doi(1);});
+  reset.addEventListener('click',function(){muc=1;ve();});
+  fab.addEventListener('click',function(e){ e.stopPropagation(); mo(!panel.classList.contains('open')); });
+  panel.addEventListener('click',function(e){ e.stopPropagation(); });
+  document.addEventListener('click',function(){ mo(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') mo(false); });
+
+  ve();
 })();
 </script>
 
