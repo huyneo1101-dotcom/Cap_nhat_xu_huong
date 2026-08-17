@@ -9,6 +9,14 @@ Lex Fridman...).
 - Mỗi mục là **tóm tắt/diễn giải**, không sao chép nguyên văn nội dung có bản quyền.
 - Luôn kèm nguồn để tra lại bản gốc.
 - Trang dùng cá nhân, không phải sản phẩm public.
+- **Danh sách nguồn quét** nằm ở khối `.week#goi-y` trong `index.html`, và mỗi kênh phải có tên trong `CHAN_ORDER`
+  + `CHAN_DESC` (cuối file) thì tab "🎙️ Theo podcast" mới gom bài đúng chỗ. Kênh chưa có bài vẫn hiện ra với nhãn
+  "chưa có bài". Từ 17/8/2026 danh sách có 19 nguồn — 18 podcast cộng **The Rundown AI**.
+- **The Rundown AI là nguồn chữ, có quy tắc riêng**: phỏng vấn lớn thường có bản chữ đăng thẳng trên `therundown.ai`
+  (ví dụ tập Demis Hassabis 27/5/2026) — có bản chữ thì trích bản chữ. Tập nào chưa có bản chữ thì tóm tắt từ
+  podcast *Rowan's Notes* trên Spotify (`open.spotify.com/show/2zQpIc96gbruTylpzo9dVY`) và **ghi rõ trong phần
+  Nguồn là tóm tắt từ bản nghe**. Đặt `src-tag` là `The Rundown AI` (hoặc `Rowan's Notes`, `baseChan` tự gộp về một
+  kênh).
 - **Mỗi bài tóm tắt khách mời/tập giữ độ dài khoảng 1000 từ**, theo cấu trúc 4 phần: bối cảnh khách mời, nội dung
   chính của tập, giải thích thêm thuật ngữ cho người mới, và vì sao đáng nghe/liên hệ. Xem các bài trong "Tuần 1"
   làm mẫu.
