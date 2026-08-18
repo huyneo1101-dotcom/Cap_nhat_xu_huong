@@ -17,6 +17,10 @@ Lex Fridman...).
   podcast *Rowan's Notes* trên Spotify (`open.spotify.com/show/2zQpIc96gbruTylpzo9dVY`) và **ghi rõ trong phần
   Nguồn là tóm tắt từ bản nghe**. Đặt `src-tag` là `The Rundown AI` (hoặc `Rowan's Notes`, `baseChan` tự gộp về một
   kênh).
+- ⛔ **ĐỘ DÀI THEO LOẠI NỘI DUNG, đừng áp một khuôn cho tất cả** (Huy chốt 17/8/2026: *"tin tức thì cần quái gì
+  viết 1000 từ"*). **Tin tức** — bản tin hằng ngày kiểu The Rundown AI — viết dạng **điểm tin**: một câu dẫn, gạch
+  đầu dòng cho từng tin kèm số liệu, một dòng liên hệ cửa hàng, tổng khoảng **150-250 từ**. Khuôn ~1000 từ bốn phần
+  chỉ dành cho **bài phân tích và phỏng vấn dài** (podcast, bài chuyên đề), nơi có luận điểm để mổ.
 - **Mỗi bài tóm tắt khách mời/tập giữ độ dài khoảng 1000 từ**, theo cấu trúc 4 phần: bối cảnh khách mời, nội dung
   chính của tập, giải thích thêm thuật ngữ cho người mới, và vì sao đáng nghe/liên hệ. Xem các bài trong "Tuần 1"
   làm mẫu.
