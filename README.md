@@ -28,11 +28,17 @@ Lex Fridman...).
 ## Mục "Phân tích" (tab thứ ba ở trang chủ)
 
 Ngoài hai tab duyệt bài (theo chủ đề / theo podcast) còn tab **🧭 Phân tích**: bài tổng hợp trả lời câu hỏi
-"104 bài này chạm vào cửa hàng Hương Diện ở chỗ nào", gồm 06 mục — bản đồ kho, bốn chỗ các nguồn tự mâu
-thuẫn, ảnh hưởng tới cửa hàng (14 tiểu mục, gồm 3.6 số ngành Mẹ & Bé Việt Nam, 3.7 so giá 04 chuỗi,
-3.12 hành vi người mua ở châu Á, Việt Nam, Hà Nội, 3.13 hệ quả mức sinh giảm với ngành bán lẻ ở Nhật,
-Hàn, Trung, và 3.14 đọc kỹ nhà bán lẻ Kidswant), đưa AI vào cửa hàng, bảng quyết định "đúng trong cả
-hai kịch bản", và chỗ kho còn thiếu.
+"104 bài podcast cộng 05 số bản tin The Rundown AI này chạm vào cửa hàng Hương Diện ở chỗ nào", gồm 06 mục —
+bản đồ kho, bốn chỗ các nguồn tự mâu thuẫn, ảnh hưởng tới cửa hàng (15 tiểu mục, gồm 3.6 số ngành Mẹ & Bé
+Việt Nam, 3.7 so giá 04 chuỗi, 3.12 hành vi người mua ở châu Á, Việt Nam, Hà Nội, 3.13 hệ quả mức sinh giảm
+với ngành bán lẻ ở Nhật, Hàn, Trung, 3.14 đọc kỹ nhà bán lẻ Kidswant, và 3.15 công cụ tấn công rẻ đi nhanh
+hơn công cụ phòng thủ), đưa AI vào cửa hàng (04 chỗ sẽ gãy), bảng quyết định "đúng trong cả hai kịch bản",
+và chỗ kho còn thiếu.
+
+⚠ **Bản tin hằng ngày vào mục Phân tích theo đúng một cách** (bản 20/8/2026, khi gộp 05 số Tuần 4): dùng làm
+**số kiểm lại** luận điểm podcast đã nêu, **không** làm nguồn cho luận điểm mới — vì tin tức mang số đo chứ
+không dựng lập luận. Và cả lớp tin ấy đứng trên đúng một nguồn, chưa có nguồn độc lập kiểm lại, nên mục 06 (v)
+khai thẳng chỗ đó; dùng làm *chiều* để hành động sớm ở việc rẻ, đừng dùng làm *mức* để tính toán.
 
 ⛔ **Bài chỉ bàn cửa hàng** (Huy chốt 15/8/2026). Bản trước có mục "ảnh hưởng tới công việc và tương lai
 của tôi" cùng mục "ảnh hưởng tới cuộc sống" — đã bỏ, cùng với mọi câu mô tả Huy đang quản lý hàng chục
