@@ -1,0 +1,429 @@
+<title>Trendy — 4 hướng</title>
+<style>
+:root{--nen:#f0f0ee;--chu:#16171a;--mo:#606369;--vien:#d8d9dc;--the:#fcfcfd}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--nen:#101112;--chu:#e9eaec;--mo:#8b8d93;--vien:#26282c;--the:#17181a}}
+:root[data-theme="dark"]{--nen:#101112;--chu:#e9eaec;--mo:#8b8d93;--vien:#26282c;--the:#17181a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--nen);color:var(--chu);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+.bao{max-width:1120px;margin:0 auto;padding:40px 20px 80px}
+h1.tieu{font-size:32px;line-height:1.15;margin:0 0 8px;letter-spacing:-.02em}
+.dan{color:var(--mo);max-width:660px;margin:0 0 32px;font-size:15px}
+.muc{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-bottom:56px}
+.muc a{display:block;text-decoration:none;color:inherit;background:var(--the);border:1px solid var(--vien);border-radius:14px;padding:16px}
+.muc a:hover{border-color:var(--chu)}
+.muc .so{font-size:11px;letter-spacing:.14em;color:var(--mo);font-weight:600}
+.muc .ten{font-size:17px;font-weight:700;margin:6px 0 4px}
+.muc .cam{font-size:13px;color:var(--mo);line-height:1.45}
+section{margin:0 0 72px;scroll-margin-top:20px}
+.dau{border-top:2px solid var(--chu);padding-top:14px;margin-bottom:20px}
+.dau .so{font-size:11px;letter-spacing:.14em;color:var(--mo);font-weight:700}
+.dau h2{font-size:24px;margin:6px 0;letter-spacing:-.01em}
+.dau p{margin:0;color:var(--mo);font-size:14px;max-width:660px}
+.hang{display:flex;gap:22px;flex-wrap:wrap}
+:root{--s:.62}
+@media (max-width:900px){:root{--s:.48}}
+@media (max-width:560px){:root{--s:.42}}
+.o{width:calc(390px * var(--s));height:calc(844px * var(--s));overflow:hidden;position:relative;flex:0 0 auto}
+.may{width:390px;height:844px;position:absolute;top:0;left:0;transform:scale(var(--s));transform-origin:top left;border-radius:38px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.22),0 0 0 8px #23211e,0 0 0 9px #46423c}
+.than{position:absolute;inset:0;display:flex;flex-direction:column;overflow:hidden;font-size:15px}
+.than > *{flex:0 0 auto}
+.cuon{flex:1 1 auto;overflow:hidden;min-height:0}
+.nhan{font-size:12px;color:var(--mo);margin:10px 0 0;font-weight:600}
+.tai{position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 22px 6px;font-size:12px;font-weight:600;z-index:5}
+.vach{position:absolute;bottom:7px;left:50%;transform:translateX(-50%);width:126px;height:4px;border-radius:2px;opacity:.35;z-index:6}
+.t{font-variant-numeric:tabular-nums}
+svg{display:block}
+</style>
+
+<div class="bao">
+<h1 class="tieu">Trendy — 04 hướng thiết kế</h1>
+<p class="dan">Bản đang chạy dùng emoji cho gần như mọi thứ — logo, nhãn, đầu dòng — và ba nút giới thiệu thì mỗi nút một cỡ, xếp lệch tâm thành hình bậc thang; nút phóng chữ tròn ở góc thì đè lên đúng chỗ đang đọc. Nội dung bên trong là bản tóm tắt hàng trăm buổi phỏng vấn, đáng được bày tử tế hơn thế.</p>
+
+<div class="muc">
+  <a href="#t1"><div class="so">MOCKUP 01</div><div class="ten">Tạp Chí</div><div class="cam">Mỗi tuần một số báo: măng-sét, bài đinh chiếm trọn màn, mục lục đánh số. Đọc từ đầu tới cuối như một ấn phẩm.</div></a>
+  <a href="#t2"><div class="so">MOCKUP 02</div><div class="ten">Dòng Tập</div><div class="cam">Bám theo podcast: mỗi tập một dòng, ai nói, kênh nào, dài bao lâu, và một câu rút ra. Lọc theo kênh quen.</div></a>
+  <a href="#t3"><div class="so">MOCKUP 03</div><div class="ten">Thẻ Ý</div><div class="cam">Bỏ bài dài, chỉ giữ các nhận định rời. Mỗi thẻ một ý, ai nói, dựa vào gì. Vuốt lên là ý tiếp theo.</div></a>
+  <a href="#t4"><div class="so">MOCKUP 04</div><div class="ten">Bản Đồ Chủ Đề</div><div class="cam">Gom theo chủ đề và bày rõ chỗ các chuyên gia nói ngược nhau — đó mới là phần đáng đọc.</div></a>
+</div>
+
+<!-- 01 TẠP CHÍ -->
+<section id="t1">
+<div class="dau"><div class="so">MOCKUP 01</div><h2>Tạp Chí</h2>
+<p>Mỗi kỳ cập nhật là một số báo có số hiệu và ngày phát hành. Bài đinh chiếm gần trọn màn đầu với một khối màu đặc thay ảnh, dưới đó là mục lục đánh số. Chữ tiêu đề dùng bộ chữ hẹp cỡ lớn, không emoji ở bất cứ đâu.</p></div>
+<div class="hang">
+<div class="o"><div class="may"><div class="than">
+  <div class="tai" style="color:#f4f3f0">23:41<span>Việt Nam</span></div>
+  <div class="cuon" style="background:#141414;position:relative">
+    <div style="position:absolute;inset:0;background:linear-gradient(150deg,#2d2352 0%,#1b1730 46%,#141414 100%)"></div>
+    <div style="position:absolute;top:52px;left:20px;right:20px">
+      <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:10px">
+        <div style="font-size:19px;font-weight:800;color:#f4f3f0;letter-spacing:-.02em">Trendy</div>
+        <div style="font-size:11px;letter-spacing:.14em;color:#a9a4c4;font-weight:700" class="t">SỐ 34 · 15.08.2026</div>
+      </div>
+    </div>
+    <div style="position:absolute;left:20px;right:20px;top:130px">
+      <div style="display:inline-block;font-size:11px;letter-spacing:.14em;font-weight:700;color:#141414;background:#c9f24d;padding:5px 10px;border-radius:5px">BÀI ĐINH</div>
+      <div style="font-size:38px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-.035em;margin-top:14px">AI ăn tác vụ, không ăn nghề</div>
+      <div style="font-size:15px;color:#c5c0dd;line-height:1.6;margin-top:14px">Bốn khách mời khác nhau cùng đi tới một chỗ: thứ biến mất là từng đầu việc lặp lại, không phải cả cái nghề. Nghề nào gồm nhiều đầu việc rời rạc thì mất nhanh nhất.</div>
+      <div style="display:flex;align-items:center;gap:9px;margin-top:18px">
+        <span style="font-size:12px;font-weight:700;color:#141414;background:#c9f24d;padding:5px 10px;border-radius:999px">6 phút đọc</span>
+        <span style="font-size:12px;color:#a9a4c4" class="t">tổng hợp từ 7 tập</span>
+      </div>
+    </div>
+    <div style="position:absolute;left:20px;right:20px;bottom:24px">
+      <div style="height:1px;background:rgba(255,255,255,.18);margin-bottom:13px"></div>
+      <div style="font-size:11px;letter-spacing:.14em;color:#8f8ab0;font-weight:700;margin-bottom:11px">TRONG SỐ NÀY</div>
+      <div style="display:flex;gap:11px;padding-bottom:10px">
+        <span style="font-size:13px;font-weight:800;color:#c9f24d;width:20px" class="t">01</span>
+        <span style="flex:1;font-size:14px;color:#e6e3f0;line-height:1.35">Cơn sốt cổ phiếu AI nhìn từ người đã gọi đúng ba bong bóng</span>
+      </div>
+      <div style="display:flex;gap:11px;padding-bottom:10px">
+        <span style="font-size:13px;font-weight:800;color:#c9f24d;width:20px" class="t">02</span>
+        <span style="flex:1;font-size:14px;color:#e6e3f0;line-height:1.35">Bốn chỗ các khách mời nói ngược nhau trong cùng một tuần</span>
+      </div>
+      <div style="display:flex;gap:11px">
+        <span style="font-size:13px;font-weight:800;color:#c9f24d;width:20px" class="t">03</span>
+        <span style="flex:1;font-size:14px;color:#e6e3f0;line-height:1.35">Chuyện này chạm vào cửa hàng Hương Diện ở chỗ nào</span>
+      </div>
+    </div>
+  </div>
+  <div class="vach" style="background:#f4f3f0"></div>
+</div></div></div>
+
+<div class="o"><div class="may"><div class="than">
+  <div class="tai" style="color:#17181a">23:41<span>Việt Nam</span></div>
+  <div style="background:#f7f7f5;padding:52px 20px 12px;border-bottom:1px solid #e2e2df">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:11px">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#4a3fa8" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+        <div style="font-size:12px;letter-spacing:.13em;color:#6d6f76;font-weight:700" class="t">SỐ 34 · BÀI 01</div>
+      </div>
+      <div style="display:flex;gap:6px">
+        <span style="width:30px;height:30px;border:1px solid #dcdcd8;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#4a4c52">A</span>
+        <span style="width:30px;height:30px;border:1px solid #dcdcd8;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#17181a">A</span>
+      </div>
+    </div>
+  </div>
+  <div class="cuon" style="background:#f7f7f5;padding:16px 20px 0">
+    <div style="font-size:26px;font-weight:800;color:#17181a;line-height:1.22;letter-spacing:-.025em">Cơn sốt cổ phiếu AI nhìn từ người đã gọi đúng ba bong bóng</div>
+    <div style="display:flex;align-items:center;gap:9px;margin:12px 0 16px">
+      <span style="width:32px;height:32px;border-radius:10px;background:#e6e3f6;color:#4a3fa8;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">JG</span>
+      <div style="font-size:13px;color:#6d6f76" class="t">Jeremy Grantham · Bloomberg Odd Lots · phát 03.05.2026</div>
+    </div>
+    <div style="height:1px;background:#e2e2df;margin-bottom:14px"></div>
+    <div style="font-size:16px;line-height:1.68;color:#33353b">Grantham gọi đây là <b>bong bóng thật</b>, nhưng phân biệt rõ hai lớp: công nghệ nền là thật và sẽ đổi cách làm ăn của nhiều ngành; còn giá cổ phiếu thì đang trả trước cho hai mươi năm sau.</div>
+    <div style="border-left:3px solid #4a3fa8;padding:2px 0 2px 14px;margin:16px 0">
+      <div style="font-size:16px;line-height:1.6;color:#17181a;font-style:italic">"Mọi bong bóng lớn đều dựng trên một sự thật. Vấn đề không phải câu chuyện sai, mà là cái giá."</div>
+    </div>
+    <div style="font-size:16px;line-height:1.68;color:#33353b">Ông nêu ba dấu hiệu đang lặp lại so với năm 2000: số công ty mới lên sàn tăng vọt, khoảng cách giữa nhóm dẫn đầu và phần còn lại giãn rộng bất thường, và người mua bắt đầu giải thích mức giá bằng tương lai xa thay vì dòng tiền hiện tại.</div>
+    <div style="background:#eeedf8;border:1px solid #dad7ee;border-radius:13px;padding:14px;margin-top:16px">
+      <div style="font-size:11px;letter-spacing:.12em;color:#4a3fa8;font-weight:700;margin-bottom:6px">ĐIỀU RÚT RA</div>
+      <div style="font-size:14px;color:#2c2b3d;line-height:1.55">Tách bạch "công nghệ này có thật không" với "giá này có hợp lý không". Hai câu hỏi khác nhau, và phần lớn tranh luận trên mạng đang trộn chúng làm một.</div>
+    </div>
+  </div>
+  <div class="vach" style="background:#17181a"></div>
+</div></div></div>
+</div>
+<div class="nhan">Trái: bản tối, bìa số. Phải: bản sáng, một bài bên trong — nút phóng chữ nằm trên đầu trang, không đè nội dung.</div>
+</section>
+
+<!-- 02 DÒNG TẬP -->
+<section id="t2">
+<div class="dau"><div class="so">MOCKUP 02</div><h2>Dòng Tập</h2>
+<p>Bám đúng nguồn gốc dữ liệu: đây là các tập podcast đã nghe. Mỗi tập một dòng gọn — khách mời, kênh, ngày phát, thời lượng, và một câu rút ra. Hàng chip trên đầu lọc theo kênh; đã đọc thì dòng nhạt đi chứ không biến mất.</p></div>
+<div class="hang">
+<div class="o"><div class="may"><div class="than">
+  <div class="tai" style="color:#16171a">23:41<span>Việt Nam</span></div>
+  <div style="background:#f6f7f8;padding:52px 18px 0;border-bottom:1px solid #e4e6e9">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div>
+        <div style="font-size:20px;font-weight:800;color:#16171a;letter-spacing:-.02em">Tuần này</div>
+        <div style="font-size:12px;color:#6a6f76" class="t">11 tập · 8 giờ 40 phút nội dung</div>
+      </div>
+      <span style="width:34px;height:34px;border-radius:10px;background:#fff;border:1px solid #dfe2e6;display:flex;align-items:center;justify-content:center">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5a6068" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span>
+    </div>
+    <div style="display:flex;gap:7px;padding-bottom:12px;overflow:hidden">
+      <span style="font-size:12px;font-weight:700;background:#16171a;color:#fff;padding:6px 12px;border-radius:999px;flex:0 0 auto">Tất cả</span>
+      <span style="font-size:12px;color:#5a6068;border:1px solid #dfe2e6;padding:6px 12px;border-radius:999px;flex:0 0 auto">Diary of a CEO</span>
+      <span style="font-size:12px;color:#5a6068;border:1px solid #dfe2e6;padding:6px 12px;border-radius:999px;flex:0 0 auto">Lex</span>
+    </div>
+  </div>
+  <div class="cuon" style="background:#f6f7f8;padding:4px 18px 0">
+    <div style="display:flex;gap:12px;padding:13px 0;border-bottom:1px solid #e6e8eb">
+      <span style="width:44px;height:44px;border-radius:12px;background:#1f2937;color:#c9f24d;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 44px">DoC</span>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:15px;font-weight:700;color:#16171a;line-height:1.35">Mo Gawdat — "AI có 70% khả năng diễn biến tồi tệ"</div>
+        <div style="font-size:12px;color:#6a6f76;margin-top:3px" class="t">Diary of a CEO · 14/08 · 2 giờ 08</div>
+        <div style="font-size:13px;color:#3f444b;line-height:1.5;margin-top:6px">Ông không nói AI sẽ hại người, mà nói giai đoạn chuyển tiếp mới là chỗ đau — và nó kéo dài chừng 12 tới 15 năm.</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;padding:13px 0;border-bottom:1px solid #e6e8eb">
+      <span style="width:44px;height:44px;border-radius:12px;background:#2a2440;color:#c4b5fd;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 44px">Lex</span>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:15px;font-weight:700;color:#16171a;line-height:1.35">Geoffrey Hinton — nguy cơ và những gì ông tiếc</div>
+        <div style="font-size:12px;color:#6a6f76;margin-top:3px" class="t">Lex Fridman · 12/08 · 3 giờ 21</div>
+        <div style="font-size:13px;color:#3f444b;line-height:1.5;margin-top:6px">Hinton ước tính xác suất kết cục xấu ở khoảng 10 tới 20%, và nói thẳng rằng con số đó là phỏng đoán chứ không phải mô hình.</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;padding:13px 0;border-bottom:1px solid #e6e8eb;opacity:.62">
+      <span style="width:44px;height:44px;border-radius:12px;background:#1e3a34;color:#6ee7b7;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 44px">Dwk</span>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:7px">
+          <div style="font-size:15px;font-weight:700;color:#16171a;line-height:1.35;flex:1">Ballmer kể lại 34 năm ở Microsoft</div>
+          <span style="font-size:11px;font-weight:700;color:#41794f;background:#e4f3e8;border-radius:6px;padding:3px 7px;flex:0 0 auto">đã đọc</span>
+        </div>
+        <div style="font-size:12px;color:#6a6f76;margin-top:3px" class="t">Dwarkesh Podcast · 09/08 · 1 giờ 47</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;padding:13px 0">
+      <span style="width:44px;height:44px;border-radius:12px;background:#3a2b1e;color:#fcd34d;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 44px">OL</span>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:15px;font-weight:700;color:#16171a;line-height:1.35">Jeremy Grantham về cơn sốt cổ phiếu AI</div>
+        <div style="font-size:12px;color:#6a6f76;margin-top:3px" class="t">Odd Lots · 03/08 · 58 phút</div>
+        <div style="font-size:13px;color:#3f444b;line-height:1.5;margin-top:6px">Công nghệ thật, nhưng giá đang trả trước cho hai mươi năm sau.</div>
+      </div>
+    </div>
+  </div>
+  <div class="vach" style="background:#16171a"></div>
+</div></div></div>
+
+<div class="o"><div class="may"><div class="than">
+  <div class="tai" style="color:#eceef0">23:41<span>Việt Nam</span></div>
+  <div style="background:#0f1113;padding:52px 18px 14px;border-bottom:1px solid #212529">
+    <div style="display:flex;align-items:center;gap:11px">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c9f24d" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      <div style="font-size:16px;font-weight:700;color:#eceef0">Một tập</div>
+    </div>
+  </div>
+  <div class="cuon" style="background:#0f1113;padding:16px 18px 0">
+    <div style="display:flex;gap:12px;margin-bottom:16px">
+      <span style="width:52px;height:52px;border-radius:14px;background:#1f2937;color:#c9f24d;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 52px">DoC</span>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:18px;font-weight:800;color:#f2f4f5;line-height:1.3">Mo Gawdat</div>
+        <div style="font-size:12px;color:#7d858d" class="t">Diary of a CEO · 14/08/2026 · 2 giờ 08</div>
+      </div>
+    </div>
+    <div style="font-size:11px;letter-spacing:.12em;color:#7d858d;font-weight:700;margin-bottom:10px">BA Ý CHÍNH</div>
+    <div style="display:flex;gap:11px;padding-bottom:13px;border-bottom:1px solid #1c2024">
+      <span style="font-size:13px;font-weight:800;color:#c9f24d;width:18px" class="t">1</span>
+      <div style="flex:1;font-size:15px;color:#dfe3e6;line-height:1.5">Giai đoạn chuyển tiếp mới là chỗ đau, không phải bản thân công nghệ. Ông ước lượng nó kéo dài 12 tới 15 năm.</div>
+    </div>
+    <div style="display:flex;gap:11px;padding:13px 0;border-bottom:1px solid #1c2024">
+      <span style="font-size:13px;font-weight:800;color:#c9f24d;width:18px" class="t">2</span>
+      <div style="flex:1;font-size:15px;color:#dfe3e6;line-height:1.5">Việc mất trước là việc mô tả được thành quy trình, bất kể lương cao hay thấp.</div>
+    </div>
+    <div style="display:flex;gap:11px;padding:13px 0">
+      <span style="font-size:13px;font-weight:800;color:#c9f24d;width:18px" class="t">3</span>
+      <div style="flex:1;font-size:15px;color:#dfe3e6;line-height:1.5">Ông không đưa số về tỉ lệ thất nghiệp, và nói rõ mình không có cơ sở để đưa.</div>
+    </div>
+    <div style="background:#161a1d;border:1px solid #232830;border-radius:12px;padding:14px;margin-top:16px">
+      <div style="font-size:11px;letter-spacing:.12em;color:#c9f24d;font-weight:700;margin-bottom:6px">CHẠM VÀO VIỆC CỦA MÌNH Ở ĐÂU</div>
+      <div style="font-size:14px;color:#c6cbd0;line-height:1.55">Phần việc lặp lại ở cửa hàng — soạn bài đăng, trả tin nhắn mẫu, lên đơn — đúng nhóm ông nói mất trước. Nên tách chúng ra và giao dần cho máy trong năm nay.</div>
+    </div>
+    <div style="display:flex;gap:9px;margin-top:14px">
+      <span style="flex:1;text-align:center;background:#c9f24d;color:#0f1113;font-size:14px;font-weight:700;padding:12px;border-radius:10px">Nghe bản gốc</span>
+      <span style="width:50px;display:flex;align-items:center;justify-content:center;border:1px solid #262c33;border-radius:10px">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#8b939b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg></span>
+    </div>
+  </div>
+  <div class="vach" style="background:#eceef0"></div>
+</div></div></div>
+</div>
+<div class="nhan">Trái: bản sáng, dòng tập trong tuần. Phải: bản tối, mở một tập.</div>
+</section>
+
+<!-- 03 THẺ Ý -->
+<section id="t3">
+<div class="dau"><div class="so">MOCKUP 03</div><h2>Thẻ Ý</h2>
+<p>Cắt bỏ hẳn hình thức bài viết. Thứ đọng lại sau khi nghe hàng trăm giờ podcast là các nhận định rời, nên mỗi nhận định thành một thẻ chiếm trọn màn: câu nói, ai nói, dựa vào gì, và một vạch cho biết ý này có ai phản bác không. Vuốt lên là ý sau.</p></div>
+<div class="hang">
+<div class="o"><div class="may"><div class="than">
+  <div class="tai" style="color:#1b1a17">23:41<span>Việt Nam</span></div>
+  <div style="background:#faf8f4;padding:52px 20px 0">
+    <div style="display:flex;gap:4px">
+      <span style="flex:1;height:3px;border-radius:2px;background:#1b1a17"></span>
+      <span style="flex:1;height:3px;border-radius:2px;background:#1b1a17"></span>
+      <span style="flex:1;height:3px;border-radius:2px;background:#ddd8ce"></span>
+      <span style="flex:1;height:3px;border-radius:2px;background:#ddd8ce"></span>
+      <span style="flex:1;height:3px;border-radius:2px;background:#ddd8ce"></span>
+      <span style="flex:1;height:3px;border-radius:2px;background:#ddd8ce"></span>
+    </div>
+    <div style="display:flex;justify-content:space-between;margin-top:10px">
+      <span style="font-size:11px;letter-spacing:.13em;color:#8a857c;font-weight:700">AI &amp; VIỆC LÀM</span>
+      <span style="font-size:11px;color:#8a857c;font-weight:600" class="t">2 / 6</span>
+    </div>
+  </div>
+  <div class="cuon" style="background:#faf8f4;padding:0 20px;display:flex;flex-direction:column;justify-content:center">
+    <div style="font-family:Georgia,serif;font-size:31px;font-weight:700;line-height:1.28;color:#1b1a17;letter-spacing:-.01em">"AI ăn tác vụ, không ăn nghề."</div>
+    <div style="display:flex;align-items:center;gap:10px;margin-top:18px">
+      <span style="width:36px;height:36px;border-radius:11px;background:#e9e4d8;color:#6b6355;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">EM</span>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:#1b1a17">Ethan Mollick</div>
+        <div style="font-size:12px;color:#8a857c" class="t">Wharton · nhắc lại ở 4 tập khác nhau</div>
+      </div>
+    </div>
+    <div style="height:1px;background:#e6e1d7;margin:20px 0"></div>
+    <div style="font-size:11px;letter-spacing:.12em;color:#8a857c;font-weight:700;margin-bottom:7px">DỰA VÀO GÌ</div>
+    <div style="font-size:15px;color:#3f3c35;line-height:1.6">Khảo sát nội bộ ở các công ty đã triển khai: số nhân sự gần như không đổi, nhưng cơ cấu đầu việc trong cùng một chức danh đổi mạnh.</div>
+    <div style="margin-top:20px;background:#f2ede1;border:1px solid #e2dbcb;border-radius:13px;padding:14px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9a6b28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5M12 16.5h.01"/><circle cx="12" cy="12" r="9"/></svg>
+        <span style="font-size:11px;letter-spacing:.12em;color:#9a6b28;font-weight:700">CÓ NGƯỜI NÓI NGƯỢC</span>
+      </div>
+      <div style="font-size:14px;color:#4a4237;line-height:1.55">Một khách mời khác trong cùng tuần dự đoán 30% việc làm biến mất vào 2027 — tức là mất cả nghề, không chỉ mất đầu việc.</div>
+    </div>
+  </div>
+  <div style="background:#faf8f4;padding:12px 20px 24px;display:flex;align-items:center;gap:10px">
+    <span style="width:52px;height:52px;border-radius:15px;border:1px solid #ddd8ce;display:flex;align-items:center;justify-content:center">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#8a857c" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg></span>
+    <span style="flex:1;text-align:center;background:#1b1a17;color:#faf8f4;font-size:15px;font-weight:700;padding:16px;border-radius:15px">Ý tiếp theo</span>
+  </div>
+  <div class="vach" style="background:#1b1a17"></div>
+</div></div></div>
+
+<div class="o"><div class="may"><div class="than">
+  <div class="tai" style="color:#f0f0ee">23:41<span>Việt Nam</span></div>
+  <div style="background:#131316;padding:52px 20px 0">
+    <div style="display:flex;gap:4px">
+      <span style="flex:1;height:3px;border-radius:2px;background:#7dd3fc"></span>
+      <span style="flex:1;height:3px;border-radius:2px;background:#7dd3fc"></span>
+      <span style="flex:1;height:3px;border-radius:2px;background:#7dd3fc"></span>
+      <span style="flex:1;height:3px;border-radius:2px;background:#2a2c33"></span>
+      <span style="flex:1;height:3px;border-radius:2px;background:#2a2c33"></span>
+      <span style="flex:1;height:3px;border-radius:2px;background:#2a2c33"></span>
+    </div>
+    <div style="display:flex;justify-content:space-between;margin-top:10px">
+      <span style="font-size:11px;letter-spacing:.13em;color:#8b8d95;font-weight:700">THỊ TRƯỜNG</span>
+      <span style="font-size:11px;color:#8b8d95;font-weight:600" class="t">3 / 6</span>
+    </div>
+  </div>
+  <div class="cuon" style="background:#131316;padding:0 20px;display:flex;flex-direction:column;justify-content:center">
+    <div style="font-family:Georgia,serif;font-size:29px;font-weight:700;line-height:1.3;color:#f4f4f2;letter-spacing:-.01em">"Mọi bong bóng lớn đều dựng trên một sự thật. Vấn đề không phải câu chuyện sai, mà là cái giá."</div>
+    <div style="display:flex;align-items:center;gap:10px;margin-top:18px">
+      <span style="width:36px;height:36px;border-radius:11px;background:#20242c;color:#7dd3fc;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center">JG</span>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:#f0f0ee">Jeremy Grantham</div>
+        <div style="font-size:12px;color:#8b8d95" class="t">Odd Lots · 03/08/2026</div>
+      </div>
+    </div>
+    <div style="height:1px;background:#26282e;margin:20px 0"></div>
+    <div style="font-size:11px;letter-spacing:.12em;color:#8b8d95;font-weight:700;margin-bottom:9px">BA DẤU HIỆU ÔNG NÊU</div>
+    <div style="display:flex;gap:10px;margin-bottom:9px">
+      <span style="width:7px;height:7px;border-radius:50%;background:#7dd3fc;margin-top:8px;flex:0 0 7px"></span>
+      <span style="flex:1;font-size:15px;color:#d5d7dc;line-height:1.55">Số công ty mới lên sàn tăng vọt</span></div>
+    <div style="display:flex;gap:10px;margin-bottom:9px">
+      <span style="width:7px;height:7px;border-radius:50%;background:#7dd3fc;margin-top:8px;flex:0 0 7px"></span>
+      <span style="flex:1;font-size:15px;color:#d5d7dc;line-height:1.55">Khoảng cách giữa nhóm dẫn đầu và phần còn lại giãn bất thường</span></div>
+    <div style="display:flex;gap:10px">
+      <span style="width:7px;height:7px;border-radius:50%;background:#7dd3fc;margin-top:8px;flex:0 0 7px"></span>
+      <span style="flex:1;font-size:15px;color:#d5d7dc;line-height:1.55">Người mua giải thích giá bằng tương lai xa thay vì dòng tiền hiện tại</span></div>
+    <div style="margin-top:20px;background:#181c22;border:1px solid #262b33;border-radius:13px;padding:13px">
+      <div style="font-size:13px;color:#9ba3ad;line-height:1.55">Ông đã gọi đúng ba lần trước, và cũng đã gọi sai vài lần về thời điểm — thường là sớm hơn thực tế vài năm.</div>
+    </div>
+  </div>
+  <div style="background:#131316;padding:12px 20px 24px;display:flex;align-items:center;gap:10px">
+    <span style="width:52px;height:52px;border-radius:15px;border:1px solid #2a2c33;display:flex;align-items:center;justify-content:center">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#8b8d95" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg></span>
+    <span style="flex:1;text-align:center;background:#7dd3fc;color:#131316;font-size:15px;font-weight:700;padding:16px;border-radius:15px">Ý tiếp theo</span>
+  </div>
+  <div class="vach" style="background:#f0f0ee"></div>
+</div></div></div>
+</div>
+<div class="nhan">Trái: bản sáng, thẻ ý về việc làm. Phải: bản tối, thẻ ý về thị trường.</div>
+</section>
+
+<!-- 04 BẢN ĐỒ CHỦ ĐỀ -->
+<section id="t4">
+<div class="dau"><div class="so">MOCKUP 04</div><h2>Bản Đồ Chủ Đề</h2>
+<p>Gom theo chủ đề thay vì theo kỳ. Mỗi chủ đề một khối cho biết bao nhiêu tập đã bàn tới, và quan trọng hơn: có mấy chỗ các khách mời nói ngược nhau. Mở một chủ đề ra là hai cột đối nhau, ai nói gì, dựa vào đâu.</p></div>
+<div class="hang">
+<div class="o"><div class="may"><div class="than">
+  <div class="tai" style="color:#15161a">23:41<span>Việt Nam</span></div>
+  <div style="background:#f5f6f8;padding:52px 18px 12px;border-bottom:1px solid #e3e5e9">
+    <div style="font-size:21px;font-weight:800;color:#15161a;letter-spacing:-.025em">Các chủ đề</div>
+    <div style="font-size:12px;color:#6a6e76;margin-top:2px" class="t">104 tập đã tóm tắt · cập nhật 15/08</div>
+  </div>
+  <div class="cuon" style="background:#f5f6f8;padding:14px 18px 0">
+    <div style="background:#fff;border:1px solid #e2e5e9;border-radius:15px;padding:15px;margin-bottom:11px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
+        <div style="font-size:17px;font-weight:800;color:#15161a">AI &amp; việc làm</div>
+        <span style="font-size:11px;font-weight:700;color:#9a5a1e;background:#fdf1dc;border-radius:7px;padding:4px 9px;flex:0 0 auto" class="t">4 chỗ mâu thuẫn</span>
+      </div>
+      <div style="font-size:13px;color:#6a6e76;margin-top:5px" class="t">38 tập · 12 nhận định đã ghi</div>
+      <div style="display:flex;gap:4px;margin-top:11px">
+        <span style="flex:3;height:7px;border-radius:4px;background:#2f6ba8"></span>
+        <span style="flex:2;height:7px;border-radius:4px;background:#c99a4a"></span>
+        <span style="flex:1;height:7px;border-radius:4px;background:#b04a34"></span>
+      </div>
+      <div style="display:flex;gap:14px;margin-top:8px;font-size:11px;color:#6a6e76">
+        <span style="display:flex;align-items:center;gap:5px"><span style="width:9px;height:9px;border-radius:3px;background:#2f6ba8"></span>đổi việc</span>
+        <span style="display:flex;align-items:center;gap:5px"><span style="width:9px;height:9px;border-radius:3px;background:#c99a4a"></span>chưa rõ</span>
+        <span style="display:flex;align-items:center;gap:5px"><span style="width:9px;height:9px;border-radius:3px;background:#b04a34"></span>mất việc</span>
+      </div>
+    </div>
+    <div style="background:#fff;border:1px solid #e2e5e9;border-radius:15px;padding:15px;margin-bottom:11px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
+        <div style="font-size:17px;font-weight:800;color:#15161a">Thị trường &amp; định giá</div>
+        <span style="font-size:11px;font-weight:700;color:#9a5a1e;background:#fdf1dc;border-radius:7px;padding:4px 9px;flex:0 0 auto" class="t">2 chỗ mâu thuẫn</span>
+      </div>
+      <div style="font-size:13px;color:#6a6e76;margin-top:5px" class="t">21 tập · 7 nhận định đã ghi</div>
+      <div style="display:flex;gap:4px;margin-top:11px">
+        <span style="flex:2;height:7px;border-radius:4px;background:#2f6ba8"></span>
+        <span style="flex:1;height:7px;border-radius:4px;background:#c99a4a"></span>
+        <span style="flex:3;height:7px;border-radius:4px;background:#b04a34"></span>
+      </div>
+    </div>
+    <div style="background:#fff;border:1px solid #e2e5e9;border-radius:15px;padding:15px;margin-bottom:11px">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
+        <div style="font-size:17px;font-weight:800;color:#15161a">Địa chính trị</div>
+        <span style="font-size:11px;font-weight:700;color:#5a6069;background:#eef0f3;border-radius:7px;padding:4px 9px;flex:0 0 auto" class="t">1 chỗ mâu thuẫn</span>
+      </div>
+      <div style="font-size:13px;color:#6a6e76;margin-top:5px" class="t">26 tập · 9 nhận định đã ghi</div>
+    </div>
+    <div style="background:#fff;border:1px solid #e2e5e9;border-radius:15px;padding:15px">
+      <div style="font-size:17px;font-weight:800;color:#15161a">Bán lẻ &amp; hành vi mua</div>
+      <div style="font-size:13px;color:#6a6e76;margin-top:5px" class="t">19 tập · 6 nhận định đã ghi</div>
+    </div>
+  </div>
+  <div class="vach" style="background:#15161a"></div>
+</div></div></div>
+
+<div class="o"><div class="may"><div class="than">
+  <div class="tai" style="color:#eff0f2">23:41<span>Việt Nam</span></div>
+  <div style="background:#101114;padding:52px 18px 12px;border-bottom:1px solid #22242a">
+    <div style="display:flex;align-items:center;gap:11px">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#7fb0e8" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      <div style="font-size:16px;font-weight:700;color:#eff0f2">AI &amp; việc làm · chỗ nói ngược</div>
+    </div>
+  </div>
+  <div class="cuon" style="background:#101114;padding:16px 18px 0">
+    <div style="font-size:17px;font-weight:700;color:#f2f3f5;line-height:1.4;margin-bottom:16px">Việc làm mất theo đầu việc, hay mất cả nghề?</div>
+    <div style="display:flex;gap:10px;margin-bottom:14px">
+      <div style="flex:1;background:#141c26;border:1px solid #1f3448;border-radius:13px;padding:13px">
+        <div style="font-size:11px;letter-spacing:.1em;color:#7fb0e8;font-weight:700;margin-bottom:7px">MẤT ĐẦU VIỆC</div>
+        <div style="font-size:14px;color:#dbe3ea;line-height:1.5">Số người không đổi, cơ cấu công việc trong cùng chức danh thì đổi mạnh.</div>
+        <div style="font-size:12px;color:#8395a5;margin-top:9px" class="t">4 khách mời · dựa vào khảo sát nội bộ doanh nghiệp</div>
+      </div>
+      <div style="flex:1;background:#231617;border:1px solid #46252a;border-radius:13px;padding:13px">
+        <div style="font-size:11px;letter-spacing:.1em;color:#e08b7a;font-weight:700;margin-bottom:7px">MẤT CẢ NGHỀ</div>
+        <div style="font-size:14px;color:#eadbd9;line-height:1.5">30% việc làm biến mất vào 2027, nhất là nhóm văn phòng cấp thấp.</div>
+        <div style="font-size:12px;color:#ad8f8a;margin-top:9px" class="t">2 khách mời · dựa vào ngoại suy tốc độ triển khai</div>
+      </div>
+    </div>
+    <div style="background:#15171b;border:1px solid #23262c;border-radius:13px;padding:14px;margin-bottom:12px">
+      <div style="font-size:11px;letter-spacing:.1em;color:#8b8f97;font-weight:700;margin-bottom:7px">CHỖ HAI BÊN THỰC SỰ LỆCH</div>
+      <div style="font-size:14px;color:#c8ccd2;line-height:1.55">Không phải ở việc AI làm được gì, mà ở tốc độ doanh nghiệp thay đổi cách tổ chức. Bên nói mất đầu việc lấy số từ nơi đã triển khai; bên nói mất nghề ngoại suy từ tốc độ hiện tại kéo dài thêm hai năm.</div>
+    </div>
+    <div style="background:#141a15;border:1px solid #21331f;border-radius:13px;padding:14px">
+      <div style="font-size:11px;letter-spacing:.1em;color:#8fc48f;font-weight:700;margin-bottom:7px">KIỂM LẠI ĐƯỢC BẰNG GÌ</div>
+      <div style="font-size:14px;color:#c9d5c9;line-height:1.55">Số tin tuyển dụng nhóm việc văn phòng cấp thấp trong 12 tháng tới. Bên nào đúng sẽ lộ ra ở đó trước.</div>
+    </div>
+  </div>
+  <div class="vach" style="background:#eff0f2"></div>
+</div></div></div>
+</div>
+<div class="nhan">Trái: bản sáng, các chủ đề. Phải: bản tối, mở một chỗ các khách mời nói ngược nhau.</div>
+</section>
+
+</div>
